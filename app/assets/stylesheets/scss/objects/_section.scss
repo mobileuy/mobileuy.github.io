@@ -1,0 +1,27 @@
+// ==========================================================================
+// Secti0ns
+// ==========================================================================
+
+//
+// A simply content wrapper with special features.
+// The "o-section__title" works as a Component element that will be used only
+// as a "o-section" object child.
+//
+
+.o-section {
+  @extend %clearfix;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.o-section__title {
+  padding: {
+    top: $base-spacing-unit;
+    bottom: $base-spacing-unit;
+  }
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-grey;
+  font-weight: bold;
+}

@@ -1,0 +1,51 @@
+//
+// Following properties complement background-image properties.
+//
+
+[data-image] {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+[data-image*="full-auto"] {
+  background-size: 100% auto;
+}
+
+[data-image*="auto-full"] {
+  background-size: auto 100%;
+}
+
+[data-image*="full-full"] {
+  background-size: 100% 100%;
+}
+
+[data-image*="center-top"] {
+  background-position: center top;
+}
+
+[data-image*="left-top"] {
+  background-position: left top;
+}
+
+[data-image*="left-center"] {
+  background-position: left center;
+}
+
+[data-image*="right-top"] {
+  background-position: right top;
+}
+
+[data-image*="right-center"] {
+  background-position: right center;
+}
+
+[data-image*="hover-resized"] {
+  background-size: auto 150%;
+  transition: background-size 0.3s ease;
+
+  &:hover,
+  a:hover & {
+    background-size: auto 200%;
+  }
+}

@@ -1,0 +1,28 @@
+//
+// Some properties that must be fixed
+// ==========================================================================
+
+.o-layout {
+  @extend %clearfix;
+}
+
+.o-layout__item {
+  float: left;
+}
+
+.o-pack--top > .o-pack__item {
+  vertical-align: top;
+}
+
+.o-pack--collapse {
+  border-spacing: 0;
+}
+
+.u-overflow-hidden-alt {
+  overflow: hidden;
+}
+
+[name="google_conversion_frame"] {
+  // scss-lint:disable ImportantRule
+  display: none !important;
+}

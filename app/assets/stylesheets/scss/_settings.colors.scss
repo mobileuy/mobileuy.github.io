@@ -1,0 +1,38 @@
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+$white:                                 #fff;
+$black:                                 #000;
+
+$color-brand-primary:                   #4A90E2;
+$color-brand-secondary:                 #5D3165;
+
+$color-grey:                            #737373;
+$color-grey-dark:                       mix($color-grey, $black, 50%);
+$color-grey-darker:                     mix($color-grey, $black, 25%);
+$color-grey-light:                      mix($color-grey, $white, 50%);
+$color-grey-lighter:                    mix($color-grey, $white, 15%);
+
+$color-page-text:                       $color-grey-dark;
+$inuit-base-text-color:		 			        $color-page-text;
+$color-page-background:                 #fff;
+$inuit-base-background-color: 			    $color-page-background;
+
+$color-logo:                            $color-brand-primary;
+
+$color-links:                           $color-brand-primary;
+$color-links-hover:                     darken($color-brand-primary, 5%);
+
+$color-page-head:                       #fff;
+$color-page-head-background:            transparent;
+
+$color-btn:                             #fff;
+$color-btn-background:                  $color-brand-primary;
+$color-btn-background-hover:            darken($color-brand-primary, 5%);
+$color-btn-secondary:                   #fff;
+$color-btn-secondary-background:        transparent;
+$color-btn-secondary-background-hover:  rgba($color-grey, 0.5);
+
+$success-color:                         #56d478;
+$error-color:                           #d45659;

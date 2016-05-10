@@ -1,0 +1,26 @@
+//
+// layers utilities
+// ==========================================================================
+
+.u-background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba($black, 0.75);
+  width: 100%;
+  height: 100%;
+}
+
+.u-gradient-background {
+  background-image: linear-gradient(to top , rgba($color-grey-darker, 1), rgba($color-grey-darker, 0));
+}
+
+.u-gradient-shadow {
+  background-image: linear-gradient(to top , rgba($color-grey-darker, 0), rgba($color-grey-darker, 0) calc(100% - #{$base-spacing-unit}), rgba($color-grey-darker, 0.25));
+}
+
+.u-background-grey-hover:hover {
+  transition: $base-transition;
+  background-color: $color-grey;
+  cursor: pointer;
+}

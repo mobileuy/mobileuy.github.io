@@ -1,0 +1,79 @@
+//
+// Visibility utilities
+// ==========================================================================
+
+//
+// This file generates a utility class for hide any element and show
+// it after a breakpoint is reached.
+//
+// With the default $displays variables set values,
+// these classes will be avaliable :
+//
+// .display-inherit-start-up
+// .display-inherit-small-up
+// .display-inherit-large-up
+// .display-block-start-up
+// .display-block-small-up
+// .display-block-large-up
+// .display-inline-block-start-up
+// .display-inline-block-small-up
+// .display-inline-block-large-up
+// .display-table-cell-start-up
+// .display-table-cell-small-up
+// .display-table-cell-large-up
+//
+//
+// Besides, this classes will hide the elements whet the
+// breakpoint is reached:
+//
+// .hide-start-up
+// .hide-small-up
+// .hide-large-up
+//
+
+
+
+
+
+$displays: inherit block inline-block table-cell !default;
+
+
+// A selector for extend hidden (display:none) states of all
+// classes sarting with format ".display-< value >-< breaqpoint >-up".
+%display-none {
+  display: none;
+}
+
+@each $breakpoint in $breakpoints {
+  $alias: nth($breakpoint, 1);
+
+  @include media-query($alias) {
+    .display-#{$alias}-up {
+      display: inherit;
+    }
+  }
+}
+
+@each $d in $displays {
+  @each $breakpoint in $breakpoints {
+    $alias: nth($breakpoint, 1);
+
+    .display-#{$d}-#{$alias}-up {
+      @extend %display-none;
+
+      @include media-query($alias) {
+        display: $d;
+      }
+    }
+  }
+}
+
+@each $breakpoint in $breakpoints {
+  $alias: nth($breakpoint, 1);
+
+  .hide-#{$alias}-up {
+    @include media-query($alias) {
+      display: none;
+    }
+  }
+}

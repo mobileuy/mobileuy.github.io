@@ -1,0 +1,50 @@
+// Base heritage
+// ==========================================================================
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+
+
+
+
+// Links
+// ==========================================================================
+
+a {
+  text-decoration: none;
+  color: $color-links;
+  font-weight: 400;
+
+  @include hocus() {
+    text-decoration: underline;
+  }
+}
+
+
+
+
+
+// Headings
+// ==========================================================================
+
+//
+// We need in order to override user-agent default font-weight and Inuit line-height.
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5;
+  font-weight: 300; // Be specific//
+}

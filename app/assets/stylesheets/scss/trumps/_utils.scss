@@ -1,0 +1,246 @@
+//
+// Massive utility generator
+// ==========================================================================
+
+//
+// Following list defines which properties will be available for using by the utility (.u-) namespace.
+// Frist value works a a configuration value in order to set responsive behavior.
+//
+
+$utilities: (
+  "float":                    responsive_true      left right none,
+  "clear":                    responsive_false     left right both,
+  "text-align":               responsive_false     center left right,
+  "text-decoration":          responsive_false     line-through none,
+  "font-weight":              responsive_false     300 800 400,
+  "list-style":               responsive_false     none,
+  "margin-left":              responsive_false     auto,
+  "margin-right":             responsive_false     auto,
+  "position":                 responsive_false     absolute relative fixed,
+  "overflow":                 responsive_false     hidden,
+  "display":                  responsive_false     block inline-block inline none table table-cell responsive,
+);
+
+@each $i, $property in $utilities {
+
+  //
+  // @for statement starts with 2 in order to get ride of first value
+  // that is a responsive behaviour setting but not a valid declaration value.
+  //
+
+  @for $n from 2 through length($property) {
+    .u-#{$i}--#{nth($property, $n)} {
+      #{$i}: nth($property, $n);
+    }
+
+    @if nth($property, 1) == responsive_true {
+      .u-#{$i}--#{nth($property, $n)} {
+        @include media-query(start) {
+          &-start {
+            #{$i}: nth($property, $n);
+          }
+        }
+
+        @include media-query(small) {
+          &-small {
+            #{$i}: nth($property, $n);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+//
+//  Text decoration
+// ==========================================================================
+
+.u-text-decoration--none:hover {
+  text-decoration: none;
+}
+
+
+
+
+
+//
+//  Max widths
+// ==========================================================================
+
+$max-widths: 72 200 400 500 600 800 1024;
+
+@each $mw in $max-widths {
+
+  .u-max-width--#{$mw} {
+
+    max-width: 1px * $mw;
+
+    @include media-query(start) {
+      &-start {
+        max-width: 1px * $mw;
+      }
+    }
+
+    @include media-query(small) {
+      &-small {
+        max-width: 1px * $mw;
+      }
+    }
+  }
+}
+
+
+
+
+
+//
+// Heights
+// ==========================================================================
+
+$heights: 100 75 50;
+
+@each $h in $heights {
+  .u-height--#{$h} {
+
+    // scss-lint:disable ImportantRule
+    height: 1% * $h !important;
+  }
+}
+
+
+
+
+
+//
+// Body and background colors
+// ==========================================================================
+
+$our-colors: (
+  white: white,
+  black: black,
+
+  orange:   $color-brand-primary,
+
+  grey:     $color-grey,
+
+  dark:     $color-grey-dark,
+  darker:   $color-grey-darker,
+
+  light:    $color-grey-light,
+  lighter:  $color-grey-lighter,
+
+  transparent: transparent,
+
+  layer:    rgba($color-grey-darker, 0.8)
+);
+
+@each $c, $color in $our-colors {
+
+  // Text colors
+  .u-color--#{$c},
+  .u-color--#{$c}-hover:hover {
+    color: $color;
+  }
+
+  // Background colors
+  .u-background--#{$c},
+  .u-background--#{$c}-hover:hover {
+    transition: $base-transition;
+    background-color: $color;
+  }
+
+  // Fill (svg)
+  .u-fill--#{$c} {
+    &,
+    * {
+      fill: $color;
+    }
+  }
+}
+
+
+//
+// CSS3 columns
+// ==========================================================================
+
+@for $i from 2 through 3 {
+  @include media-query(small) {
+    // Autoprefixr can"t help here, so:
+    // scss-lint:disable PropertySortOrder
+    .u-css-columns-#{$i} {
+      column-break-inside: avoid;
+      column-count: $i;
+      column-gap: $base-spacing-unit;
+      -moz-column-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
+
+      > p {
+        margin: 0;
+      }
+    }
+  }
+
+  @include media-query(large) {
+    .u-css-columns-#{$i}--large {
+      column-count: $i;
+    }
+  }
+}
+
+
+
+//
+// Translations
+// ==========================================================================
+$translations: 100 50;
+
+@each $t in $translations {
+  .u-translate--#{$t} {
+    transform: translateY(1% * $t);
+  }
+
+  .u-translate--#{$t}-n {
+    transform: translateY(-1% * $t);
+  }
+}
+
+
+
+
+
+//
+// Line Height
+// ==========================================================================
+$line-heights: 100 125 150 200 300;
+
+@each $ln in $line-heights {
+  .u-line-height--#{$ln} {
+    line-height: $ln / 100;
+  }
+}
+
+
+
+
+
+//
+// Positions
+// ==========================================================================
+$positions: top bottom left right;
+$position-values: 0 20 40;
+
+@each $p in $positions {
+  .u-#{$p} {
+    @each $pv in $position-values {
+      &--#{$pv} {
+        #{$p}: 1px * $pv;
+      }
+    }
+  }
+}
+

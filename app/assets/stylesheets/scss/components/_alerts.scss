@@ -1,0 +1,93 @@
+// ==========================================================================
+// Alert
+// ==========================================================================
+
+//
+// A component to manage alert messages.
+//
+// Usage:
+//
+// <div class="c-alert c-alert--(1)">
+//   <div class="c-alert__close"></div> (2)
+//   <div class="c-alert__icon"></div> (3)
+//   <div class="c-alert__message"> Message </div>
+// </div>
+//
+// 1: 'error' or 'success' modifier
+// 2: A '˟' character placed top righ to close via js.
+// 3: An optional '✓' or 'i' symbol next to text message.
+//
+
+.c-alert {
+  position: relative;
+  transition: all 1s ease;
+  margin-bottom: 30px;
+  padding: 20px 10px;
+  width: 100%;
+  min-height: 40px;
+}
+
+.c-alert--closed {
+  display: none;
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.c-alert__close {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  z-index: 2;
+  cursor: pointer;
+  line-height: 0;
+  color: $white;
+  font-size: 45px;
+
+  &::before {
+    content: "\02DF";
+  }
+}
+
+.c-alert__icon {
+  float: left;
+
+  &::after {
+    display: block;
+    border: 1px solid $white;
+    border-radius: 100%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 20px;
+    color: $white;
+    font-weight: 800;
+  }
+
+  .c-alert--error &::after {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    content: "i";
+  }
+
+  .c-alert--success &::after {
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    content: "\2713"; /* ✓ */
+  }
+}
+
+.c-alert__message {
+  display: inline-block;
+  position: relative;
+  left: -40px;
+  padding-left: 50px;
+  color: $white;
+}
+
+.c-alert--error {
+  background-color: $error-color;
+}
+
+.c-alert--success {
+  background-color: $success-color;
+}

@@ -1,6 +1,3 @@
-$(function(){
-
-});
 /**
  * Generates random particles using canvas
  *

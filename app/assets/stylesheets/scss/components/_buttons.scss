@@ -1,0 +1,107 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+//
+// Buttos styles.
+//
+
+.c-btn {
+  display: inline-block;
+  margin: 0;
+  border: transparent 1px solid;
+  cursor: pointer;
+  padding: 0 $base-spacing-unit;
+  height: $base-spacing-unit * 2;
+  vertical-align: middle;
+  text-align: center;
+  font: inherit;
+
+  @include hocus() {
+    text-decoration: none;
+  }
+}
+
+.c-btn--primary {
+  transition: $base-transition;
+  border-radius: 999px;
+  background-color: $color-btn-background;
+  line-height: $base-spacing-unit * 2;
+  color: $color-btn;
+
+  @include hocus() {
+    background-color: $color-btn-background-hover;
+  }
+}
+
+.c-btn--secondary {
+  transition: $base-transition;
+  border: $color-btn-secondary 1px solid;
+  border-radius: 999px;
+  background-color: $color-btn-secondary-background;
+  line-height: ($base-spacing-unit * 2) - 2;
+  color: $color-btn-secondary;
+
+  @include hocus() {
+    background-color: $color-btn-secondary-background-hover;
+  }
+}
+
+
+
+
+
+//
+// Special button
+// ==========================================================================
+//
+// A special button animated on hover state.
+//
+// Usage:
+//
+// <a href='#' class='c-btn c-btn--primary c-btn--special'>
+//    <span class='c-btn__icon> &#8250; </span>
+//    <span class='c-btn__text> text </span>
+// </a>
+//
+
+//
+// Buttons animation keyframes
+//
+@keyframes a-btn-arrow {
+  0% {transform: translate(0, 0);}
+  51% {transform: translate(140px, 0);}
+  51.1% {transform: translate(-70px, 0);}
+  100% {transform: translate(0, 0);}
+}
+
+@keyframes a-btn-text {
+  0% {opacity: 1;}
+  25% {opacity: 0;}
+  51.1% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.c-btn--special {
+  overflow: hidden;
+}
+
+.c-btn__icon {
+  display: inline-block;
+  line-height: $base-font-size;
+  font-size: 19px;
+
+  .c-btn--special:hover & {
+    animation: a-btn-arrow ease-in-out 0.75s;
+    animation-iteration-count: 1;
+  }
+}
+
+.c-btn__text {
+  margin-left: 1em;
+
+  .c-btn--special:hover & {
+    animation: a-btn-text ease-in-out 0.75s;
+    animation-iteration-count: 1;
+  }
+}

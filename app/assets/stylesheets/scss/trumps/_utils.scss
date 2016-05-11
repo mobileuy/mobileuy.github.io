@@ -9,6 +9,7 @@
 
 $utilities: (
   "float":                    responsive_true      left right none,
+  "text-transform":           responsive_true      uppercase lowercase normal,
   "clear":                    responsive_false     left right both,
   "text-align":               responsive_false     center left right,
   "text-decoration":          responsive_false     line-through none,

@@ -97,7 +97,7 @@ gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function(){
   runSequence('clean:tmp', 'script', 'vendor', 'sass', 'images',
-              'autoprefixer', 'dist', 'minifycss', 'minifyjs');
+              'autoprefixer', 'dist');
 });
 
 gulp.task('compile:css', function(){
@@ -173,16 +173,16 @@ gulp.task('vendor', function() {
 });
 
 // Minify js
-gulp.task('minifyjs', function() {
-  return gulp.src([config.mainJSVendorFilePath, config.mainJSFilePath])
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(uglify())
-    .pipe(rename({
-      basename: 'mobileuy',
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest(config.distPath))
-});
+//gulp.task('minifyjs', function() {
+//  return gulp.src([config.mainJSVendorFilePath, config.mainJSFilePath])
+//    .pipe(plumber({ errorHandler: onError }))
+//    .pipe(uglify())
+//    .pipe(rename({
+//      basename: 'mobileuy',
+//      suffix: '.min'
+//    }))
+//    .pipe(gulp.dest(config.distPath))
+//});
 
 // Clean folder Dist
 gulp.task('clean:dist', function() {

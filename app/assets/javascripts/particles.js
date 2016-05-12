@@ -4,7 +4,7 @@
  * @class Particles
  * @constructor
  */
-function Particles(){
+function Particles(canvasElement){
   //particle colors
   this.colors = [
     '255, 255, 255',
@@ -29,7 +29,7 @@ function Particles(){
   //number of particles
   this.numParticles = 250;
   //required canvas variables
-  this.canvas = document.getElementById('canvas');
+  this.canvas = canvasElement;
   this.ctx = this.canvas.getContext('2d');
 }
 
@@ -83,8 +83,8 @@ Particles.prototype.createCircle = function(){
         r =1; //Math.sqrt(Math.sqr(vx)+Math.sqr(vy));
     particle[i] = {
           radius: r,
-            xPos: self._rand(0, canvas.width),
-            yPos: self._rand(0,canvas.height),
+            xPos: self._rand(0, self.canvas.width),
+            yPos: self._rand(0, self.canvas.height),
       xVelocity: self._rand(self.minSpeed, self.maxSpeed),
       yVelocity: vy,
       color: 'rgba(' + color + ',' + self._rand(self.minOpacity, self.maxOpacity) + ')'
@@ -170,11 +170,11 @@ Particles.prototype.resetParticle = function(particle, i){
   if (random > .5) {
     // 50% chance particle comes from left side of window...
     particle[i].  xPos = -particle[i].radius;
-        particle[i].yPos =   self._rand(0, canvas.height);
+        particle[i].yPos =   self._rand(0, self.canvas.height);
   } else {
     //... or bottom of window
-    particle[i].  xPos = self._rand(0, canvas.width);
-        particle[i].yPos =   canvas.height + particle[i].radius;
+    particle[i].  xPos = self._rand(0, self.canvas.width);
+        particle[i].yPos =   self.canvas.height + particle[i].radius;
   }
   //redraw particle with new values
   self.draw(particle, i);
@@ -185,10 +185,14 @@ Particles.prototype.resetParticle = function(particle, i){
  * @method clearCanvas
  */
 Particles.prototype.clearCanvas = function(){
-  this.ctx.clearRect(0, 0, canvas.width, canvas.height);
+  var self = this;
+
+  this.ctx.clearRect(0, 0, self.canvas.width, self.canvas.height);
 }
 
 
 // go go go!
-var particle = new Particles();
-particle.init();
+Array.from(document.getElementsByClassName("canvas")).forEach(function(element) {
+  var particle = new Particles(element);
+  particle.init();
+});

@@ -1,9 +1,9 @@
 # mobileuy.github.io
 Mobile day initial page
 
-- Install npm
-- Install bower
-- Install gulp
+- Install npm (https://www.npmjs.com)
+- Install bower (http://bower.io)
+- Install gulp (http://gulpjs.com)
 - run "bower install" on project root
 - run "gulp" on project root
 - open another tab with project root and run "npm start"

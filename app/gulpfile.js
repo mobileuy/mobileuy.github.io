@@ -39,7 +39,7 @@ var logger = util.log;
 var config = {
   scssFiles:      'assets/stylesheets/scss/**/*.scss',
   scssMainFile:   'assets/stylesheets/scss/application.scss',
-  srcImages:      'public',
+  srcImages:      'assets',
   distPath:       'public/dist',
   tmpPath:        'tmp',
   outputCSS:      'mobileuy.css',

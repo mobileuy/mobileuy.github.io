@@ -1,2 +1,19 @@
+# Mac OS
+.DS_Store
+
+# IntelliJ
+.idea
+*.iml
+*.iws
+*.ipr
+
+# Downloaded dependencies
 app/bower_components/**
 app/node_modules/**
+
+# Auto-generated & intermediate files
+app/public/**
+app/tmp/**
+
+# Logs
+npm-debug.log

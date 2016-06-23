@@ -1,3 +1,5 @@
+@import "compass";
+
 .u-home {
   top: 0;
   left: 0;
@@ -6,15 +8,25 @@
 }
 
 .u-counter {
-  background-image: url(/images/pattern-01.png);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-color: #1e5799;
+
+  background-color: $color-brand-primary-dark; // Old browsers
+  @include filter-gradient($color-brand-secondary-light, $color-brand-primary-dark, horizontal); // IE6-9
+  @include background-image(
+                  url(/images/pattern-01.png),
+                  linear-gradient(left, $color-brand-secondary-light 0%,#614ab1 41%,$color-brand-primary-dark 100%)
+  );
 }
 
 .u-request-proposal {
-  background-image: url(/images/pattern-02.png);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
-  background-color: #1e5799;
+
+  background-color: $color-brand-primary-dark; // Old browsers
+  @include filter-gradient($color-brand-secondary-light, $color-brand-primary-dark, horizontal); // IE6-9
+  @include background-image(
+                  url(/images/pattern-03.png),
+                  linear-gradient(left, $color-brand-secondary-light 0%,#614ab1 41%,$color-brand-primary-dark 100%)
+  );
 }

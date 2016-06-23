@@ -14,6 +14,7 @@ app/node_modules/**
 # Auto-generated & intermediate files
 app/public/**
 app/tmp/**
+**/.sass-cache/**
 
 # Logs
 npm-debug.log

@@ -7,6 +7,7 @@ var autoprefixer = require('gulp-autoprefixer'),
            clean = require('gulp-clean'),
           concat = require('gulp-concat'),
             gulp = require('gulp'),
+         compass = require('gulp-compass'),
           header = require('gulp-header'),
        minifycss = require('gulp-minify-css'),
          plumber = require('gulp-plumber'),
@@ -116,6 +117,10 @@ gulp.task('compile:js', function(){
 gulp.task('sass', function() {
   return gulp.src(config.scssMainFile)
           .pipe(plumber({errorHandler: onError}))
+          .pipe(compass({
+            project: path.join(__dirname, 'assets'),
+            sass: 'stylesheets/scss',
+          }))
           .pipe(sass({outputStyle: 'expanded'}))
           .pipe(rename(config.outputCSS))
           .pipe(gulp.dest(config.tmpPath));

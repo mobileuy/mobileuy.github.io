@@ -22,11 +22,23 @@
 .u-request-proposal {
   background-size: contain;
   background-position: center;
-
   background-color: $color-brand-primary-dark; // Old browsers
   @include filter-gradient($color-brand-secondary-light, $color-brand-primary-dark, horizontal); // IE6-9
   @include background-image(
                   url(/images/pattern-03.png),
                   linear-gradient(left, $color-brand-secondary-light 0%,#614ab1 41%,$color-brand-primary-dark 100%)
   );
+}
+
+.u-about-title {
+  background-image: url(/images/pattern-02.png);
+  background-size: cover;
+  background-position: center;
+  background-color: $color-brand-primary;
+}
+
+.u-about {
+  background-size: cover;
+  background-position: center;
+  background-color: $white;
 }

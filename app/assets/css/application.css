@@ -4468,3 +4468,16 @@ input[type='file'] {
   background-image: url(/images/pattern-03.png), -webkit-linear-gradient(left, #794fc0 0%, #614ab1 41%, #1e5799 100%);
   background-image: url(/images/pattern-03.png), linear-gradient(to right, #794fc0 0%, #614ab1 41%, #1e5799 100%);
 }
+
+.u-about-title {
+  background-image: url(/images/pattern-02.png);
+  background-size: cover;
+  background-position: center;
+  background-color: #4A90E2;
+}
+
+.u-about {
+  background-size: cover;
+  background-position: center;
+  background-color: #fff;
+}

@@ -8,6 +8,7 @@ var autoprefixer = require('gulp-autoprefixer'),
           concat = require('gulp-concat'),
             gulp = require('gulp'),
          compass = require('gulp-compass'),
+             ejs = require("gulp-ejs");
           header = require('gulp-header'),
        minifycss = require('gulp-minify-css'),
          plumber = require('gulp-plumber'),
@@ -38,6 +39,7 @@ var logger = util.log;
 // -------------------------------------------
 
 var config = {
+  ejbFiles:       'views/!(_)*.ejs',
   scssFiles:      'assets/stylesheets/scss/**/*.scss',
   scssMainFile:   'assets/stylesheets/scss/application.scss',
   srcImages:      'assets',
@@ -97,7 +99,7 @@ var loadBowerComponents = function(source) {
 gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function(){
-  runSequence('clean:tmp', 'script', 'vendor', 'sass', 'images',
+  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'images',
               'autoprefixer', 'dist');
 });
 
@@ -109,9 +111,23 @@ gulp.task('compile:js', function(){
   runSequence('script', 'vendor', 'dist');
 });
 
+gulp.task('compile:html', function(){
+    runSequence('html', 'vendor', 'dist');
+});
+
 // -------------------------------------------
 // Tasks
 // -------------------------------------------
+
+// Compile html
+gulp.task('html', function() {
+    return gulp.src(config.ejbFiles)
+        .pipe(plumber({errorHandler: onError}))
+        .pipe(ejs({
+            title: "Mobile day"
+        }, { ext: ".html" }))
+        .pipe(gulp.dest(config.tmpPath));
+});
 
 // Compile sass.
 gulp.task('sass', function() {
@@ -212,4 +228,5 @@ gulp.task('images', function () {
 gulp.task('watch', function() {
   gulp.watch(config.scriptFiles, ['compile:js']);
   gulp.watch(config.scssFiles, ['compile:css']);
+  gulp.watch(config.scssFiles, ['compile:html']);
 });

@@ -5,5 +5,7 @@ Mobile day initial page
 - Install bower (http://bower.io)
 - Install gulp (http://gulpjs.com)
 - run "bower install" on project root
+- run "npm install"
+- run "gem install compass"
 - run "gulp" on project root
 - open another tab with project root and run "npm start"

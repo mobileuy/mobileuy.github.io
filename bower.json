@@ -4,10 +4,9 @@
   "description": " ",
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
-    "test",
-    "tests",
+    "node_modules",
+    "dist",
     "tmp",
     "package.json",
     "gulpfile.json"
@@ -16,5 +15,4 @@
   "dependencies": {
     "jquery": "~2.1.4"
   }
-
 }

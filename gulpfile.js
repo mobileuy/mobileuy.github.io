@@ -20,6 +20,7 @@ var autoprefixer = require('gulp-autoprefixer'),
           uglify = require('gulp-uglify');
           watch  = require('gulp-watch');
 
+
 // -------------------------------------------
 // Others libraries
 // -------------------------------------------
@@ -28,45 +29,42 @@ var vinylPaths = require('vinyl-paths'),
           path = require('path'),
            del = require('del');
 
+
 // -------------------------------------------
 // General definitions.
 // -------------------------------------------
 
 var logger = util.log;
 
+
 // -------------------------------------------
 // General config
 // -------------------------------------------
 
 var config = {
-  ejbFiles:       'views/!(_)*.ejs',
-  scssFiles:      'assets/stylesheets/scss/**/*.scss',
-  scssMainFile:   'assets/stylesheets/scss/application.scss',
-  srcImages:      'assets',
-  distPath:       'public/dist',
+  ejsFiles:       'app/views/!(_)*.ejs',
+  scriptFiles:    'app/assets/javascripts/**/*.js',
+  scssFiles:      'app/assets/stylesheets/scss/**/*.scss',
+  scssMainFile:   'app/assets/stylesheets/scss/application.scss',
+  distPath:       'dist',
   tmpPath:        'tmp',
   outputCSS:      'mobileuy.css',
   outputCSSMin:   'mobileuy.min.css',
   outputJS:       'mobileuy.app.js',
   outputJSVendor: 'mobileuy.vendor.js',
-  scriptFiles:    'assets/javascripts/**/*.js',
   vendorFiles:    ['jquery']
 };
 
-
-config.mainFilePath    = path.join(config.tmpPath, config.outputCSS);
-config.mainMinFilePath = path.join(config.tmpPath, config.outputCSSMin);
-config.mainJSFilePath    = path.join(config.tmpPath, config.outputJS);
-config.mainJSVendorFilePath    = path.join(config.tmpPath, config.outputJSVendor);
-config.mainAllFilePath    = path.join(config.tmpPath, '*');
-config.imagesDistPath  = path.join(config.distPath, 'images')
-
+config.cssOutputFilePath      = path.join(config.tmpPath, config.outputCSS);
+config.outputJSFilePath       = path.join(config.tmpPath, config.outputJS);
+config.outputJSVendorFilePath = path.join(config.tmpPath, config.outputJSVendor);
 config.base64 = {
-  baseDir: config.srcImages,
+  baseDir: 'app/assets',
   extensions: ['png', 'svg', 'jpg', 'eot', 'woff2', 'woff', 'ttf'],
   maxImageSize: 10048 * 1024, // bytes
   debug: true
-}
+};
+
 
 // -------------------------------------------
 // Functions
@@ -75,7 +73,7 @@ config.base64 = {
 var onError = function(error) {
   logger(error);
   this.emit('end');
-}
+};
 
 var loadBowerComponents = function(source) {
   var bowerPath = 'bower_components';
@@ -90,7 +88,8 @@ var loadBowerComponents = function(source) {
   }
 
   return arryLibs;
-}
+};
+
 
 // -------------------------------------------
 // Main Tasks
@@ -98,30 +97,81 @@ var loadBowerComponents = function(source) {
 
 gulp.task('default', ['build', 'watch']);
 
-gulp.task('build',  function(){
-  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'images',
-              'autoprefixer', 'dist');
+gulp.task('build',  function() {
+  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass',
+      'autoprefixer', 'images', 'dist');
 });
 
-gulp.task('compile:css', function(){
-  runSequence('sass', 'images','autoprefixer', 'dist');
+gulp.task('watch', function() {
+    gulp.watch(config.scriptFiles, ['compile:js']);
+    gulp.watch(config.scssFiles, ['compile:css']);
+    gulp.watch(config.scssFiles, ['compile:html']);
 });
 
-gulp.task('compile:js', function(){
+
+// -------------------------------------------
+// Watch Tasks
+// -------------------------------------------
+
+gulp.task('compile:css', function() {
+  runSequence('sass', 'images', 'autoprefixer', 'dist');
+});
+
+gulp.task('compile:js', function() {
   runSequence('script', 'vendor', 'dist');
 });
 
-gulp.task('compile:html', function(){
+gulp.task('compile:html', function() {
     runSequence('html', 'vendor', 'dist');
 });
+
+
+// -------------------------------------------
+// Clean Tasks
+// -------------------------------------------
+
+// Copy files from 'tmp' to 'dist'
+gulp.task('dist', ['clean:dist'], function(){
+    return gulp.src(path.join(config.tmpPath, '*'))
+        .pipe(gulp.dest(config.distPath));
+});
+
+// Clean folder Dist
+gulp.task('clean:dist', function() {
+    return gulp.src(config.distPath)
+        .pipe(vinylPaths(del));
+});
+
+// Clean folder tmp
+gulp.task('clean:tmp', function(){
+    return gulp.src(config.tmpPath)
+        .pipe(vinylPaths(del));
+});
+
 
 // -------------------------------------------
 // Tasks
 // -------------------------------------------
 
+// Compile js
+gulp.task('script', function() {
+    return gulp.src(config.scriptFiles)
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(concat(config.outputJS))
+        .pipe(gulp.dest(config.tmpPath))
+});
+
+// Compile js
+gulp.task('vendor', function() {
+    return gulp.src(loadBowerComponents(config.vendorFiles))
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(concat(config.outputJSVendor))
+        .pipe(gulp.dest(config.tmpPath))
+});
+
 // Compile html
 gulp.task('html', function() {
-    return gulp.src(config.ejbFiles)
+    return gulp.src(config.ejsFiles)
         .pipe(plumber({errorHandler: onError}))
         .pipe(ejs({
             title: "Mobile day"
@@ -134,8 +184,10 @@ gulp.task('sass', function() {
   return gulp.src(config.scssMainFile)
           .pipe(plumber({errorHandler: onError}))
           .pipe(compass({
-            project: path.join(__dirname, 'assets'),
-            sass: 'stylesheets/scss',
+              config_file: path.join(__dirname, 'compass_config.rb'),
+              project: path.join(__dirname, 'app', 'assets'),
+              sass: 'stylesheets/scss',
+              css: 'stylesheets/css'
           }))
           .pipe(sass({outputStyle: 'expanded'}))
           .pipe(rename(config.outputCSS))
@@ -144,7 +196,7 @@ gulp.task('sass', function() {
 
 // Autoprefixer process.
 gulp.task('autoprefixer', function() {
-  return gulp.src(config.mainFilePath)
+  return gulp.src(config.cssOutputFilePath)
           .pipe(plumber({ errorHandler: onError }))
           .pipe(autoprefixer(
             'last 2 version',
@@ -158,44 +210,29 @@ gulp.task('autoprefixer', function() {
           .pipe(gulp.dest(config.tmpPath));
 });
 
-// Copy files from 'tmp' to 'dist'
-gulp.task('dist', ['clean:dist'], function(){
-  return gulp.src(config.mainAllFilePath)
-         .pipe(gulp.dest(config.distPath));
+// Preprocess Images
+gulp.task('images', function () {
+    return gulp.src(config.cssOutputFilePath)
+        .pipe(base64(config.base64))
+        .pipe(gulp.dest(config.tmpPath));
 });
 
 // Minify css
-gulp.task('minifycss', function() {
-  return gulp.src(config.mainFilePath)
-          .pipe(plumber({ errorHandler: onError }))
-          .pipe(sourcemaps.init())
-          .pipe(minifycss({keepBreaks: true}))
-          .pipe(rename({
-              suffix: '.min'
-          }))
-          .pipe(sourcemaps.write())
-          .pipe(gulp.dest(config.distPath))
-});
-
-// Compile js
-gulp.task('script', function() {
-  return gulp.src(config.scriptFiles)
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(concat(config.outputJS))
-    .pipe(gulp.dest(config.tmpPath))
-});
-
-// Compile js
-gulp.task('vendor', function() {
-  return gulp.src(loadBowerComponents(config.vendorFiles))
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(concat(config.outputJSVendor))
-    .pipe(gulp.dest(config.tmpPath))
-});
+// gulp.task('minifycss', function() {
+//   return gulp.src(config.cssOutputFilePath)
+//           .pipe(plumber({ errorHandler: onError }))
+//           .pipe(sourcemaps.init())
+//           .pipe(minifycss({keepBreaks: true}))
+//           .pipe(rename({
+//               suffix: '.min'
+//           }))
+//           .pipe(sourcemaps.write())
+//           .pipe(gulp.dest(config.distPath))
+// });
 
 // Minify js
 //gulp.task('minifyjs', function() {
-//  return gulp.src([config.mainJSVendorFilePath, config.mainJSFilePath])
+//  return gulp.src([config.outputJSVendorFilePath, config.outputJSFilePath])
 //    .pipe(plumber({ errorHandler: onError }))
 //    .pipe(uglify())
 //    .pipe(rename({
@@ -204,29 +241,3 @@ gulp.task('vendor', function() {
 //    }))
 //    .pipe(gulp.dest(config.distPath))
 //});
-
-// Clean folder Dist
-gulp.task('clean:dist', function() {
-  return gulp.src(config.distPath)
-          .pipe(vinylPaths(del));
-});
-
-// Clean folder tmp
-gulp.task('clean:tmp', function(){
-  return gulp.src(config.tmpPath)
-          .pipe(vinylPaths(del));
-});
-
-// Preprocess Images
-gulp.task('images', function () {
-    return gulp.src(config.mainFilePath)
-            .pipe(base64(config.base64))
-            .pipe(gulp.dest(config.tmpPath));
-});
-
-// Watch
-gulp.task('watch', function() {
-  gulp.watch(config.scriptFiles, ['compile:js']);
-  gulp.watch(config.scssFiles, ['compile:css']);
-  gulp.watch(config.scssFiles, ['compile:html']);
-});

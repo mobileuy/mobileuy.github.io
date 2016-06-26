@@ -75,19 +75,19 @@ var onError = function(error) {
   this.emit('end');
 };
 
-var loadBowerComponents = function(source) {
-  var bowerPath = 'bower_components';
-  var arryLibs  = [];
+var loadVendorComponents = function(source) {
+  var node_path = 'node_modules';
+  var libs  = [];
 
   for (i = 0; i < source.length; i++) {
-    var bowerJsonPath = './' + path.join('./',bowerPath, source[i], 'bower.json')
-    var bowerJson = require(bowerJsonPath);
-    var pathLib = path.join(bowerPath, source[i], bowerJson.main);
-    console.log(pathLib);
-    arryLibs.push(pathLib)
+    var jsonFilePath = './' + path.join('./', node_path, source[i], 'package.json');
+    var json = require(jsonFilePath);
+    var libsPath = path.join(node_path, source[i], json.main);
+    console.log(libsPath);
+    libs.push(libsPath)
   }
 
-  return arryLibs;
+  return libs;
 };
 
 
@@ -163,7 +163,7 @@ gulp.task('script', function() {
 
 // Compile js
 gulp.task('vendor', function() {
-    return gulp.src(loadBowerComponents(config.vendorFiles))
+    return gulp.src(loadVendorComponents(config.vendorFiles))
         .pipe(plumber({ errorHandler: onError }))
         .pipe(concat(config.outputJSVendor))
         .pipe(gulp.dest(config.tmpPath))

@@ -105,7 +105,7 @@ gulp.task('build',  function() {
 gulp.task('watch', function() {
     gulp.watch(config.scriptFiles, ['compile:js']);
     gulp.watch(config.scssFiles, ['compile:css']);
-    gulp.watch(config.scssFiles, ['compile:html']);
+    gulp.watch(config.ejsFiles, ['compile:html']);
 });
 
 

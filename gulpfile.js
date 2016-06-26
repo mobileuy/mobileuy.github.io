@@ -174,7 +174,10 @@ gulp.task('html', function() {
     return gulp.src(config.ejsFiles)
         .pipe(plumber({errorHandler: onError}))
         .pipe(ejs({
-            title: "Mobile day"
+            title: "MobileDay Uruguay",
+            jsVendorFileName: config.outputJSVendor,
+            jsFileName: config.outputJS,
+            cssFileName: config.outputCSS
         }, { ext: ".html" }))
         .pipe(gulp.dest(config.tmpPath));
 });

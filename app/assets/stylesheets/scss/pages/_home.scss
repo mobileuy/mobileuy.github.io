@@ -5,6 +5,16 @@
   left: 0;
   z-index: 1;
   position: absolute;
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  background-size: auto calc(100% - 200px), 80vw, 80vw, 80vw;
+
+  @include media-query(small) {
+    background-image: url(/images/iphone.png), url(/images/parallax-1.png), url(/images/parallax-2.png);
+  }
+  @include media-query(large) {
+    background-image: url(/images/iphone.png), url(/images/parallax-1.png), url(/images/parallax-2.png), url(/images/parallax-3.png);
+  }
 }
 
 .u-counter {

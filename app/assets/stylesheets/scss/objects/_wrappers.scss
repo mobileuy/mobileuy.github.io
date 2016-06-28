@@ -9,8 +9,8 @@
 //
 
 $wraper-width-default: 320px   !default;
-$wraper-width-start:   646px   !default;
-$wraper-width-small:   646px  !default;
+$wraper-width-start:   800px   !default;
+$wraper-width-small:   1100px  !default;
 
 .o-wrapper {
   display: block;
@@ -28,4 +28,14 @@ $wraper-width-small:   646px  !default;
   @include media-query(small) {
     max-width: $wraper-width-small;
   }
+}
+
+.o-hero-wrapper {
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $base-spacing-unit;
+  padding-left: $base-spacing-unit;
+  max-width: 646px;
 }

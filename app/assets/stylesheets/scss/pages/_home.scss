@@ -20,6 +20,16 @@
   }
 }
 
+.u-down-arrow {
+  background-image: url(/images/ic-down.png);
+  width: 21px;
+  height: 12px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 15px;
+}
+
 .u-counter {
   background-size: contain;
   background-position: center;

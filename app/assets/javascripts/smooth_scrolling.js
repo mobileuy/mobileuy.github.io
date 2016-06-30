@@ -1,6 +1,7 @@
 /**
- *  All internal anchor links will have a 1 sec smooth scrolling animation to their destination, and the URL will be
- *  updated to reflect the new position on the page.
+ *  All internal anchor links will have a 900ms smooth scrolling animation to
+ *  their destination and the URL will be updated to reflect the new position
+ *  on the page.
  */
 $(document).ready(function() {
     $('a[href^="#"]').on('click', function (e) {

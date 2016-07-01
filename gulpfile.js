@@ -3,13 +3,11 @@
 // -------------------------------------------
 
 var autoprefixer = require('gulp-autoprefixer'),
-          base64 = require('gulp-base64');
-           clean = require('gulp-clean'),
+          base64 = require('gulp-base64'),
           concat = require('gulp-concat'),
             gulp = require('gulp'),
          compass = require('gulp-compass'),
-             ejs = require("gulp-ejs");
-          header = require('gulp-header'),
+             ejs = require("gulp-ejs"),
        minifycss = require('gulp-minify-css'),
          plumber = require('gulp-plumber'),
      runSequence = require('run-sequence'),
@@ -17,7 +15,7 @@ var autoprefixer = require('gulp-autoprefixer'),
             sass = require('gulp-sass'),
       sourcemaps = require('gulp-sourcemaps'),
             util = require('gulp-util'),
-          uglify = require('gulp-uglify');
+          uglify = require('gulp-uglify'),
           watch  = require('gulp-watch');
 
 

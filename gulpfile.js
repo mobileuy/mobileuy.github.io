@@ -2,21 +2,22 @@
 // Libraries gulp required.
 // -------------------------------------------
 
-var autoprefixer = require('gulp-autoprefixer'),
-          base64 = require('gulp-base64'),
-          concat = require('gulp-concat'),
-            gulp = require('gulp'),
-         compass = require('gulp-compass'),
-             ejs = require("gulp-ejs"),
-       minifycss = require('gulp-minify-css'),
-         plumber = require('gulp-plumber'),
-     runSequence = require('run-sequence'),
-          rename = require('gulp-rename'),
-            sass = require('gulp-sass'),
-      sourcemaps = require('gulp-sourcemaps'),
-            util = require('gulp-util'),
-          uglify = require('gulp-uglify'),
-          watch  = require('gulp-watch');
+var autoprefixer    = require('gulp-autoprefixer'),
+    base64          = require('gulp-base64'),
+    concat          = require('gulp-concat'),
+    ejs             = require("gulp-ejs"),
+    gulp            = require('gulp'),
+    compass         = require('gulp-compass'),
+    minifycss       = require('gulp-minify-css'),
+    open            = require('gulp-open'),
+    plumber         = require('gulp-plumber'),
+    runSequence     = require('run-sequence'),
+    rename          = require('gulp-rename'),
+    sass            = require('gulp-sass'),
+    sourcemaps      = require('gulp-sourcemaps'),
+    uglify          = require('gulp-uglify'),
+    util            = require('gulp-util'),
+    watch           = require('gulp-watch');
 
 
 // -------------------------------------------
@@ -97,7 +98,7 @@ gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function() {
   runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass',
-      'autoprefixer', 'images', 'dist');
+      'autoprefixer', 'images', 'dist', 'open');
 });
 
 gulp.task('watch', function() {
@@ -242,3 +243,8 @@ gulp.task('images', function () {
 //    }))
 //    .pipe(gulp.dest(config.distPath))
 //});
+
+gulp.task('open', function () {
+    return gulp.src(path.join(config.distPath, 'index.html'))
+        .pipe(open());
+});

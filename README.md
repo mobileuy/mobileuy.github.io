@@ -11,4 +11,4 @@ Install the dev dependencies:
 
 Finally:
 - To build the project run `gulp`.
-- To open the generated static site run `npm start`.
+- Upon build completion, the generated static site will be opened on your default browser.

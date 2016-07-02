@@ -1,0 +1,24 @@
+.u-counter {
+  background-size: contain;
+  background-position: center;
+
+  background-color: $color-brand-primary-dark; // Old browsers
+  @include filter-gradient($color-brand-secondary-light, $color-brand-primary-dark, horizontal); // IE6-9
+  @include background-image(
+                  url(pattern-01.png),
+                  linear-gradient(left, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%)
+  );
+}
+
+.u-counter h1 {
+  font-size: 15vh;
+  font-weight: 500;
+  color: $white;
+  text-shadow: 0.125vh 0.125vh 0.250vh $black;
+  text-transform: uppercase;
+}
+
+.u-counter h5 {
+  color: $white;
+  font-weight: 500;
+}

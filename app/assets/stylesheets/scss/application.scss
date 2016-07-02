@@ -31,6 +31,7 @@
 @import "tools/tools.truncate";
 @import "inuit/tools.responsive";
 @import "inuit/tools.widths";
+@import "compass";
 
 
 
@@ -104,4 +105,11 @@
 // ==========================================================================
 // Pages
 // ==========================================================================
-@import "pages/home";
+@import "pages/home/header";
+@import "pages/home/hero";
+@import "pages/home/counter";
+@import "pages/home/about";
+@import "pages/home/cfs";
+@import "pages/home/sponsors";
+@import "pages/home/venue";
+@import "pages/home/footer";

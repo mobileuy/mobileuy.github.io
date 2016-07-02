@@ -29,13 +29,3 @@ $wraper-width-small:   1100px  !default;
     max-width: $wraper-width-small;
   }
 }
-
-.o-hero-wrapper {
-  display: block;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $base-spacing-unit;
-  padding-left: $base-spacing-unit;
-  max-width: 646px;
-}

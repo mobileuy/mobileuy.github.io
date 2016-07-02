@@ -58,7 +58,7 @@ config.cssOutputFilePath      = path.join(config.tmpPath, config.outputCSS);
 config.outputJSFilePath       = path.join(config.tmpPath, config.outputJS);
 config.outputJSVendorFilePath = path.join(config.tmpPath, config.outputJSVendor);
 config.base64 = {
-  baseDir: 'app/assets',
+  baseDir: 'app/assets/images',
   extensions: ['png', 'svg', 'jpg', 'eot', 'woff2', 'woff', 'ttf'],
   maxImageSize: 10048 * 1024, // bytes
   debug: true

@@ -1,0 +1,29 @@
+.u-navbar {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+
+.u-navbar-logo {
+  background-image: url(mobileday-logo.png);
+  width: 230px;
+  height: 58px;
+  position: absolute;
+  left: 7vh;
+}
+
+.u-navbar nav {
+  margin: 7vh;
+  text-align: right;
+}
+
+.u-navbar nav a {
+  font-size: 1.3vw;
+  padding: 1vw;
+  color: $white;
+}
+
+.u-navbar nav a:hover {
+  color: $color-links-hover;
+  text-decoration: none;
+}

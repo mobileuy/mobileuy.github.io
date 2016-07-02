@@ -1,0 +1,32 @@
+.u-hero {
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: auto 70%, 60vw, 60vw, 55vw;
+
+  @include media-query(small) {
+    background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png);
+  }
+  @include media-query(large) {
+    background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png), url(parallax-3.png);
+  }
+}
+
+.o-hero-wrapper {
+  display: block;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $base-spacing-unit;
+  padding-left: $base-spacing-unit;
+  max-width: 646px;
+}
+
+.u-down-arrow {
+  background-image: url(ic-down.png);
+  width: 21px;
+  height: 12px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  bottom: 15px;
+}

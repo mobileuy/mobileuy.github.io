@@ -41,7 +41,8 @@ var logger = util.log;
 // -------------------------------------------
 
 var config = {
-  ejsFiles:       'app/views/!(_)*.ejs',
+  mainEjsFiles:   'app/views/**/!(_)*.ejs',
+  ejsFiles:       'app/views/**/*.ejs',
   scriptFiles:    'app/assets/javascripts/**/*.js',
   scssFiles:      'app/assets/stylesheets/scss/**/*.scss',
   scssMainFile:   'app/assets/stylesheets/scss/application.scss',
@@ -170,7 +171,7 @@ gulp.task('vendor', function() {
 
 // Compile html
 gulp.task('html', function() {
-    return gulp.src(config.ejsFiles)
+    return gulp.src(config.mainEjsFiles)
         .pipe(plumber({errorHandler: onError}))
         .pipe(ejs({
             title: "MobileDay Uruguay",

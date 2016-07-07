@@ -12,10 +12,10 @@
 // Settings
 // ==========================================================================
 
+@import "inuit/settings.defaults";
 @import "settings.global";
 @import "inuit/settings.responsive";
 @import "settings.colors";
-
 
 
 
@@ -27,11 +27,13 @@
 @import "inuit/tools.functions";
 @import "inuit/tools.mixins";
 @import "tools/tools.clearfix";
+@import "tools/tools.mixins";
 @import "tools/tools.hocus";
 @import "tools/tools.truncate";
 @import "inuit/tools.responsive";
 @import "inuit/tools.widths";
 @import "compass";
+@import "tools/tools.aliases";
 
 
 
@@ -82,6 +84,7 @@
 @import "components/alerts";
 @import "components/forms";
 @import "components/particles";
+@import "components/sitenav";
 
 
 // ==========================================================================

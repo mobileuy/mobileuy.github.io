@@ -11,6 +11,14 @@
   }
 }
 
+.home {
+  transition: padding-top .3s ease-in-out;
+}
+
+.home.in {
+  padding-top: 8rem;
+}
+
 .o-hero-wrapper {
   display: block;
   position: relative;

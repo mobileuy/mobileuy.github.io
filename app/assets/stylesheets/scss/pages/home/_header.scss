@@ -6,10 +6,16 @@
 
 .u-navbar-logo {
   background-image: url(mobileday-logo.png);
-  width: 230px;
-  height: 58px;
   position: absolute;
   left: 7vh;
+  width: 170px;
+  height: 43px;
+  background-size: contain;
+
+  @include media-query(start) {
+    width: 230px;
+    height: 58px;
+  }
 }
 
 .u-navbar nav {
@@ -18,8 +24,8 @@
 }
 
 .u-navbar nav a {
-  font-size: 1.3vw;
-  padding: 1vw;
+  font-size: 1rem;
+  padding: 0 1vw;
   color: $white;
 }
 

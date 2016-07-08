@@ -12,9 +12,9 @@
 // Settings
 // ==========================================================================
 
-@import "inuit/settings.defaults";
+@import "inuit-defaults";
 @import "settings.global";
-@import "inuit/settings.responsive";
+@import "inuit-responsive-settings";
 @import "settings.colors";
 
 
@@ -24,15 +24,14 @@
 // Tools
 // ==========================================================================
 
-@import "inuit/tools.functions";
-@import "inuit/tools.mixins";
+@import "inuit-functions";
+@import "inuit-mixins";
 @import "tools/tools.clearfix";
 @import "tools/tools.mixins";
 @import "tools/tools.hocus";
 @import "tools/tools.truncate";
-@import "inuit/tools.responsive";
-@import "inuit/tools.widths";
-@import "compass";
+@import "inuit-responsive-tools";
+@import "inuit-tools-widths";
 @import "tools/tools.aliases";
 
 
@@ -43,10 +42,10 @@
 // Generic
 // ==========================================================================
 
-@import "inuit/generic.normalize";
-@import "inuit/generic.reset";
-@import "inuit/generic.box-sizing";
-@import "inuit/generic.shared";
+@import "inuit-normalize";
+@import "inuit-reset";
+@import "inuit-box-sizing";
+@import "inuit-shared";
 
 
 
@@ -54,11 +53,11 @@
 // Base
 // ==========================================================================
 
-@import "inuit/base.page";
+@import "inuit-page";
 @import "base.page";
-@import "inuit/base.headings";
-@import "inuit/base.lists";
-@import "inuit/base.images";
+@import "inuit-headings";
+@import "inuit-lists";
+@import "inuit-images";
 
 
 
@@ -67,12 +66,12 @@
 // ==========================================================================
 
 @import "objects/wrappers";
-@import "inuit/objects.layout";
-@import "inuit/objects.pack";
+@import "inuit-layout";
+@import "inuit-pack";
 @import "objects/section";
 @import "objects/box";
-@import "inuit/objects.list-ui";
-@import "inuit/objects.list-inline";
+@import "inuit-list-ui";
+@import "inuit-list-inline";
 
 
 
@@ -91,11 +90,11 @@
 // Trumps
 // ==========================================================================
 
-@import "inuit/trumps.clearfix";
-@import "inuit/trumps.widths";
-@import "inuit/trumps.widths-responsive";
-@import "inuit/trumps.spacing";
-@import "inuit/trumps.spacing-responsive";
+@import "inuit-clearfix";
+@import "inuit-widths";
+@import "inuit-responsive-widths";
+@import "inuit-spacing";
+@import "inuit-responsive-spacing";
 @import "trumps/utils.overrides";
 @import "trumps/utils.backgrounds";
 @import "trumps/utils.borders";

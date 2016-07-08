@@ -7,7 +7,6 @@ var autoprefixer    = require('gulp-autoprefixer'),
     concat          = require('gulp-concat'),
     ejs             = require("gulp-ejs"),
     gulp            = require('gulp'),
-    compass         = require('gulp-compass'),
     minifycss       = require('gulp-minify-css'),
     open            = require('gulp-open'),
     plumber         = require('gulp-plumber'),
@@ -75,7 +74,7 @@ var onError = function(error) {
   this.emit('end');
 };
 
-var loadVendorComponents = function(source) {
+function loadVendorComponents(source) {
   var node_path = 'node_modules';
   var libs  = [];
 
@@ -88,7 +87,30 @@ var loadVendorComponents = function(source) {
   }
 
   return libs;
-};
+}
+
+var aliases = {};
+
+/**
+ * Will look for .scss|sass files inside the node_modules folder
+ */
+function npmModule(url, file, done) {
+    // check if the path was already found and cached
+    if(aliases[url]) {
+        return done({ file:aliases[url] });
+    }
+
+    // look for modules installed through npm
+    try {
+        var newPath = path.relative('./app/assets/stylesheets/css', require.resolve(url));
+        aliases[url] = newPath; // cache this request
+        return done({ file:newPath });
+    } catch(e) {
+        // if your module could not be found, just return the original url
+        aliases[url] = url;
+        return done({ file:url });
+    }
+}
 
 
 // -------------------------------------------
@@ -186,13 +208,7 @@ gulp.task('html', function() {
 gulp.task('sass', function() {
   return gulp.src(config.scssMainFile)
           .pipe(plumber({errorHandler: onError}))
-          .pipe(compass({
-              config_file: path.join(__dirname, 'compass_config.rb'),
-              project: path.join(__dirname, 'app', 'assets'),
-              sass: 'stylesheets/scss',
-              css: 'stylesheets/css'
-          }))
-          .pipe(sass({outputStyle: 'expanded'}))
+          .pipe(sass({ importer:npmModule, outputStyle: 'expanded' }))
           .pipe(rename(config.outputCSS))
           .pipe(gulp.dest(config.tmpPath));
 });

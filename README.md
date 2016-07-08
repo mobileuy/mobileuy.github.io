@@ -1,5 +1,4 @@
-# mobileuy.github.io
-Mobile Day Site
+# MobileDay Uruguay Site
 
 Install:
 - npm (https://www.npmjs.com)
@@ -7,7 +6,6 @@ Install:
 
 Install the dev dependencies:
 - npm install (on the project's root directory)
-- gem install compass
 
 Finally:
 - To build the project run `gulp`.

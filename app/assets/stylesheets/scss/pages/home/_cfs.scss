@@ -1,10 +1,6 @@
 .u-request-proposal {
   background-size: contain;
   background-position: center;
-  background-color: $color-brand-primary-dark; // Old browsers
-  @include filter-gradient($color-brand-secondary-light, $color-brand-primary-dark, horizontal); // IE6-9
-  @include background-image(
-                  url(pattern-03.png),
-                  linear-gradient(left, $color-brand-secondary-light 0%,#614ab1 41%,$color-brand-primary-dark 100%)
-  );
+  background: url(pattern-03.png),
+              linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
 }

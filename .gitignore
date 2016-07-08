@@ -8,15 +8,10 @@
 *.ipr
 
 # Downloaded dependencies
-bower_components/**
 node_modules/**
 
 # Auto-generated & intermediate files
-.sass-cache
 app/assets/stylesheets/css
 dist/**
 tmp/**
-
-
-# Logs
 npm-debug.log

@@ -1,6 +1,44 @@
 // Base heritage
 // ==========================================================================
 
+$content: '{ "particleCount" : 50 }';
+
+.variables-metadata:before {
+  content: $content;
+}
+
+head { font-family: $content; }
+
+@include media-query(start) {
+  $content: '{ "particleCount" : 100 }';
+
+  .variables-metadata:before {
+    content: $content;
+  }
+
+  head { font-family: $content; }
+}
+
+@include media-query(small) {
+  $content: '{ "particleCount" : 150 }';
+
+  .variables-metadata:before {
+    content: $content;
+  }
+
+  head { font-family: $content; }
+}
+
+@include media-query(large) {
+  $content: '{ "particleCount" : 250 }';
+
+  .variables-metadata:before {
+    content: $content;
+  }
+
+  head { font-family: $content; }
+}
+
 html {
   height: 100%;
 }
@@ -9,11 +47,9 @@ body {
   height: 100%;
   font-family: "Lato", sans-serif;
   font-weight: 300;
+
+
 }
-
-
-
-
 
 // Links
 // ==========================================================================

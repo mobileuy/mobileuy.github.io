@@ -65,9 +65,19 @@ Particles.prototype.render = function(){
 
   self.canvas.width = wWidth;
   self.canvas.height = wHeight;
+  self.numParticles = self.extractMetadata().particleCount;
 
   clearInterval(self.intervalId);
+
+  if (self.numParticles == 0) {
+    return;
+  }
+
   self.createCircle();
+}
+
+Particles.prototype.extractMetadata = function () {
+  return getBreakpoint(document.querySelector('.variables-metadata'));
 }
 
 /**

@@ -1,6 +1,21 @@
-.u-request-proposal {
+.u-cfs {
   background-size: contain;
   background-position: center;
   background: url(pattern-03.png),
               linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
+}
+
+.u-cfs h1 {
+  color: $white;
+  text-shadow: 0.125vh 0.125vh 0.250vh $black;
+  text-transform: uppercase;
+  text-align: left;
+
+  &.first-line {
+    font-weight: 300;
+  }
+
+  &.second-line {
+    font-weight: 700;
+  }
 }

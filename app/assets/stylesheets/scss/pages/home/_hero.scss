@@ -9,6 +9,22 @@
   @include media-query(large) {
     background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png), url(parallax-3.png);
   }
+
+  h1 {
+    font-size: 8vw;
+
+    @include media-query(small) {
+      @include inuit-font-size($inuit-heading-size-1);
+    }
+  }
+
+  h4 {
+    font-size: 5vw;
+
+    @include media-query(small) {
+      @include inuit-font-size($inuit-heading-size-4);
+    }
+  }
 }
 
 .home {

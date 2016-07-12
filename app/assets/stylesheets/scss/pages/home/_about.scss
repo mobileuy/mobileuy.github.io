@@ -3,10 +3,20 @@
   background-size: cover;
   background-position: center;
   background-color: #4a91e0;
+
+  & h1 {
+    color: $white;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10vh;
+  }
 }
 
-.u-about {
-  background-size: cover;
-  background-position: center;
+.u-about-content {
   background-color: $white;
+  padding: 5vh;
+
+  & h5 .highlight-text {
+    color: $color-brand-primary;
+  }
 }

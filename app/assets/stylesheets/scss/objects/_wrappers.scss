@@ -29,3 +29,10 @@ $wraper-width-small:   1100px  !default;
     max-width: $wraper-width-small;
   }
 }
+
+.o-wrapper-no-margin {
+  @extend .o-wrapper;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}

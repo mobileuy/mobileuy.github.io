@@ -1,0 +1,38 @@
+footer {
+  background-color: $color-footer;
+
+  & .u-footer-logo {
+    background-image: url(mobileday-logo-greyscale.png);
+    position: absolute;
+    width: 170px;
+    height: 43px;
+    background-size: contain;
+    opacity: 0.5;
+
+    @include media-query(start) {
+      width: 230px;
+      height: 58px;
+    }
+  }
+
+  & .transparent-separator {
+    opacity: 0.5;
+  }
+
+  & li {
+    color: white;
+  }
+
+  & .u-footer-right-graphic {
+    background-image: url(ic-simbol.png);
+    position: absolute;
+    width: 48px;
+    height: 85px;
+    background-size: contain;
+
+    @include media-query(start) {
+      width: 98px;
+      height: 171px;
+    }
+  }
+}

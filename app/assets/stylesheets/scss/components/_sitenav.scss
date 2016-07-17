@@ -48,171 +48,80 @@ $logo-height:   64px;
     @include media-query(start) {
         @include font-size(16px);
     }
+}
 
-    /**
-     * If the site nav exists in a masthead, we absolutely position it. We have
-     * to do this because the masthead has a fixed height, partially governed by
-     * a faux-fluid-height technique which utilises a zeroed `height` and a
-     * large `padding-top` value, ergo, we *have* to take the nav out of flow.
-     */
-    .page-head--masthead & {
-        position: absolute;
-        top:   0;
-        right: $spacing-unit--small;
-        left:  $spacing-unit--small;
+.site-nav__home {
+    display: block;
+    float: left;
+}
 
-        @include media-query(start) {
-            top:   0;
-            right: $spacing-unit;
-            left:  $spacing-unit;
+.site-nav__logo {
+    display: block;
+}
+
+.site-nav__logo-fill {
+    fill: $color-brand-primary;
+}
+
+/**
+ * On smaller viewports, the nav is a 2x2 grid of links that lies perfectly
+ * fluch with the top and bottom of the home link. On larger viewports, the
+ * nav becomes a single row of links vertically centred to the logo, but
+ * way over to the right.
+ */
+.site-nav__list {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    height: 0;
+    transition: height .3s ease-in-out;
+    clear: both;
+
+    @include media-query(small) {
+        float: right;
+        overflow: visible;
+        height: auto;
+        transition: none;
+        clear: none;
+    }
+}
+
+.site-nav__list.in {
+  height: 8rem;
+
+  .site-nav__item {
+    width: auto;
+    float: none;
+  }
+}
+
+.site-nav__item {
+    @include media-query(small) {
+        float: left;
+        width: auto;
+
+        &:last-child a {
+            padding-right: 0;
         }
 
     }
 
 }
 
-    .site-nav__home {
-        display: block;
-        float: left;
+.site-nav__link {
+    display: block;
+    padding-right: 12px;
+    padding-left:  12px;
+    line-height: halve($logo-height);
+    color: $color-site-nav;
+
+    @include attention() {
+        text-decoration: none;
+        color: $color-links;
     }
 
-        .site-nav__logo {
-            display: block;
-        }
-
-            .site-nav__logo-fill {
-                fill: $color-brand-primary;
-
-                .page-head--masthead & {
-                    fill: $color-page-head;
-                }
-
-            }
-
-    /**
-     * On smaller viewports, the nav is a 2x2 grid of links that lies perfectly
-     * fluch with the top and bottom of the home link. On larger viewports, the
-     * nav becomes a single row of links vertically centred to the logo, but
-     * way over to the right.
-     */
-    .site-nav__list {
-        margin:  0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        height: 0;
-        transition: height .3s ease-in-out;
-        clear: both;
-
-        @include media-query(small) {
-            float: right;
-            overflow: visible;
-            height: auto;
-            transition: none;
-            clear: none;
-        }
-
+    @include media-query(small) {
+        line-height: $logo-height;
     }
-
-    .site-nav__list.in {
-      height: 8rem;
-
-      .site-nav__item {
-        width: auto;
-        float: none;
-      }
-    }
-        .site-nav__item {
-
-            @include media-query(small) {
-                float: left;
-                width: auto;
-
-                &:last-child a {
-                    padding-right: 0;
-                }
-
-            }
-
-        }
-
-            .site-nav__link {
-                display: block;
-                padding-right: 12px;
-                padding-left:  12px;
-                line-height: halve($logo-height);
-                color: $color-site-nav;
-
-                @include attention() {
-                    text-decoration: none;
-                    color: $color-links;
-                }
-
-                @include media-query(small) {
-                    line-height: $logo-height;
-                }
-
-                .page-head--masthead & {
-
-                    @include attention(self) {
-                        color: $color-masthead;
-                    }
-
-                    @include attention() {
-                        text-decoration: underline;
-                    }
-
-                }
-
-            }
-
-            /**
-             * The current state for the nav (in large-screen view) is a notched
-             * out triangle lying toward the bottom of the page head. We apply
-             * this styling to a silent class which we then extend out of the
-             * loop below.
-             */
-            %site-nav__current {
-                color: $color-links;
-
-                @include media-query(start) {
-
-                    $notch-size: halve($spacing-unit);
-
-                    position: relative;
-
-                    &:before,
-                    &:after {
-                        content: "";
-                        position: absolute;
-                        left: 50%;
-                        pointer-events: none;
-                        border-style: solid;
-                        border-color: transparent;
-                    }
-
-                    &:before {
-                        border-width: $notch-size;
-                        border-bottom-color: #f2f2f2;
-                        margin-left: -$notch-size;
-                        bottom: -$spacing-unit;
-                    }
-
-                    &:after {
-                        border-width: $notch-size - 1;
-                        border-bottom-color: $inuit-base-background-color;
-                        margin-left: -($notch-size - 1);
-                        bottom: -($spacing-unit + 1);
-                    }
-
-                }
-
-            }
-
-            @each $page in about, speaking, case-studies, hire-me {
-
-                .page--#{$page} .site-nav__#{$page} {
-                    @extend %site-nav__current;
-                }
-
-            }
+}

@@ -1,22 +1,29 @@
-.u-about-title {
-  background-image: url(pattern-02.png);
-  background-size: cover;
-  background-position: center;
-  background-color: #4a91e0;
-
-  & h1 {
-    color: $white;
-    font-weight: 800;
-    text-transform: uppercase;
-    padding: 10vh 0;
+#about {
+  & .o-section__title {
+    padding: 7%;
+    background: #4a91e0 url(pattern-02.png) center;
+    background-size: cover;
   }
-}
 
-.u-about-content {
-  background-color: $white;
-  padding: 5vh;
+  & article {
+    padding: 3% 12%;
 
-  & h5 .highlight-text {
-    color: $color-brand-primary;
+    & p {
+      font-size: 120%;
+      text-align: justify;
+
+      @include media-query(start) {
+        font-size: 140%;
+      }
+
+      & span {
+        color: $color-brand-primary;
+        font-weight: bold;
+      }
+
+      & a {
+        font-weight: bold;
+      }
+    }
   }
 }

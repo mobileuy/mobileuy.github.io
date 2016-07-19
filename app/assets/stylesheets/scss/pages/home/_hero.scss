@@ -45,12 +45,17 @@
   max-width: 576px;
 }
 
-.u-down-arrow {
-  background-image: url(ic-down.png);
-  width: 21px;
-  height: 12px;
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+.explore {
+  width: 5vh;
+  height: 5vh;
+  fill: #e6e6e6;
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
-  bottom: 15px;
+  bottom: 1vh;
+  animation: fadeIn 2s infinite alternate;
 }

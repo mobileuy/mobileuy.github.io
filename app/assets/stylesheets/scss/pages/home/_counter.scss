@@ -1,19 +1,20 @@
-.u-counter {
+#counter {
+  height: 50%;
   background-size: contain;
   background-position: center;
   background: url(pattern-01.png),
               linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
 
   & h1 {
-    font-size: 9vw;
+    font-size: 700%;
     font-weight: 500;
     color: $white;
     text-shadow: 0.125vh 0.125vh 0.250vh $black;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   & h5 {
-    font-size: 4vw;
     color: $white;
     font-weight: 500;
   }

@@ -40,4 +40,4 @@ function initializeClock(id, endtime) {
 
 
 var deadline = 'November 12 2016 09:00:00 GMT-0300';
-initializeClock('countdown_timer', deadline);
+initializeClock('counter', deadline);

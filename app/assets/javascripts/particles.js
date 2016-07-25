@@ -208,7 +208,7 @@ Particles.prototype.clearCanvas = function(){
 
 
 // go go go!
-$(".canvas").each(function(index, element) {
+$(".c-particles").each(function(index, element) {
   var particle = new Particles(element);
   particle.init();
   $(window).on('resize', $.proxy(particle.render, particle));

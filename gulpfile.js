@@ -236,30 +236,6 @@ gulp.task('images', function () {
         .pipe(gulp.dest(config.tmpPath));
 });
 
-// Minify css
-// gulp.task('minifycss', function() {
-//   return gulp.src(config.cssOutputFilePath)
-//           .pipe(plumber({ errorHandler: onError }))
-//           .pipe(sourcemaps.init())
-//           .pipe(minifycss({keepBreaks: true}))
-//           .pipe(rename({
-//               suffix: '.min'
-//           }))
-//           .pipe(sourcemaps.write())
-//           .pipe(gulp.dest(config.distPath))
-// });
-
-// Minify js
-//gulp.task('minifyjs', function() {
-//  return gulp.src([config.outputJSVendorFilePath, config.outputJSFilePath])
-//    .pipe(plumber({ errorHandler: onError }))
-//    .pipe(uglify())
-//    .pipe(rename({
-//      basename: 'mobileuy',
-//      suffix: '.min'
-//    }))
-//    .pipe(gulp.dest(config.distPath))
-//});
 
 gulp.task('open', function () {
     return gulp.src(path.join(config.distPath, 'index.html'))

@@ -47,5 +47,8 @@
     "jquery": "~3.0.0",
     "run-sequence": "^1.1.2",
     "vinyl-paths": "^2.1.0"
+  },
+  "dependencies": {
+    "inuit-spacing": "^0.7.0"
   }
 }

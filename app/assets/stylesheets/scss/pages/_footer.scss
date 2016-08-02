@@ -48,25 +48,22 @@ footer {
       height: 30px;
       color: rgba(255,255,255,0.5);
       border-radius: 30px;
-      border: 1px solid rgba(255,255,255,0.5);
       margin: 3px;
+      transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 
       &:hover, &:focus, &:active {
         color: $white;
 
         &.twitter {
           background: #1DA1F2;
-          border-color: #1DA1F2;
         }
 
         &.facebook {
-          background: #3B5998;
-          border-color: #3B5998;
+          background: #4267B2;
         }
 
         &.linkedin {
           background: #0E76A8;
-          border-color: #0E76A8;
         }
       }
     }

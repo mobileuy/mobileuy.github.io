@@ -102,7 +102,7 @@ $max-widths: 72 200 400 500 600 800 1024;
 // Heights
 // ==========================================================================
 
-$heights: 100 90 80 75 70 60 50 40 30 25 10;
+$heights: 100 90 80 75 70 60 50 40 30 25 20 15 10;
 
 @each $h in $heights {
   .u-height--#{$h} {
@@ -125,6 +125,7 @@ $our-colors: (
   black: black,
 
   orange:   $color-brand-primary,
+  primary:  $color-brand-primary,
 
   grey:     $color-grey,
 

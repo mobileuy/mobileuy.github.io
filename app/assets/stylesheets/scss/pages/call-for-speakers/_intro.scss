@@ -1,0 +1,59 @@
+#intro {
+
+  & article {
+
+    & h1 {
+      color: $color-brand-primary;
+      font-weight: 400;
+      font-size: 4em;
+    }
+
+    & p {
+      font-size: 1.3em;
+      text-align: justify;
+
+      @include media-query(start) {
+        font-size: 1.4em;
+      }
+
+      & span {
+        color: $color-brand-primary;
+        font-weight: bold;
+      }
+
+      & a {
+        font-weight: bold;
+      }
+    }
+  }
+
+  & .lead {
+    font-size: 1.7em;
+
+    @include media-query(start) {
+      font-size: 1.9em;
+    }
+  }
+
+  & a.submit-action {
+    background-color: $color-brand-primary;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 15px 55px;
+
+    &:hover {
+      background-color: darken($white, 5%);
+      color: $color-brand-primary;
+    }
+  }
+
+  p.centered {
+    text-align: center;
+  }
+
+  & h2 {
+    text-align: left;
+  }
+}

@@ -1,87 +1,90 @@
 footer {
   background-color: $color-footer;
 
-  & .u-footer-logo {
-    background-image: url(mobileday-logo-greyscale.png);
-    position: absolute;
-    width: 170px;
-    height: 43px;
-    background-size: contain;
-    opacity: 0.5;
-
-    @include media-query(start) {
-      width: 230px;
-      height: 58px;
-    }
-  }
-
-  & .transparent-separator {
-    opacity: 0.5;
-  }
-
-  & li {
-    color: white;
-  }
-
-  & .u-footer-right-graphic {
-    background-image: url(ic-simbol.png);
-    position: absolute;
-    width: 48px;
-    height: 85px;
-    background-size: contain;
-
-    @include media-query(start) {
-      width: 98px;
-      height: 171px;
-    }
-  }
-
-  .social-nav {
-    position: absolute;
-    bottom: 3%;
-    left: 50%;
-    transform: translate(-50%, 0);
-
-    a {
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      color: rgba(255,255,255,0.5);
-      border-radius: 30px;
-      margin: 3px;
+  @include media-query(start) {
+    & .u-footer-logo {
+      background-image: url(mobileday-logo.png);
+      filter: grayscale(100%);
+      position: absolute;
+      width: 170px;
+      height: 43px;
+      background-size: contain;
+      opacity: 0.5;
       transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 
-      &:hover, &:focus, &:active {
-        color: $white;
-
-        &.twitter {
-          background: #1DA1F2;
-        }
-
-        &.facebook {
-          background: #4267B2;
-        }
-
-        &.linkedin {
-          background: #0E76A8;
-        }
-
-        &.youtube {
-          background: #E62117;
-        }
-
-        &.github {
-          background: #333;
-        }
-
-        &.meetup {
-          background: #ED1C40;
-        }
-
-        &.email {
-          background: #FFCC00;
-        }
+      &:hover {
+        filter: none;
+        opacity: 1;
       }
     }
+
+    & .u-footer-right-graphic {
+      background-image: url(ic-simbol.png);
+      position: absolute;
+      width: 48px;
+      height: 85px;
+      background-size: contain;
+    }
+  }
+}
+
+.social-nav {
+  a {
+    display: inline-block;
+  }
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  margin: 3px;
+  border-radius: 50%;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  color: rgba(255,255,255,0.5);
+
+  &:hover, &:focus, &:active {
+    color: $white;
+  }
+}
+
+.twitter {
+  &:hover, &:focus, &:active {
+    background: #1DA1F2;
+  }
+}
+
+.facebook {
+  &:hover, &:focus, &:active {
+    background: #4267B2;
+  }
+}
+
+.linkedin {
+  &:hover, &:focus, &:active {
+    background: #0E76A8;
+  }
+}
+
+.youtube {
+  &:hover, &:focus, &:active {
+    background: #E62117;
+  }
+}
+
+.github {
+  &:hover, &:focus, &:active {
+    background: #333;
+  }
+}
+
+.meetup {
+  &:hover, &:focus, &:active {
+    background: #ED1C40;
+  }
+}
+
+.email {
+  &:hover, &:focus, &:active {
+    background: #FFCC00;
   }
 }

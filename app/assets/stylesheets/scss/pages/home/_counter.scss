@@ -1,12 +1,16 @@
 #counter {
-  height: 50%;
+  padding: 5% 0;
   background-size: contain;
   background-position: center;
   background: url(pattern-01.png),
-              linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
+  linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
+}
 
-  & h1 {
-    font-size: 700%;
+.counter-item {
+  padding: 0 0 $base-spacing-unit $base-spacing-unit;
+
+  h1 {
+    font-size: 300%;
     font-weight: 500;
     color: $white;
     text-shadow: 0.125vh 0.125vh 0.250vh $black;
@@ -14,8 +18,21 @@
     margin-bottom: 0;
   }
 
-  & h5 {
+  h6 {
     color: $white;
     font-weight: 500;
+    margin-bottom: 0;
+  }
+}
+
+@include media-query(small) {
+  .counter-item {
+    h1 {
+      font-size: 700%;
+    }
+
+    h6 {
+      font-size: 150%;
+    }
   }
 }

@@ -7,6 +7,7 @@ var autoprefixer    = require('gulp-autoprefixer'),
     concat          = require('gulp-concat'),
     ejs             = require("gulp-ejs"),
     gulp            = require('gulp'),
+    inlineimg       = require('gulp-inline-image-html'),
     minifycss       = require('gulp-minify-css'),
     open            = require('gulp-open'),
     plumber         = require('gulp-plumber'),
@@ -45,6 +46,7 @@ var config = {
   scriptFiles:    'app/assets/javascripts/**/*.js',
   scssFiles:      'app/assets/stylesheets/scss/**/*.scss',
   scssMainFile:   'app/assets/stylesheets/scss/application.scss',
+  imagesDir:      'app/assets/images',
   distPath:       'dist',
   tmpPath:        'tmp',
   outputCSS:      'mobileuy.css',
@@ -57,8 +59,9 @@ var config = {
 config.cssOutputFilePath      = path.join(config.tmpPath, config.outputCSS);
 config.outputJSFilePath       = path.join(config.tmpPath, config.outputJS);
 config.outputJSVendorFilePath = path.join(config.tmpPath, config.outputJSVendor);
+
 config.base64 = {
-  baseDir: 'app/assets/images',
+  baseDir: config.imagesDir,
   extensions: ['png', 'svg', 'jpg', 'eot', 'woff2', 'woff', 'ttf'],
   maxImageSize: 10048 * 1024, // bytes
   debug: true
@@ -120,8 +123,7 @@ function npmModule(url, file, done) {
 gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function() {
-  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass',
-      'autoprefixer', 'images', 'dist', 'open');
+  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'autoprefixer', 'dist', 'open');
 });
 
 gulp.task('watch', function() {
@@ -136,7 +138,7 @@ gulp.task('watch', function() {
 // -------------------------------------------
 
 gulp.task('compile:css', function() {
-  runSequence('sass', 'images', 'autoprefixer', 'dist');
+  runSequence('sass', 'autoprefixer', 'dist');
 });
 
 gulp.task('compile:js', function() {
@@ -153,7 +155,7 @@ gulp.task('compile:html', function() {
 // -------------------------------------------
 
 // Copy files from 'tmp' to 'dist'
-gulp.task('dist', ['clean:dist'], function(){
+gulp.task('dist', ['clean:dist'], function() {
     return gulp.src(path.join(config.tmpPath, '*'))
         .pipe(gulp.dest(config.distPath));
 });
@@ -165,7 +167,7 @@ gulp.task('clean:dist', function() {
 });
 
 // Clean folder tmp
-gulp.task('clean:tmp', function(){
+gulp.task('clean:tmp', function() {
     return gulp.src(config.tmpPath)
         .pipe(vinylPaths(del));
 });
@@ -194,22 +196,24 @@ gulp.task('vendor', function() {
 // Compile html
 gulp.task('html', function() {
     return gulp.src(config.mainEjsFiles)
-        .pipe(plumber({errorHandler: onError}))
+        .pipe(plumber({ errorHandler: onError }))
         .pipe(ejs({
             title: "MobileDay Uruguay",
             jsVendorFileName: config.outputJSVendor,
             jsFileName: config.outputJS,
             cssFileName: config.outputCSS
         }, { ext: ".html" }))
+        .pipe(inlineimg(config.imagesDir))
         .pipe(gulp.dest(config.tmpPath));
 });
 
 // Compile sass.
 gulp.task('sass', function() {
   return gulp.src(config.scssMainFile)
-          .pipe(plumber({errorHandler: onError}))
+          .pipe(plumber({ errorHandler: onError }))
           .pipe(sass({ importer:npmModule, outputStyle: 'expanded' }))
           .pipe(rename(config.outputCSS))
+          .pipe(base64(config.base64))
           .pipe(gulp.dest(config.tmpPath));
 });
 
@@ -228,14 +232,6 @@ gulp.task('autoprefixer', function() {
           ))
           .pipe(gulp.dest(config.tmpPath));
 });
-
-// Preprocess Images
-gulp.task('images', function () {
-    return gulp.src(config.cssOutputFilePath)
-        .pipe(base64(config.base64))
-        .pipe(gulp.dest(config.tmpPath));
-});
-
 
 gulp.task('open', function () {
     return gulp.src(path.join(config.distPath, 'index.html'))

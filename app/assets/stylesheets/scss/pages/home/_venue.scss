@@ -2,61 +2,36 @@
   height: 90%;
 }
 
-#map{
+#map {
   height: 100%;
 }
 
-.map-subsection {
+.venue-details {
   height: 100%;
-  background: url(map.png) no-repeat center;
-  background-size: cover;
-}
-
-.panel-subsection {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: $color-map-primary-dark;
   opacity: 0.9;
-
   color: $white;
 
-  .venue-details {
-    padding-top: 10%;
-    padding-left: 7%;
+  padding-top: 10%;
+  padding-left: 7%;
 
-    h1 {
-      text-transform: uppercase;
-      font-size: 300%;
-      font-weight: 600;
-      margin-bottom: 10%;
-    }
-
-    h2 {
-      font-size: 200%;
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-bottom: 0;
-    }
-
-    h3 {
-      font-size: 150%;
-      font-weight: 300;
-      margin-bottom: 0;
-    }
+  h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 10%;
   }
 
-  .contact-details {
-    position: absolute;
-    bottom: 15%;
-    width: 100%;
-    font-size: 150%;
+  h2 {
+    font-size: 2em;
     font-weight: 400;
-    text-align: center;
-    p {
-      margin-bottom: 0;
-    }
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 0;
   }
 }

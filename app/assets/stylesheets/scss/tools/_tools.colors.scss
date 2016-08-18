@@ -1,0 +1,11 @@
+$palette: (
+  'primary': $color-brand-primary,
+  'secondary': $color-brand-secondary,
+  'secondary-light': $color-brand-secondary-light,
+  'primary-dark': $color-brand-primary-dark,
+  'white': #fff,
+);
+
+@function palette($some-color) {
+  @return map-get($palette, "#{$some-color}");
+};

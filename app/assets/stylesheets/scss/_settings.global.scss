@@ -18,7 +18,7 @@ $inuit-namespace:             null !default;
 // Fonts size & Line heights
 // ==========================================================================
 
-$base-font-size:              16px;
+$base-font-size:              18px;
 $inuit-base-font-size:        $base-font-size;
 
 //
@@ -55,8 +55,8 @@ $inuit-use-fractions:         false;
 // https://github.com/inuitcss/settings.responsive/blob/master/_settings.responsive.scss
 $breakpoints: (
     "start"          "screen and (min-width: 450px)",
-    "small"          "screen and (min-width: 873px)",
-    "large"          "screen and (min-width: 1200px)",
+    "small"          "screen and (min-width: 800px)",
+    "large"          "screen and (min-width: 1000px)",
 );
 
 //https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss

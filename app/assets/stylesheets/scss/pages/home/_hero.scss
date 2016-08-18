@@ -1,8 +1,13 @@
-.u-hero {
+.c-hero {
   height: 100%;
   background-repeat: no-repeat;
   background-position: center 50%;
-  background-size: auto 70%, 60vw, 60vw, 55vw;
+  background-size: auto 70%, 60% auto, 60vw, 55vw;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1;
 
   @include media-query(small) {
     background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png);
@@ -10,73 +15,15 @@
   @include media-query(large) {
     background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png), url(parallax-3.png);
   }
-
-  & h1 {
-    font-size: 8vw;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: left;
-
-    &.first-line {
-      color: $white;
-    }
-
-    &.second-line {
-      color: $color-brand-primary;
-    }
-
-    @include media-query(small) {
-      @include inuit-font-size($inuit-heading-size-1);
-    }
-  }
-
-  & h4 {
-    font-size: 5vw;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: right;
-
-    &.third-line {
-      color: $white;
-    }
-
-    @include media-query(small) {
-      @include inuit-font-size($inuit-heading-size-4);
-    }
-  }
 }
 
-#home {
-  transition: padding-top .3s ease-in-out;
-  height: 100%;
-}
-
-#home.in {
-  padding-top: 8rem;
-}
-
-.o-hero-wrapper {
-  height: 100%;
+.c-hero__arrow {
   display: block;
-  position: relative;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $base-spacing-unit;
-  padding-left: $base-spacing-unit;
-  max-width: 584px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-}
-
-.explore {
-  width: 5vh;
-  height: 5vh;
-  color: #e6e6e6;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  bottom: 1vh;
+  width: 45px;
+  height: 45px;
   animation: fadeIn 2s infinite alternate;
+  position: absolute;
+  bottom: $base-spacing-unit;
+  left: 50%;
+  transform: translateX(-50%);
 }

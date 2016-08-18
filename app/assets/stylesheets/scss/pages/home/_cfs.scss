@@ -1,39 +1,9 @@
-#cfs {
-  height: 40%;
-  background-size: contain;
-  background-position: center;
+.c-cfs {
+  margin: ($base-spacing-unit * 4) 0;
+  padding: ($base-spacing-unit * 4) 0;
   background: url(pattern-03.png),
-              linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
-
-
-  & span {
-    color: $white;
-    text-shadow: 0.125vh 0.125vh 0.250vh $black;
-    text-transform: uppercase;
-    font-size: 120%;
-
-
-    &.first-line {
-      font-weight: 300;
-    }
-
-    &.second-line {
-      font-weight: 700;
-    }
-  }
-
-  & a {
-    background-color: $white;
-    color: $color-brand-secondary-light;
-    font-size: 200%;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 20px;
-    padding: 15px 55px;
-
-    &:hover {
-      background-color: darken($white, 5%);
-    }
-  }
+              linear-gradient(120deg, $color-brand-secondary-light 30%, $color-brand-secondary 70%);
+  background-position: center;
+  color: $white;
+  text-transform: uppercase;
 }
-

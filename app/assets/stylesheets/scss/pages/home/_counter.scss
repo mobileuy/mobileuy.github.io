@@ -1,38 +1,42 @@
-#counter {
-  padding: 5% 0;
-  background-size: contain;
+.c-counter {
+  margin: ($base-spacing-unit * 4) 0;
+  padding: ($base-spacing-unit * 4) 0;
   background-position: center;
   background: url(pattern-01.png),
-  linear-gradient(to right, $color-brand-secondary-light 0%, #614ab1 41%, $color-brand-primary-dark 100%);
+  linear-gradient(120deg, $color-brand-secondary-light 30%, $color-brand-primary-dark 70%);
+  text-align: center;
+  color: $white;
 }
 
-.counter-item {
-  padding: 0 0 $base-spacing-unit $base-spacing-unit;
+.c-counter__number {
+  font-size: 32px;
+  font-weight: 800;
+  color: $white;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  @extend %u-text-shadow;
 
-  h1 {
-    font-size: 300%;
-    font-weight: 500;
-    color: $white;
-    text-shadow: 0.125vh 0.125vh 0.250vh $black;
-    text-transform: uppercase;
-    margin-bottom: 0;
+  @include media-query(start) {
+    font-size: 44px;
   }
-
-  h6 {
-    color: $white;
-    font-weight: 500;
-    margin-bottom: 0;
+  @include media-query(small) {
+    font-size: 68px;
   }
 }
 
-@include media-query(small) {
-  .counter-item {
-    h1 {
-      font-size: 700%;
-    }
+.c-counter__unit {
+  color: $white;
+  font-weight: 300;
+  margin-bottom: 0;
+  display: block;
+  line-height: 1;
+  font-size: 13px;
 
-    h6 {
-      font-size: 150%;
-    }
+  @include media-query(start) {
+    font-size: 18px;
+  }
+  @include media-query(small) {
+    font-size: 24px;
   }
 }

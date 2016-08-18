@@ -1,0 +1,149 @@
+//Navbar
+
+.c-navbar {
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  padding-bottom: 0;
+  padding: $base-spacing-unit;
+
+  @include media-query(start) {
+    padding: $base-spacing-unit * 3;
+  }
+}
+
+.c-navbar__logo {
+  background-image: url(mobileday-logo.png);
+  float: left;
+  width: 170px;
+  height: 43px;
+  background-size: contain;
+
+  @include media-query(start) {
+    width: 230px;
+    height: 58px;
+  }
+}
+
+// Menu
+
+.c-menu {
+  float: right;
+
+}
+
+.c-menu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  visibility: hidden;
+  background-color: transparent;
+  transform: translateY(-$base-spacing-unit);
+  transition: background-color $base-transition, transform $base-transition;
+
+  &.in {
+    visibility: visible;
+    transform: translateY(0);
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: $base-spacing-unit;
+    padding-top: 84px;
+    background-color: rgba(#000, 0.8);
+    min-height: 800px;
+    z-index: -1;
+
+    @include media-query(start) {
+      padding: $base-spacing-unit * 3;
+      padding-top: 178px;
+    }
+  }
+
+  @include media-query(small) {
+    transform: none;
+    visibility: visible;
+    position: relative;
+    display: block;
+  }
+}
+
+.c-menu__item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+
+  @include media-query(small) {
+    margin-left: $base-spacing-unit;
+    display: inline-block;
+  }
+}
+
+.c-menu__link {
+  color: #fff;
+  display: block;
+  line-height: 43px;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include media-query(start) {
+    line-height: 58px;
+  }
+}
+
+// Mobile Menu toggler
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 0;
+  margin: 15px 0 0 0;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0;
+
+  @include media-query(small) {
+    display: none;
+  }
+}
+
+
+.navbar-toggle {
+
+  .icon-bar {
+    display: block;
+    width: $base-spacing-unit;
+    height: 4px;
+    background-color: $white;
+    transition: transform $base-transition, opacity $base-transition;
+    opacity: 1;
+    transform: rotate(0);
+    margin-top: 4px;
+  }
+
+  .icon-bar:nth-child(1) {
+    transform-origin: bottom right;
+  }
+  &:not(.collapsed) .icon-bar:nth-child(1) {
+    transform: rotate(-45deg);
+  }
+  &:not(.collapsed) .icon-bar:nth-child(2) {
+    opacity: 0;
+  }
+  .icon-bar:nth-child(3) {
+    transform-origin: top right;
+  }
+  &:not(.collapsed) .icon-bar:nth-child(3) {
+    transform: rotate(45deg) translateY(-1px);
+  }
+
+}

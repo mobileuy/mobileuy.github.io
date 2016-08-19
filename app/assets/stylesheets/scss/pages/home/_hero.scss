@@ -15,6 +15,35 @@
   @include media-query(large) {
     background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png), url(parallax-3.png);
   }
+
+  h1{
+    max-width: 496px;
+    margin: 0 auto;
+    font-size: 31px;
+
+    @include media-query(start) {
+      font-size: 44px;
+    }
+    @include media-query(small) {
+      font-size: 56px;
+    }
+  }
+  h4 {
+    max-width: 496px;
+    margin: 0 auto;
+    font-size: 22px;
+
+    @include media-query(start) {
+      font-size: 28px;
+    }
+    @include media-query(small) {
+      font-size: 32px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
 }
 
 .c-hero__arrow {
@@ -26,4 +55,5 @@
   bottom: $base-spacing-unit;
   left: 50%;
   transform: translateX(-50%);
+  color: #e6e6e6;
 }

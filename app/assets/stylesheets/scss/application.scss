@@ -11,7 +11,6 @@
 // ==========================================================================
 // Settings
 // ==========================================================================
-
 @import "inuit-defaults";
 @import "settings.global";
 @import "inuit-responsive-settings";
@@ -29,10 +28,9 @@
 @import "tools/tools.clearfix";
 @import "tools/tools.mixins";
 @import "tools/tools.hocus";
-@import "tools/tools.truncate";
+@import "tools/tools.colors";
 @import "inuit-responsive-tools";
 @import "inuit-tools-widths";
-@import "tools/tools.aliases";
 
 
 
@@ -68,7 +66,6 @@
 @import "objects/wrappers";
 @import "inuit-layout";
 @import "inuit-pack";
-@import "objects/section";
 @import "objects/box";
 @import "inuit-list-ui";
 @import "inuit-list-inline";
@@ -79,11 +76,20 @@
 // Components
 // ==========================================================================
 
+@import "components/header";
+@import "components/footer";
 @import "components/buttons";
 @import "components/alerts";
 @import "components/forms";
 @import "components/particles";
-@import "components/sitenav";
+
+@import "pages/home/hero";
+@import "pages/home/counter";
+@import "pages/home/about";
+@import "pages/home/cfs";
+@import "pages/call-for-speakers/intro";
+@import "pages/call-for-speakers/form";
+
 
 
 // ==========================================================================
@@ -96,24 +102,6 @@
 @import "inuit-spacing";
 @import "inuit-responsive-spacing";
 @import "trumps/utils.overrides";
-@import "trumps/utils.backgrounds";
-@import "trumps/utils.borders";
-@import "trumps/utils.layers";
 @import "trumps/utils";
-@import "trumps/utils.states";
+@import "trumps/utils.colors";
 @import "trumps/utils.visibility";
-
-
-// ==========================================================================
-// Pages
-// ==========================================================================
-@import "pages/header";
-@import "pages/home/hero";
-@import "pages/home/counter";
-@import "pages/home/about";
-@import "pages/home/cfs";
-@import "pages/home/sponsors";
-@import "pages/home/venue";
-@import "pages/footer";
-@import "pages/call-for-speakers/intro";
-@import "pages/call-for-speakers/form";

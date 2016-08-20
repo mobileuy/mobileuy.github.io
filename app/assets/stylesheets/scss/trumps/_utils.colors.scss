@@ -1,0 +1,13 @@
+@for $i from 1 through length($palette) {
+  .u-color--#{nth(map-keys($palette), $i)} {
+    color: nth(map-values($palette), $i) !important;
+  }
+
+  .u-bg--#{nth(map-keys($palette), $i)} {
+    background-color: nth(map-values($palette), $i) !important;
+  }
+}
+
+.u-bg--white-layer {
+  background-color: rgba($white, 0.1);
+}

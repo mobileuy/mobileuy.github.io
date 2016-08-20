@@ -1,81 +1,33 @@
-.c-title {
+.c-about__title{
+  color: palette(white);
+  text-transform: uppercase;
+  font-weight: 700;
+  background: palette('primary') url('pattern-02.png') center;
+  padding: $base-spacing-unit;
+  text-align: center;
 
-  &--patterns {
+  @include media-query(large) {
+    transform: rotate(270deg) translateY(-$base-spacing-unit);
+    transform-origin: center center;
+    margin: 0;
+    padding-top: 100%;
+    position: relative;
 
-    &-1{
-      background-image: url('pattern-01.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    &-2{
-      background-image: url('pattern-02.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-    &-3{
-      background-image: url('pattern-03.png');
-      background-size: cover;
-      background-position: center;
-    }
-
-  }
-
-  &--bg-color {
-    &-blue {
-      background-color: #4a91e0;
+    > span {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
-
 }
 
-.c-about {
-
-  &__title{
-
-    transform: rotate(270deg);
-    position: absolute;
-    right: -100px;
-    top: calc(50% - 50px);
-    font-size: 90px;
-    text-transform: uppercase;
-    font-weight: 700;
-
-    &-container {
-      margin-top: 50%;
-      height: 50%;
-      position: relative;
-      text-align: center;
-    }
-
-  }
-
-}
-
-
-#about {
-
-  & article {
-    margin-top: calc(50% - 200px);
-    padding: 50px;
-
-    & p {
-      font-size: 1.3em;
-      text-align: justify;
-
-      @include media-query(start) {
-        font-size: 1.4em;
-      }
-
-      & span {
-        color: $color-brand-primary;
-        font-weight: bold;
-      }
-
-      & a {
-        font-weight: bold;
-      }
-    }
-  }
+.c-ic-symbol {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }

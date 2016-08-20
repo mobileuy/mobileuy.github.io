@@ -1,0 +1,146 @@
+.c-venue {
+  background-color: $color-footer;
+  position: relative;
+
+  @include media-query(small) {
+    padding-bottom: 50%;
+  }
+}
+
+.c-venue__wrapper {
+  @include media-query(small) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.c-venue-info {
+  color: $white;
+  text-transform: uppercase;
+  text-align: left;
+  padding: $base-spacing-unit;
+  background-color: $color-footer;
+  position: relative;
+  z-index: 1;
+
+  > h2 {
+    font-size: 28px;
+  }
+
+  @include media-query(small) {
+    background-color: rgba($color-footer, 0.9);
+    padding: 101% $base-spacing-unit 0;
+    position: relative;
+
+    > h2 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 44px;
+      padding: ($base-spacing-unit * 3) $base-spacing-unit;
+    }
+  }
+}
+
+.c-venue__map {
+  height: 300px;
+
+  @include media-query(small) {
+    z-index: 0;
+    left: 0;
+    top: 0;
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.c-footer {
+  background-color: $color-footer;
+  padding: $base-spacing-unit * 3;
+  text-align: center;
+}
+
+.c-footer__link {
+  width: 42px;
+  height: 42px;
+  margin: 3px;
+  border-radius: 50%;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  color: rgba(255,255,255,0.5);
+  display: inline-block;
+
+  &:hover, &:focus, &:active {
+    background: lighten($color-footer, 80%);
+    //filter: blur(7px);
+  }
+}
+
+.twitter {
+  &:hover, &:focus, &:active {
+    color: #1DA1F2;
+  }
+}
+
+.facebook {
+  &:hover, &:focus, &:active {
+    color: #4267B2;
+  }
+}
+
+.linkedin {
+  &:hover, &:focus, &:active {
+    color: #0E76A8;
+  }
+}
+
+.youtube {
+  &:hover, &:focus, &:active {
+    color: #E62117;
+  }
+}
+
+.github {
+  &:hover, &:focus, &:active {
+    color: #333;
+  }
+}
+
+.meetup {
+  &:hover, &:focus, &:active {
+    color: #ED1C40;
+  }
+}
+
+.email {
+  &:hover, &:focus, &:active {
+    color: #FFCC00;
+  }
+}
+
+.c-footer__logo {
+  display: block;
+  margin: 0 auto 1rem;
+  background: url(mobileday-logo.png) no-repeat;
+  width: 167px;
+  height: 42px;
+  background-size: contain;
+
+  @include media-query(small) {
+    margin-right: $base-spacing-unit;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+
+  transition: $base-transition filter, $base-transition -webkit-filter, $base-transition opacity;
+  opacity: 0.5;
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}

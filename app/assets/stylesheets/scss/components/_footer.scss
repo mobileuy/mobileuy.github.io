@@ -133,16 +133,14 @@
     margin-right: $base-spacing-unit;
     margin-bottom: 0;
     display: inline-block;
-    opacity: 0.5;
+  }
 
-    transition: $base-transition filter, $base-transition -webkit-filter, $base-transition opacity;
-    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-    filter: grayscale(100%);
+  transition: $base-transition filter, $base-transition -webkit-filter, $base-transition opacity;
+  opacity: 0.5;
+  filter: grayscale(100%);
 
-    &:hover {
-      -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
-      filter: grayscale(0);
-      opacity: 1;
-    }
+  &:hover {
+    filter: grayscale(0);
+    opacity: 1;
   }
 }

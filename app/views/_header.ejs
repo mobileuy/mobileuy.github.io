@@ -6,7 +6,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%- is_home = typeof is_home === "undefined" ? false : is_home %>
+    <% is_home = (typeof is_home === "undefined" ? false : is_home) %>
     <ul class="c-menu__list">
       <li class="c-menu__item"><a href="<%= is_home ? "#" : "index.html"%>" class="c-menu__link">Inicio</a></li>
       <li class="c-menu__item"><a href="call-for-proposals.html" class="c-menu__link">Llamado a propuestas</a></li>

@@ -124,11 +124,11 @@ function npmModule(url, file, done) {
 gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function() {
-  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'autoprefixer', 'static', 'dist', 'open');
+  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'autoprefixer', 'copy:static', 'dist', 'open');
 });
 
 gulp.task('watch', function() {
-    gulp.watch(config.staticFiles, ['static']);
+    gulp.watch(config.staticFiles, ['copy:static']);
     gulp.watch(config.scriptFiles, ['compile:js']);
     gulp.watch(config.scssFiles, ['compile:css']);
     gulp.watch(config.ejsFiles, ['compile:html']);
@@ -235,8 +235,7 @@ gulp.task('autoprefixer', function() {
           .pipe(gulp.dest(config.tmpPath));
 });
 
-// Copy static files
-gulp.task('static', function() {
+gulp.task('copy:static', function() {
   return gulp.src(path.join(config.staticFiles))
       .pipe(gulp.dest(config.tmpPath));
 });

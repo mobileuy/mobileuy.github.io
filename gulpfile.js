@@ -45,6 +45,7 @@ var config = {
   ejsFiles:       'app/views/**/*.ejs',
   scriptFiles:    'app/assets/javascripts/**/*.js',
   scssFiles:      'app/assets/stylesheets/scss/**/*.scss',
+  staticFiles:    'app/assets/static/**/*.*',
   scssMainFile:   'app/assets/stylesheets/scss/application.scss',
   imagesDir:      'app/assets/images',
   distPath:       'dist',
@@ -123,10 +124,11 @@ function npmModule(url, file, done) {
 gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function() {
-  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'autoprefixer', 'dist', 'open');
+  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'autoprefixer', 'copy:static', 'dist', 'open');
 });
 
 gulp.task('watch', function() {
+    gulp.watch(config.staticFiles, ['copy:static']);
     gulp.watch(config.scriptFiles, ['compile:js']);
     gulp.watch(config.scssFiles, ['compile:css']);
     gulp.watch(config.ejsFiles, ['compile:html']);
@@ -231,6 +233,11 @@ gulp.task('autoprefixer', function() {
             'android 4'
           ))
           .pipe(gulp.dest(config.tmpPath));
+});
+
+gulp.task('copy:static', function() {
+  return gulp.src(path.join(config.staticFiles))
+      .pipe(gulp.dest(config.tmpPath));
 });
 
 gulp.task('open', function () {

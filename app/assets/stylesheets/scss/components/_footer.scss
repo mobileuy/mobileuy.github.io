@@ -141,6 +141,9 @@
     margin-right: $base-spacing-unit;
     margin-bottom: 0;
     display: inline-block;
+    position: absolute;
+    left: 0;
+    margin-left: $base-spacing-unit * 2;
   }
 
   transition: $base-transition filter, $base-transition -webkit-filter, $base-transition opacity;

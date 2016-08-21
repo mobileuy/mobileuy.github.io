@@ -10,7 +10,7 @@ $content: '{ "particleCount" : 50 }';
 head { font-family: $content; }
 
 @include media-query(start) {
-  $content: '{ "particleCount" : 100 }';
+  $content: '{ "particleCount" : 100, "mobile_viewport" : true }';
 
   .variables-metadata::before {
     content: $content;
@@ -20,7 +20,7 @@ head { font-family: $content; }
 }
 
 @include media-query(small) {
-  $content: '{ "particleCount" : 150 }';
+  $content: '{ "particleCount" : 150, "mobile_viewport" : true }';
 
   .variables-metadata::before {
     content: $content;
@@ -30,7 +30,7 @@ head { font-family: $content; }
 }
 
 @include media-query(large) {
-  $content: '{ "particleCount" : 250 }';
+  $content: '{ "particleCount" : 250, "mobile_viewport" : false }';
 
   .variables-metadata::before {
     content: $content;

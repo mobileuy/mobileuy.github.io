@@ -200,7 +200,7 @@ gulp.task('html', function() {
     return gulp.src(config.mainEjsFiles)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(ejs({
-            title: "MobileDay Uruguay",
+            title: "Mobile Day",
             jsVendorFileName: config.outputJSVendor,
             jsFileName: config.outputJS,
             cssFileName: config.outputCSS

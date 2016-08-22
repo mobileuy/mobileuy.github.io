@@ -10,9 +10,6 @@
   line-height: 1;
 
   @include media-query(small) {
-    background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png);
-  }
-  @include media-query(large) {
     background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png), url(parallax-3.png);
   }
 

@@ -42,6 +42,7 @@ $inuit-responsive-settings:   true;
 // https://github.com/inuitcss/objects.layout
 $inuit-layout-namespace:      "o-";
 $inuit-enable-layout--flush:   true;
+$inuit-enable-layout--center: true;
 
 // https://github.com/inuitcss/objects.pack
 $inuit-pack-namespace:        "o-";
@@ -55,8 +56,7 @@ $inuit-use-fractions:         false;
 // https://github.com/inuitcss/settings.responsive/blob/master/_settings.responsive.scss
 $breakpoints: (
     "start"          "screen and (min-width: 450px)",
-    "small"          "screen and (min-width: 800px)",
-    "large"          "screen and (min-width: 1000px)",
+    "small"          "screen and (min-width: 965px)"
 );
 
 //https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss

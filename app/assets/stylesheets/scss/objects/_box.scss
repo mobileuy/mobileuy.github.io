@@ -20,7 +20,7 @@
   padding: $base-spacing-unit;
   vertical-align: middle;
 
-  @include media-query(large) {
+  @include media-query(small) {
     padding-right: $base-spacing-unit;
     padding-left: $base-spacing-unit;
   }
@@ -68,10 +68,6 @@ $proportions-list: (
 
 @include media-query(small) {
   @include box-ratio(-small);
-}
-
-@include media-query(large) {
-  @include box-ratio(-large);
 }
 
 

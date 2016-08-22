@@ -14,4 +14,22 @@
       line-height: 2em;
     }
   }
+
+  &.phone {
+    display: block;
+  }
+
+  &.higher {
+    display: none;
+  }
+
+  @include media-query(small) {
+    &.phone {
+      display: none;
+    }
+
+    &.higher {
+      display: block;
+    }
+  }
 }

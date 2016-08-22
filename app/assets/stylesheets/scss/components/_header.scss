@@ -23,6 +23,10 @@
   }
 }
 
+html.nav-bar-opened {
+  overflow-y: hidden;
+}
+
 .c-navbar__logo {
   background-image: url(mobileday-logo.png);
   float: left;

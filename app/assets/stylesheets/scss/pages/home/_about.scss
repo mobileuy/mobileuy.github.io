@@ -6,7 +6,7 @@
   padding: $base-spacing-unit;
   text-align: center;
 
-  @include media-query(large) {
+  @include media-query(small) {
     transform: rotate(270deg) translateY(-$base-spacing-unit);
     transform-origin: center center;
     margin: 0;

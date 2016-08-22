@@ -29,7 +29,7 @@ head { font-family: $content; }
   head { font-family: $content; }
 }
 
-@include media-query(large) {
+@include media-query(small) {
   $content: '{ "particleCount" : 250, "mobile_viewport" : false }';
 
   .variables-metadata::before {
@@ -43,7 +43,6 @@ head { font-family: $content; }
 
 html {
   height: 100%;
-  overflow-x: hidden;
 }
 
 body {

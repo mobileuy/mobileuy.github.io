@@ -9,7 +9,13 @@
     <% is_home = (typeof is_home === "undefined" ? false : is_home) %>
     <ul class="c-menu__list">
       <li class="c-menu__item"><a href="<%= is_home ? "#" : "index.html"%>" class="c-menu__link">Inicio</a></li>
-      <li class="c-menu__item"><a href="call-for-proposals.html" class="c-menu__link">Llamado a propuestas</a></li>
+      <!--<li class="c-menu__item"><a href="call-for-proposals.html" class="c-menu__link">Llamado a propuestas</a></li>-->
+      <li class="c-menu__item">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdW6UMPRfKx4OE-IHQFzq4HKeFShE7i8jdc3RlPOJeWYdL8ow/viewform"
+           class="c-menu__link">
+          Llamado a propuestas
+        </a>
+      </li>
       <li class="c-menu__item"><a href="code-of-conduct.html" class="c-menu__link">Código de conducta</a></li>
       <li class="c-menu__item"><a href="<%= is_home ? "" : "index.html"%>#sponsors" class="c-menu__link">Sponsors</a></li>
       <li class="c-menu__item"><a href="<%= is_home ? "" : "index.html"%>#venue" class="c-menu__link">Lugar</a></li>

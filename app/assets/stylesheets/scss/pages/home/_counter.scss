@@ -1,16 +1,25 @@
 .c-counter {
-  margin: ($base-spacing-unit * 4) 0;
-  padding: ($base-spacing-unit * 4) 0;
+  margin: ($base-spacing-unit * 2) 0;
+  padding: ($base-spacing-unit * 2) 0;
   background-position: center;
   background: url(pattern-01.png),
   linear-gradient(120deg, $color-brand-secondary-light 30%, $color-brand-primary-dark 70%);
   text-align: center;
   color: $white;
+
+  @include media-query(start) {
+    margin: ($base-spacing-unit * 3) 0;
+    padding: ($base-spacing-unit * 3) 0;
+  }
+  @include media-query(small) {
+    margin: ($base-spacing-unit * 4) 0;
+    padding: ($base-spacing-unit * 4) 0;
+  }
 }
 
 .c-counter__number {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 400;
   color: $white;
   text-transform: uppercase;
   display: block;
@@ -28,10 +37,12 @@
 .c-counter__unit {
   color: $white;
   font-weight: 300;
+  margin-top: 10px;
   margin-bottom: 0;
   display: block;
   line-height: 1;
   font-size: 13px;
+  @extend %u-text-shadow;
 
   @include media-query(start) {
     font-size: 18px;

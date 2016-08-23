@@ -6,30 +6,4 @@
   background-position: center;
   color: $white;
   text-transform: uppercase;
-
-  & .c-btn-proposal {
-    @include media-query(start) {
-      font-size: 2em;
-      height: 2em;
-      line-height: 2em;
-    }
-  }
-
-  &.phone {
-    display: block;
-  }
-
-  &.higher {
-    display: none;
-  }
-
-  @include media-query(small) {
-    &.phone {
-      display: none;
-    }
-
-    &.higher {
-      display: block;
-    }
-  }
 }

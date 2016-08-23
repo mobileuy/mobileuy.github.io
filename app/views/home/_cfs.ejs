@@ -1,21 +1,17 @@
-<% var templates = ['phone', 'higher']; %>
-<% for (var index in templates) { %>
-  <% var responsive_class = templates[index] == 'phone' ? 'o-layout' : 'o-pack'; %>
-  <div class='c-cfs <%= templates[index] %>'>
-    <div class='o-wrapper'>
-      <div class="u-2-of-3-small u-margin--auto">
-        <div class='<%= responsive_class %> o-pack--middle'>
-          <div class='<%= responsive_class %>__item u-1-of-1 u-1-of-2--start u-text-align--center u-text-align--right-small'>
-            <h2 class='u-m0'>
-              <span class='u-font-weight--300'>Llamado a</span>
-              <br/>
-              <span class='u-font-weight--800'>propuestas</span>
-            </h2>
-          </div><div class='<%= responsive_class %>__item u-1-of-1 u-1-of-2--start u-text-align--center' >
-            <a href="call-for-proposals.html" class="c-btn c-btn--secondary c-btn-proposal">Postular</a>
-          </div>
+<div class='c-cfs'>
+  <div class='o-wrapper'>
+    <div class="u-2-of-3-small u-margin--auto">
+      <div class='o-layout o-layout--middle'>
+        <div class='o-layout__item u-1-of-1 u-1-of-2-start u-text-align--center'>
+          <h2 class='u-m0'>
+            <span class='u-font-weight--300'>Llamado a</span>
+            <br/>
+            <span class='u-font-weight--800'>propuestas</span>
+          </h2>
+        </div><div class='o-layout__item u-1-of-1 u-1-of-2-start u-text-align--center u-mt+ start-mt0' >
+          <a href="call-for-proposals.html" class="c-btn c-btn--secondary c-btn--large">Postular</a>
         </div>
       </div>
     </div>
   </div>
-<% } %>
+</div>

@@ -46,3 +46,9 @@
     background-color: mix($white, $color-brand-secondary, 90%);
   }
 }
+
+.c-btn--large {
+  font-size: 1.4em;
+  height: $base-spacing-unit * 3;
+  line-height: ($base-spacing-unit * 3) - 2;
+}

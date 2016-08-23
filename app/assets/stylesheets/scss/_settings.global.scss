@@ -41,8 +41,9 @@ $inuit-responsive-settings:   true;
 
 // https://github.com/inuitcss/objects.layout
 $inuit-layout-namespace:      "o-";
-$inuit-enable-layout--flush:   true;
+$inuit-enable-layout--flush:  true;
 $inuit-enable-layout--center: true;
+$inuit-enable-layout--middle: true;
 
 // https://github.com/inuitcss/objects.pack
 $inuit-pack-namespace:        "o-";

@@ -1,5 +1,4 @@
 .c-counter {
-  margin: ($base-spacing-unit * 2) 0;
   padding: ($base-spacing-unit * 2) 0;
   background-position: center;
   background: url(pattern-01.png),
@@ -8,11 +7,9 @@
   color: $white;
 
   @include media-query(start) {
-    margin: ($base-spacing-unit * 3) 0;
     padding: ($base-spacing-unit * 3) 0;
   }
   @include media-query(small) {
-    margin: ($base-spacing-unit * 4) 0;
     padding: ($base-spacing-unit * 4) 0;
   }
 }

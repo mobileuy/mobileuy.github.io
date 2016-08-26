@@ -1,23 +1,36 @@
-.c-about__title{
+.c-about {
+  padding-top: $base-spacing-unit * 2;
+  padding-bottom: $base-spacing-unit * 2;
+
+  @include media-query(small) {
+    padding-top: $base-spacing-unit * 8;
+    padding-bottom: $base-spacing-unit * 6;
+  }
+}
+
+.c-about__title {
   color: palette(white);
   text-transform: uppercase;
   font-weight: 700;
   background: palette('primary') url('pattern-02.png') center;
-  padding: $base-spacing-unit;
+  padding: $base-spacing-unit 0;
   text-align: center;
 
+  @include media-query(start) {
+    @include inuit-font-size($inuit-heading-size-1);
+    padding: $base-spacing-unit;
+  }
+
   @include media-query(small) {
-    transform: rotate(270deg) translateY(-$base-spacing-unit);
+    transform: rotate(270deg) translateY(-$base-spacing-unit * 2) translateX(-$base-spacing-unit * 2);
     transform-origin: center center;
     margin: 0;
-    padding-top: 100%;
-    position: relative;
+    padding-top: 80%;
+    width: 130%;
 
     > span {
-      display: block;
       position: absolute;
       left: 0;
-      top: 0;
       width: 100%;
       top: 50%;
       transform: translateY(-50%);
@@ -26,8 +39,13 @@
 }
 
 .c-ic-symbol {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  float: right;
+  display: none;
+  height: 160px;
+  margin: $base-spacing-unit;
+
+  @include media-query(small) {
+    display: inline-block;
+    transform: translateY(-10%);
+  }
 }

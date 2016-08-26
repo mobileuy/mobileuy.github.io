@@ -1,0 +1,21 @@
+.c-newsletter {
+  padding-top: $inuit-base-spacing-unit * 4;
+  padding-bottom: $inuit-base-spacing-unit * 4;
+
+  @include media-query(small) {
+    padding-top: $inuit-base-spacing-unit * 8;
+    padding-bottom: $inuit-base-spacing-unit * 8;
+  }
+}
+
+.c-newsletter__title {
+  font-weight: 300;
+  color: palette(primary);
+  text-align: center;
+  margin-bottom: $inuit-base-spacing-unit * 2;
+}
+
+.c-newsletter__form__field {
+  width: 100%;
+  height: $base-spacing-unit * 2;
+}

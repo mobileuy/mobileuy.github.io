@@ -1,0 +1,27 @@
+.c-coc {
+  h2, p {
+    text-align: left;
+  }
+}
+
+.c-coc__title {
+  margin-top: $inuit-base-spacing-unit * 4;
+  margin-bottom: $inuit-base-spacing-unit * 4;
+  color: palette(primary);
+  text-align: center;
+  font-weight: 200;
+  @include inuit-font-size($inuit-heading-size-2);
+
+  @include media-query(start) {
+    @include inuit-font-size($inuit-heading-size-1);
+  }
+}
+
+.c-coc__subtitle {
+  margin-top: $inuit-base-spacing-unit * 2;
+  margin-bottom: 0;
+  text-align: left;
+  color: palette(primary);
+  font-weight: 200;
+  @include inuit-font-size($inuit-heading-size-4);
+}

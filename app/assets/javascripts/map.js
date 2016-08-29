@@ -3,12 +3,12 @@ $(function(){
 
     var isMobileViewport = getBreakpoint(document.querySelector('.variables-metadata')).mobile_viewport;
     var venuePos = [-56.19448037405206, -34.89219928156295];
-    var centerPos = isMobileViewport ? venuePos : [-56.201700, -34.892280];
+    var centerPos = isMobileViewport ? venuePos : [-56.208100, -34.892280];
 
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mobiledayuy/cirmxjudm000lg3nkghetgp16',
-        zoom: 15.26,
+        zoom: 14.36,
         center: centerPos,
         pitch: 0.00,
         interactive: false

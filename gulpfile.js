@@ -177,7 +177,6 @@ gulp.task('html', function() {
     return gulp.src(config.mainEjsFiles)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(ejs({
-            title: "Mobile Day",
             jsFileName: config.outputJS,
             cssFileName: config.outputCSS
         }, { ext: ".html" }))

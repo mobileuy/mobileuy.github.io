@@ -52,9 +52,9 @@ var config = {
   imagesDir:      'app/assets/images',
   distPath:       'dist',
   tmpPath:        'tmp',
-  outputCSS:      'mobileuy.css',
-  outputCSSMin:   'mobileuy.min.css',
-  outputJS:       'mobileuy.app.js'
+  outputCSS:      'mobileday.css',
+  outputCSSMin:   'mobileday.min.css',
+  outputJS:       'mobileday.app.js'
 };
 
 config.cssOutputFilePath      = path.join(config.tmpPath, config.outputCSS);

@@ -5,6 +5,7 @@
 var autoprefixer    = require('gulp-autoprefixer'),
     base64          = require('gulp-base64'),
     concat          = require('gulp-concat'),
+    cleanCSS        = require('gulp-clean-css'),
     ejs             = require("gulp-ejs"),
     gulp            = require('gulp'),
     htmlmin         = require('gulp-htmlmin'),
@@ -187,12 +188,13 @@ gulp.task('html', function() {
 
 // Compile sass.
 gulp.task('sass', function() {
-  return gulp.src(config.scssMainFile)
-          .pipe(plumber({ errorHandler: onError }))
-          .pipe(sass({ importer:npmModule, outputStyle: 'expanded' }))
-          .pipe(rename(config.outputCSS))
-          .pipe(base64(config.base64))
-          .pipe(gulp.dest(config.tmpPath));
+    return gulp.src(config.scssMainFile)
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(sass({ importer:npmModule, outputStyle: 'expanded' }))
+        .pipe(rename(config.outputCSS))
+        .pipe(base64(config.base64))
+        .pipe(cleanCSS())
+        .pipe(gulp.dest(config.tmpPath));
 });
 
 // Autoprefixer process.

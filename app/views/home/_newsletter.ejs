@@ -7,7 +7,10 @@
       <div class="o-layout__item u-1-of-1 u-3-of-5-start u-mb small-mb0">
         <input class="c-newsletter__form__field" type="email" value="" name="email" placeholder="Correo electrónico" required>
       </div><div class="o-layout__item u-1-of-1 u-2-of-5-start">
-        <input class="c-newsletter__form__field c-btn c-btn--primary" type="submit" value="Suscribirme" name="subscribe" >
+        <input class="c-newsletter__form__field c-btn c-btn--primary"
+               type="submit" value="Suscribirme"
+               name="subscribe"
+               onclick="ga('send', 'event', 'External links', 'Subscribe', 'Link to newsletter sign-up');">
       </div>
     </form>
 

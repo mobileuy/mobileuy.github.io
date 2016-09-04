@@ -7,7 +7,7 @@ var autoprefixer    = require('gulp-autoprefixer'),
     concat          = require('gulp-concat'),
     ejs             = require("gulp-ejs"),
     gulp            = require('gulp'),
-    htmlmin         = require('gulp-htmlmin');
+    htmlmin         = require('gulp-htmlmin'),
     inlineimg       = require('gulp-inline-image-html'),
     minifycss       = require('gulp-minify-css'),
     open            = require('gulp-open'),
@@ -53,14 +53,11 @@ var config = {
   tmpPath:        'tmp',
   outputCSS:      'mobileuy.css',
   outputCSSMin:   'mobileuy.min.css',
-  outputJS:       'mobileuy.app.js',
-  outputJSVendor: 'mobileuy.vendor.js',
-  vendorFiles:    ['jquery']
+  outputJS:       'mobileuy.app.js'
 };
 
 config.cssOutputFilePath      = path.join(config.tmpPath, config.outputCSS);
 config.outputJSFilePath       = path.join(config.tmpPath, config.outputJS);
-config.outputJSVendorFilePath = path.join(config.tmpPath, config.outputJSVendor);
 
 config.base64 = {
   baseDir: config.imagesDir,
@@ -78,21 +75,6 @@ var onError = function(error) {
   logger(error);
   this.emit('end');
 };
-
-function loadVendorComponents(source) {
-  var node_path = 'node_modules';
-  var libs  = [];
-
-  for (i = 0; i < source.length; i++) {
-    var jsonFilePath = './' + path.join('./', node_path, source[i], 'package.json');
-    var json = require(jsonFilePath);
-    var libsPath = path.join(node_path, source[i], json.main);
-    console.log(libsPath);
-    libs.push(libsPath)
-  }
-
-  return libs;
-}
 
 var aliases = {};
 
@@ -125,7 +107,7 @@ function npmModule(url, file, done) {
 gulp.task('default', ['build', 'watch']);
 
 gulp.task('build',  function() {
-  runSequence('clean:tmp', 'script', 'vendor', 'html', 'sass', 'autoprefixer', 'copy:static', 'dist', 'open');
+  runSequence('clean:tmp', 'script', 'html', 'sass', 'autoprefixer', 'copy:static', 'dist', 'open');
 });
 
 gulp.task('watch', function() {
@@ -145,11 +127,11 @@ gulp.task('compile:css', function() {
 });
 
 gulp.task('compile:js', function() {
-  runSequence('script', 'vendor', 'dist');
+  runSequence('script', 'dist');
 });
 
 gulp.task('compile:html', function() {
-    runSequence('html', 'vendor', 'dist');
+    runSequence('html', 'dist');
 });
 
 
@@ -185,14 +167,7 @@ gulp.task('script', function() {
     return gulp.src(config.scriptFiles)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(concat(config.outputJS))
-        .pipe(gulp.dest(config.tmpPath))
-});
-
-// Compile js
-gulp.task('vendor', function() {
-    return gulp.src(loadVendorComponents(config.vendorFiles))
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(concat(config.outputJSVendor))
+        .pipe(uglify())
         .pipe(gulp.dest(config.tmpPath))
 });
 
@@ -202,7 +177,6 @@ gulp.task('html', function() {
         .pipe(plumber({ errorHandler: onError }))
         .pipe(ejs({
             title: "Mobile Day",
-            jsVendorFileName: config.outputJSVendor,
             jsFileName: config.outputJS,
             cssFileName: config.outputCSS
         }, { ext: ".html" }))

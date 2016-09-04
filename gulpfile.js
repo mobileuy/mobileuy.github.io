@@ -7,6 +7,7 @@ var autoprefixer    = require('gulp-autoprefixer'),
     concat          = require('gulp-concat'),
     ejs             = require("gulp-ejs"),
     gulp            = require('gulp'),
+    htmlmin         = require('gulp-htmlmin');
     inlineimg       = require('gulp-inline-image-html'),
     minifycss       = require('gulp-minify-css'),
     open            = require('gulp-open'),
@@ -206,6 +207,7 @@ gulp.task('html', function() {
             cssFileName: config.outputCSS
         }, { ext: ".html" }))
         .pipe(inlineimg(config.imagesDir))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(config.tmpPath));
 });
 

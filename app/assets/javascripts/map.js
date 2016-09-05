@@ -1,4 +1,4 @@
-$(function(){
+$('#map').each(function(index, element) {
     mapboxgl.accessToken = 'pk.eyJ1IjoibW9iaWxlZGF5dXkiLCJhIjoiY2lxNHNhN2QyMDAwYmZsbTZydG4yb2ZzeSJ9.lFAWW3TvMm5EzUOQoNPloQ';
 
     var isMobileViewport = getBreakpoint(document.querySelector('.variables-metadata')).mobile_viewport;
@@ -6,7 +6,7 @@ $(function(){
     var centerPos = isMobileViewport ? venuePos : [-56.208100, -34.892280];
 
     var map = new mapboxgl.Map({
-        container: 'map',
+        container: element,
         style: 'mapbox://styles/mobiledayuy/cirmxjudm000lg3nkghetgp16',
         zoom: 14.36,
         center: centerPos,

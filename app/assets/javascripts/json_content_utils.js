@@ -16,7 +16,7 @@ function getBreakpoint(element) {
                 this.el = el;
                 this.getPropertyValue = function (prop) {
 
-                    var style = el.currentStyle || el.style
+                    var style = el.currentStyle || el.style;
 
                     if (typeof prop === "undefined" || typeof style === "undefined") {
                         return null;
@@ -29,7 +29,7 @@ function getBreakpoint(element) {
                         });
                     }
                     return style[prop] ? style[prop] : null;
-                }
+                };
                 return this;
             }
         }

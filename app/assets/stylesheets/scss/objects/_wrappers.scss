@@ -4,30 +4,16 @@
 
 //
 // This is an object that limit the width of the content.
-// It has sense to control phragraphs width and general
-// components proportions through all screen sizes.
 //
 
-$wraper-width-default: 320px   !default;
-$wraper-width-start:   800px   !default;
-$wraper-width-small:   1000px  !default;
+$wrapper-width:   1100px  !default;
 
 .o-wrapper {
-  display: block;
-  position: relative;
+  max-width: $wrapper-width;
   margin-right: auto;
   margin-left: auto;
   padding-right: $base-spacing-unit;
   padding-left: $base-spacing-unit;
-  max-width: $wraper-width-default;
-
-  @include media-query(start) {
-    max-width: $wraper-width-start;
-  }
-
-  @include media-query(small) {
-    max-width: $wraper-width-small;
-  }
 }
 
 .o-wrapper-no-margin {

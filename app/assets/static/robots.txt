@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /CNAME
+Disallow: /sponsors.pdf
+
+Sitemap: http://www.mobileday.uy/sitemap.xml

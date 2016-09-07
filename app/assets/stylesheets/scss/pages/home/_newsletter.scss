@@ -1,10 +1,8 @@
 .c-newsletter {
-  padding-top: $inuit-base-spacing-unit * 4;
   padding-bottom: $inuit-base-spacing-unit * 4;
 
   @include media-query(small) {
-    padding-top: $inuit-base-spacing-unit * 8;
-    padding-bottom: $inuit-base-spacing-unit * 8;
+    padding-bottom: $inuit-base-spacing-unit * 6;
   }
 }
 

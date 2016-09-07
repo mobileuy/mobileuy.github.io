@@ -1,0 +1,30 @@
+.c-tickets {
+  padding-top: $inuit-base-spacing-unit * 2;
+  padding-bottom: $inuit-base-spacing-unit * 2;
+
+  @include media-query(small) {
+    padding-top: $inuit-base-spacing-unit * 6;
+    padding-bottom: $inuit-base-spacing-unit * 6;
+  }
+}
+
+.c-tickets__title {
+  font-weight: 300;
+  color: palette(primary);
+  text-align: center;
+  margin-bottom: $inuit-base-spacing-unit * 2;
+
+  @include media-query(small) {
+    margin-bottom: $inuit-base-spacing-unit * 4;
+  }
+}
+
+.c-tickets__form {
+  width: 100%;
+  height: 350px;
+  overflow-y: hidden;
+
+  @include media-query(small) {
+    height: 250px;
+  }
+}

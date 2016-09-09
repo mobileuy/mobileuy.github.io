@@ -21,10 +21,10 @@
 
 .c-tickets__form {
   width: 100%;
-  height: 350px;
+  height: 400px;
   overflow-y: hidden;
 
   @include media-query(small) {
-    height: 250px;
+    height: 320px;
   }
 }

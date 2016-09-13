@@ -68,7 +68,7 @@
 
 .c-footer {
   background-color: $color-footer;
-  padding: $base-spacing-unit * 3 $base-spacing-unit;
+  padding: $base-spacing-unit * 2 $base-spacing-unit;
   text-align: center;
 }
 
@@ -152,5 +152,16 @@
   &:hover {
     filter: grayscale(0);
     opacity: 1;
+  }
+}
+
+.c-footer__bottom {
+  display: block;
+  color: rgba(255,255,255,0.5);
+  margin-top: $inuit-base-spacing-unit;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+    color: lighten($color-footer, 80%);
   }
 }

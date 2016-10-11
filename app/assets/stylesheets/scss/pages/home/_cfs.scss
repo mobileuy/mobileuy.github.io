@@ -5,4 +5,40 @@
   background-position: center;
   color: $white;
   text-transform: uppercase;
+  text-align: center;
+}
+
+.c-cfs__number {
+  font-size: 46px;
+  font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+  display: block;
+  line-height: 1;
+  @extend %u-text-shadow;
+
+  @include media-query(start) {
+    font-size: 44px;
+  }
+  @include media-query(small) {
+    font-size: 68px;
+  }
+}
+
+.c-cfs__text {
+  color: $white;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 0;
+  display: block;
+  line-height: 1;
+  font-size: 13px;
+  @extend %u-text-shadow;
+
+  @include media-query(start) {
+    font-size: 18px;
+  }
+  @include media-query(small) {
+    font-size: 24px;
+  }
 }

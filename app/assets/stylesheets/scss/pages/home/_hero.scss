@@ -8,12 +8,16 @@
   text-transform: uppercase;
   text-align: left;
   line-height: 1;
+  display: none;
 
+  @include media-query(start) {
+    display: block;
+  }
   @include media-query(small) {
     background-image: url(iphone.png), url(parallax-1.png), url(parallax-2.png), url(parallax-3.png);
   }
 
-  h1{
+  h1 {
     max-width: 496px;
     margin: 0 auto;
     font-size: 31px;
@@ -44,7 +48,6 @@
 }
 
 .c-hero__arrow {
-  display: block;
   width: 45px;
   height: 45px;
   animation: fadeIn 2s infinite alternate;
@@ -53,4 +56,9 @@
   left: 50%;
   transform: translateX(-50%);
   color: #e6e6e6;
+  display:none;
+
+  @include media-query(start) {
+    display: block;
+  }
 }

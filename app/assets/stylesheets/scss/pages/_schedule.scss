@@ -1,0 +1,27 @@
+.c-schedule-table {
+  width: 100%;
+  td, th {
+    vertical-align: middle;
+    padding: 10px;
+
+    > * {
+      margin: 0;
+      font-weight: normal;
+    }
+  }
+
+  td {
+    text-align: center;
+  }
+
+  tbody tr td:first-child {
+    text-align: right;
+    padding-right: 1rem;
+  }
+  tbody tr:nth-child(odd) td:not(:first-child) {
+    background-color: rgba(#000, 0.2);
+  }
+  tbody tr:nth-child(odd) td:first-child {
+    background-color: rgba(#000, 0.1);
+  }
+}

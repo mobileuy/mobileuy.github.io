@@ -11,6 +11,8 @@ $color-brand-secondary:                 #5D3165;
 $color-brand-secondary-light:           #624DAD;
 $color-brand-primary-dark:              #2B4488;
 $color-footer:                          #251F2D;
+$color-brand-primary-light:             rgba($color-brand-primary, 0.5%);
+$color-brand-secondary-x-light:         rgba($color-brand-secondary-light, 0.5%);
 
 $color-grey:                            #737373;
 $color-grey-dark:                       mix($color-grey, $black, 50%);

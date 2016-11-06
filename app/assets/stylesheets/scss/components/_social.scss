@@ -1,0 +1,41 @@
+.twitter {
+  &:hover, &:focus, &:active {
+    color: #1DA1F2;
+  }
+}
+
+.facebook {
+  &:hover, &:focus, &:active {
+    color: #4267B2;
+  }
+}
+
+.linkedin {
+  &:hover, &:focus, &:active {
+    color: #0E76A8;
+  }
+}
+
+.youtube {
+  &:hover, &:focus, &:active {
+    color: #E62117;
+  }
+}
+
+.github {
+  &:hover, &:focus, &:active {
+    color: #333;
+  }
+}
+
+.meetup {
+  &:hover, &:focus, &:active {
+    color: #ED1C40;
+  }
+}
+
+.email {
+  &:hover, &:focus, &:active {
+    color: #FFCC00;
+  }
+}

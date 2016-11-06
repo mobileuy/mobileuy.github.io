@@ -1,27 +1,26 @@
 <div id="speakers" class="c-speakers u-pv++">
   <div class='o-wrapper'>
-    <h2 class='u-text-align--center u-font-weight--300 u-mb++'>Oradores</h2>
-    <ul class='o-layout o-layout--center u-mb'>
-      <li class='o-layout__item u-1-of-1 u-1-of-2-start u-1-of-4-small'>
-        <img src="http://placehold.it/200x200" alt="">
-        <h6 class='u-mv--'>Nombre Apellido</h6>
-        <p>Bio</p>
+    <h2 class='c-speakers__title u-mb++'>Oradores</h2>
+    <ul class='o-layout o-layout--center'> <!-- TODO: Centrar el contenido de los items para que se vea bien el todos los devices -->
+      <% for (var i = 0; i < speakers.length; i++) { %>
+        <li class='o-layout__item c-speaker__item u-1-of-1 u-1-of-2-start u-1-of-5-small u-mb+ start-mb++'>
+          <a href="">
+            <img class="u-text-align--center" src="speakers/<%= speakers[i].photo %>" alt="Lucas Vidal">
+            <h6 class='u-mt- u-mb0'><%= speakers[i].name %></h6>
+          </a>
+          <% if (speakers[i].organization != '') { %><div class='u-mv0'><%= speakers[i].organization %></div><% } %>
+          <a class="c-speaker__link twitter" href="https://twitter.com/<%= speakers[i].twitter %>" target="_blank" rel="noopener">
+            <svg viewBox="0 0 38 38">
+              <use xlink:href="#twitter"></use>
+            </svg>
+          </a>
+          <a class="c-speaker__link linkedin" href="https://www.linkedin.com/in/<%= speakers[i].linkedin %>" target="_blank" rel="noopener">
+            <svg viewBox="0 0 38 38">
+              <use xlink:href="#linkedin"></use>
+            </svg>
+          </a>
       </li>
-      <li class='o-layout__item u-1-of-1 u-1-of-2-start u-1-of-4-small'>
-        <img src="http://placehold.it/200x200" alt="">
-        <h6 class='u-mv--'>Nombre Apellido</h6>
-        <p>Bio</p>
-      </li>
-      <li class='o-layout__item u-1-of-1 u-1-of-2-start u-1-of-4-small'>
-        <img src="http://placehold.it/200x200" alt="">
-        <h6 class='u-mv--'>Nombre Apellido</h6>
-        <p>Bio</p>
-      </li>
-      <li class='o-layout__item u-1-of-1 u-1-of-2-start u-1-of-4-small'>
-        <img src="http://placehold.it/200x200" alt="">
-        <h6 class='u-mv--'>Nombre Apellido</h6>
-        <p>Bio</p>
-      </li>
+      <% } %>
     </ul>
   </div>
 </div>

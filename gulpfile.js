@@ -19,7 +19,8 @@ var autoprefixer    = require('gulp-autoprefixer'),
     sourcemaps      = require('gulp-sourcemaps'),
     uglify          = require('gulp-uglify'),
     util            = require('gulp-util'),
-    watch           = require('gulp-watch');
+    watch           = require('gulp-watch'),
+    yaml            = require('js-yaml');
 
 
 // -------------------------------------------
@@ -28,7 +29,8 @@ var autoprefixer    = require('gulp-autoprefixer'),
 
 var vinylPaths = require('vinyl-paths'),
           path = require('path'),
-           del = require('del');
+           del = require('del'),
+            fs = require('fs');
 
 
 // -------------------------------------------
@@ -45,6 +47,7 @@ var logger = util.log;
 var config = {
   mainEjsFiles:   'app/views/**/!(_)*.ejs',
   ejsFiles:       'app/views/**/*.ejs',
+  dataFiles:      'app/data/data.yml',
   scriptFiles:    'app/assets/javascripts/**/*.js',
   scssFiles:      'app/assets/stylesheets/scss/**/*.scss',
   staticFiles:    'app/assets/static/**/*.*',
@@ -116,6 +119,7 @@ gulp.task('watch', function() {
     gulp.watch(config.scriptFiles, ['compile:js']);
     gulp.watch(config.scssFiles, ['compile:css']);
     gulp.watch(config.ejsFiles, ['compile:html']);
+    gulp.watch(config.dataFiles, ['compile:html']);
 });
 
 
@@ -176,10 +180,11 @@ gulp.task('script', function() {
 gulp.task('html', function() {
     return gulp.src(config.mainEjsFiles)
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(ejs({
-            jsFileName: config.outputJS,
-            cssFileName: config.outputCSS
-        }, { ext: ".html" }))
+        .pipe(ejs(
+                yaml.safeLoad(fs.readFileSync(config.dataFiles, 'UTF-8')),
+                { ext: ".html" }
+            )
+        )
         .pipe(inlineimg(config.imagesDir))
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(config.tmpPath));

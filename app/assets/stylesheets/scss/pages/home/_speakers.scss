@@ -2,3 +2,36 @@
   color: palette(white);
   background-color: lighten($color-footer, 20%);
 }
+
+.c-speakers__title {
+  text-align: center;
+  font-weight: 300;
+}
+
+.c-speaker__item {
+  text-align: center !important;
+  color: rgba(255,255,255,0.5);
+
+  a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    &:hover, &:focus, &:active {
+      color: palette(white);
+    }
+  }
+
+}
+
+.c-speaker__link {
+  width: 42px;
+  height: 42px;
+  transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+  color: rgba(255,255,255,0.5);
+  display: inline-block;
+  margin-left: -9px;
+
+  &:hover, &:focus, &:active {
+    color: palette(white);
+  }
+}

@@ -42,5 +42,12 @@
 
   a {
     color: palette(white);
+    text-decoration: none;
   }
+}
+
+.c-article__image {
+  border-radius: 50%;
+  width: 120px;
+  margin: 0 $base-spacing-unit;
 }

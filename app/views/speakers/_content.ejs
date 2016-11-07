@@ -1,0 +1,29 @@
+<section class="c-coc u-vm++">
+    <div class="o-wrapper">
+        <h1 class="c-coc__title">Oradores</h1>
+
+        <% for (var i = 0; i < speakers.length; i++) { %>
+            <article id="<%= speakers[i].id %>" class='c-articles media'>
+                <img src="speakers/<%= speakers[i].photo %>" class="media__img c-articles__photo"/>
+                <div class="media__body">
+                    <h2><%= speakers[i].name %><small><%= speakers[i].organization %></small></h2>
+                    <% for (var j = 0; j < speakers[i].bio.length; j++) { %>
+                        <p><%= speakers[i].bio[j] %></p>
+                    <% } %>
+                    <a class="c-speaker__link twitter" href="https://twitter.com/<%= speakers[i].twitter %>" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 38 38">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                    <a class="c-speaker__link linkedin" href="https://www.linkedin.com/in/<%= speakers[i].linkedin %>" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 38 38">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        <% } %>
+
+        <div class="o-box u-mv+"></div>
+    </div>
+</section>

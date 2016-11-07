@@ -2,71 +2,129 @@ jsFileName: 'mobileday.app.js'
 cssFileName: 'mobileday.css'
 
 speakers:
-  - name: 'Lucas Vidal'
+  - id: 1
+    name: 'Lucas Vidal'
     organization: 'Restorando'
     photo: 'LucasVidal.jpg'
     twitter: 'lucasvidalutn'
     linkedin: 'lucas-vidal-80027321'
-  - name: 'Marcos Barreto'
+    bio:
+      - 'Mobile developer desde Android 1.5 (no menciono Blackberry + Java ME por las pesadillas). Hace 3 años trabajando en Restorando primero armando la aplicación nativa inicial, y luego formando el equipo que felizmente la reescribiría por completo y, esta vez, bien hecha :)'
+
+  - id: 2
+    name: 'Marcos Barreto'
     photo: 'MarcosBarreto.jpg'
     organization: 'Mercado Libre'
     twitter: 'marbarfa'
     linkedin: 'jmarcosbarreto'
-  - name: 'Luis Cal'
+    bio:
+      - 'Ingeniero en computación egresado de la Universidad de la República con una Maestría en Informática de PEDECIBA en el área de Computación de Alta Performance, materia en la cual colabora en el dictado del curso en la Facultad de Ingeniería. Actualmente es Project Leader del departamento mobile en Mercado Libre.'
+      - 'Casado hace 4 años y con una hija (de 4 patas) llamada Rafaela. En sus ratos libres, cuando los tiene, le gusta aprender nuevas tecnologías o ver alguna forma de emprender algo propio. También siempre está listo para un jugar un buen fútbol, con un clásico estilo "Paolo Montereano".'
+      - 'Fanático de un buen café recién molido y de una buena cerveza artesanal (preferentemente IPA).'
+
+  - id: 3
+    name: 'Luis Cal'
     photo: 'LuisCal.jpg'
     organization: 'DIXTRA'
     twitter: '_lucho99'
     linkedin: 'luis-cal-70131525'
-  - name: 'Omar Saadoun'
+    bio:
+      - 'Luis es un ingeniero front-end apasionado con un fuerte foco en performance de mobile devices. Con una vasta experiencia trabajando con tecnologías web, es fundador y CTO de DIXTRA. Disfruta de una buena lectura, música y fútbol. En su tiempo libre le gusta trabajar en proyectos personales de IoT basados en NodeJS.'
+
+  - id: 4
+    name: 'Omar Saadoun'
     photo: 'OmarSaadoun.jpg'
     organization: 'CUTI - IAMCP'
     twitter: 'osaadoun'
     linkedin: 'omarsaadoun'
-  - name: 'Martín Loskin'
+    bio:
+      - 'Gerente comercial y co-fundador de INMIND, docente de Android en Instituto BIOS, padre de un hijo de 2 años y amante de la tecnología. Hace más de 10 años que dedica sus días al desarrollo de software desde diferentes puntos, especializándose y a su empresa en el desarrollo de aplicaciones móviles desde hace más de 4 años. Si bien su responsabilidad es a nivel comercial,  considera que no debe (ni quiere) alejarse de lo tecnológico.'
+      - 'Ingeniero en Sistemas egresado de Universidad ORT, francés y uruguayo desde hace 34 años.'
+
+  - id: 5
+    name: 'Martín Loskin'
     photo: 'MartinLoskin.jpg'
     organization: 'Infragistics'
     twitter: 'loskinoficial'
     linkedin: 'martinloskin'
-  - name: 'Diego Marcher'
+    bio:
+      - 'Martín Loskin tiene más de 10 años de experiencia como director de arte y diseñador UX, trabajando en distintos proyectos de entretenimiento, educación y software de productividad. Actualmente trabaja hace 3 años como UX Architect en Infragistics en su equipo de Enterprise Mobility.'
+
+  - id: 6
+    name: 'Diego Marcher'
     photo: 'DiegoMarcher.jpg'
     organization: ''
     twitter: 'memphisdrums'
     linkedin: 'diego-marcher-17364416'
-  - name: 'Emilio Zárraga'
+    bio:
+      - 'Diego es Ingeniero en Computación egresado de la Facultad de Ingeniería de la Universidad de la República.'
+      - 'Actualmente y desde 2011 se encuentra desarrollando aplicaciones para Android de manera nativa tanto para su trabajo como de manera freelancer.'
+      - 'Nerd, baterista frustrado, amante de las matemáticas y los cubos de Rubik.'
+
+  - id: 7
+    name: 'Emilio Zárraga'
     photo: 'EmilioZarraga.jpg'
     organization: 'GlobalLogic'
     twitter: 'emiliovirtual'
     linkedin: 'emiliozarraga'
-  - name: 'Diego Bonilla'
+    bio:
+      - 'Los pasos fundamentales para diseñar una buena aplicación es conocer las limitantes y posibilidades de la plataforma, guidelines, patrones de interacción, navegación, etc.'
+      - 'El Atomic Design aplicado en Android centraliza el proceso de diseño para crear la mayoría de elementos claves e instancias y así atender a los requerimientos técnicos de diseño como desarrollo, teniendo en cuenta los stage, assets, resoluciones, tipografías, entre otros.'
+      - 'Una de las ventajas de usar esta metodología es permitir un trabajo entre diseñadores y desarrolladores más fluido, comprensible y sobre todo escalable. Permite trabajar detalles al nivel micro como macro, integrando lo que se necesita ahora y necesitará en el futuro.'
+
+  - id: 8
+    name: 'Diego Bonilla'
     photo: 'DiegoBonilla.jpg'
     organization: 'Nareia'
     twitter: 'dbonillanareia'
     linkedin: 'diebonilla'
-  - name: 'Johann Pérez'
+    bio:
+      - 'Pica tecla co-fundador de Nareia, empresa dedicada principalmente al desarrollo mobile con tecnologías cutting edge. Ingeniero en Computación de la Universidad de la República y Xamarin Certified Developer.'
+
+  - id: 9
+    name: 'Johann Pérez'
     photo: 'JohannPerez.jpg'
     organization: 'Nareia'
     twitter: 'ermitani0'
     linkedin: 'johannperezbeteral'
-  - name: 'Martín Barreto'
+    bio:
+      - 'FINGer con 8 años de experiencia en la industria, principalmente con .NET y Xamarin. Co-Founder de Nareia. Analista de Sistemas de UdelaR.'
+
+  - id: 10
+    name: 'Martín Barreto'
     photo: 'MartinBarreto.jpg'
     organization: 'Xmartlabs'
     twitter: 'mtnbarreto'
     linkedin: 'martinbarreto'
-  - name: 'Martín Alurralde'
+    bio:
+      - 'Ingeniero en computación, uruguayo, CTO en Xmartlabs. Creador de varias librerías open source tales como Eureka, XLPagerTabStrip, XLActionController, XLForm entre otras.'
+
+  - id: 11
+    name: 'Martín Alurralde'
     photo: 'MartinAlurralde.jpg'
     organization: 'Jalumar'
     twitter: 'Talu'
     linkedin: 'martinalurralde'
-  - name: 'Nicolás Ameghino'
+    bio:
+      - 'Trabaja en internet desde 1998 desarrollando proyectos propios y se dedica a las aplicaciones desde hace 3 años, especializándose en marketing web, SEO, SEM y ASO. Actualmente trabaja junto a su socio en Jalumar, en donde cuentan con aplicaciones con más de 10 millones de descargas y son “Desarrollador destacado” en Google Play.'
+
+  - id: 12
+    name: 'Nicolás Ameghino'
     photo: 'NicolasAmeghino.jpg'
     organization: 'NSCoderBA'
     twitter: 'nameghino'
     linkedin: 'nicolas-ameghino-2ba77710'
-  - name: 'Julio Carrettoni'
+    bio:
+      - 'Nicolás trabaja en iOS desde el inicio de la plataforma en 2008, con importantes clientes como Coto CICSA, JP Morgan y Disney.'
+
+  - id: 13
+    name: 'Julio Carrettoni'
     photo: 'JulioCarrettoni.jpg'
     organization: 'Bluetrail Software'
     twitter: 'dev_jac'
     linkedin: 'juliocarrettoni'
+    bio:
+      - 'Julio Carrettoni trabaja de manera profesional e ininterrumpida en iOS desde el 2009 cuando aún era iPhoneOS. En el medio probó otras plataformas como Android y Blackberry pero siempre volvió a su primer amor. Entusiasta de UIKit e IB, se encuentra en una relación complicada con Auto Layout.'
 
 sessions:
   - id: 1
@@ -77,8 +135,7 @@ sessions:
       - 'En síntesis, discutir dónde los tests aportan valor y dónde no, o cuándo un test te puede salvar la vida y cuándo la perdemos escribiéndolos.'
     type: 'talk'
     time: '9:30 - 10:10'
-    speaker_id: 1
-    speaker_name: 'Lucas Vidal'
+    speakers: [0]
     tags: ['iOS', 'Testing']
 
   - id: 2
@@ -88,8 +145,7 @@ sessions:
       - ' En esta charla veremos lo rápido y fácil que es crear formularios iOS utilizando Eureka.'
     type: 'talk'
     time: '10:15 - 10:55'
-    speaker_id: 10
-    speaker_name: 'Martín Barreto'
+    speakers: [9]
     tags: ['iOS']
 
   - id: 3
@@ -101,8 +157,7 @@ sessions:
       - 'Esta charla presentará la metodología de trabajo que adoptamos en Mercado Libre (y cómo fué el proceso de adopción de la misma) para poder trabajar ágilmente y de forma distribuida en el desarrollo de las aplicaciones nativas.'
     type: 'talk'
     time: '11:30 - 12:10'
-    speaker_id: 2
-    speaker_name: 'Marcos Barreto'
+    speakers: [1]
     tags: ['Android']
 
   - id: 4
@@ -113,8 +168,7 @@ sessions:
       - 'Una de las ventajas de usar esta metodología es permitir un trabajo entre diseñadores y desarrolladores más fluido, comprensible y sobre todo escalable. Permite trabajar detalles al nivel micro como macro, integrando lo que se necesita ahora y necesitará en el futuro.'
     type: 'talk'
     time: '12:15 - 12:55'
-    speaker_id: 7
-    speaker_name: 'Emilio Zárraga'
+    speakers: [6]
     tags: ['Android', 'UX']
 
   - id: 5
@@ -123,8 +177,7 @@ sessions:
       - 'Xamarin es una tecnología que permite desarrollar aplicaciones nativas compartiendo código entre plataformas. En esta sesión se introducirá sobre su uso, los diferentes enfoques y se mostrará el desarrollo de una aplicación que reconoce emociones.'
     type: 'talk'
     time: '14:30 - 15:10'
-    speaker_id: [8, 9]
-    speaker_name: ['Diego Bonilla', 'Johann Pérez']
+    speakers: [7, 8]
     tags: ['Cross-platform']
 
   - id: 6
@@ -133,8 +186,7 @@ sessions:
       - 'Desde lo básico a lo más avanzado para poder posicionar tu aplicación en lo más alto de Google Play. Estrategias de marketing de guerrilla aplicadas al mundo mobile. Conocé a fondo la ciencia detrás del ASO (App Store Optimization) y conseguí miles de descargas gratis.'
     type: 'talk'
     time: '15:15 - 15:55'
-    speaker_id: 11
-    speaker_name: 'Martín Alurralde'
+    speakers: [10]
     tags: ['Marketing digital', 'Android']
 
   - id: 7
@@ -143,8 +195,7 @@ sessions:
       - 'En esta charla les compartiré la experiencia de lo que es trabajar con React Native diariamente para proyectos del mundo real. Cubriremos ventajas y desventajas, la experiencia del desarrollador, rendimiento, cómo extenderlo (native modules) y distribución.'
     type: 'talk'
     time: '16:30 - 17:10'
-    speaker_id: 3
-    speaker_name: 'Luis Cal'
+    speakers: [2]
     tags: ['Cross-platform']
 
   - id: 8
@@ -155,8 +206,7 @@ sessions:
       - 'En cuanto a tecnología el proyecto se compone de una aplicación nativa en Android e IOS, backend y backoffice en PHP y servicios de Google para notificaciones.'
     type: 'talk'
     time: '17:15 - 17:55'
-    speaker_id: 4
-    speaker_name: 'Omar Saadoun'
+    speakers: [3]
     tags: ['Business', 'Leadership']
 
   - id: 9
@@ -168,8 +218,7 @@ sessions:
       - 'Este taller apunta a quienes tienen conocimientos de Java, no importa el nivel, y aún no se han adentrado en el mundo Android.'
       - 'El participante, al finalizar el taller, será capaz de implementar de manera nativa una aplicación Android básica, haciendo uso de diferentes componentes y features del sistema operativo.'
     type: 'workshop'
-    speaker_id: 6
-    speaker_name: 'Diego Marcher'
+    speakers: [5]
     tags: ['Android']
 
   - id: 10
@@ -177,8 +226,7 @@ sessions:
     abstract:
       - 'Nos metemos de lleno en el mundo de Swift, el nuevo lenguaje de programación de Apple, creando desde cero una aplicación para iOS y viendo los principales puntos del desarrollo como UI, networking, y arquitectura en general.'
     type: 'workshop'
-    speaker_id: [12, 13]
-    speaker_name: ['Nicolás Ameghino', 'Julio Carrettoni']
+    speakers: [11, 12]
     tags: ['iOS']
 
   - id: 11
@@ -186,8 +234,7 @@ sessions:
     abstract:
       - 'En este taller discutiremos algunos tips de diseño y de usabilidad a tener en cuenta al momento de construir aplicaciones móviles, abarcando desde la conceptualización hasta la publicación de las mismas. Veremos en forma práctica un conjunto de tips que nos ayudarán durante la construcción de nuestras aplicación.'
     type: 'workshop'
-    speaker_id: 5
-    speaker_name: 'Martín Loskin'
+    speakers: [4]
     tags: ['UX']
 
 tags:

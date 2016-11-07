@@ -57,7 +57,7 @@ speakers:
     organization: 'Jalumar'
     twitter: 'Talu'
     linkedin: 'martinalurralde'
-  - name: 'Nicolas Ameghino'
+  - name: 'Nicolás Ameghino'
     photo: 'NicolasAmeghino.jpg'
     organization: 'NSCoderBA'
     twitter: 'nameghino'
@@ -67,3 +67,135 @@ speakers:
     organization: 'Bluetrail Software'
     twitter: 'dev_jac'
     linkedin: 'juliocarrettoni'
+
+sessions:
+  - id: 1
+    title: 'How coding for testability made me a better developer'
+    abstract:
+      - 'En el desarrollo mobile los tests tardaron mucho en llegar. Hasta las grandes compañías admiten no tener la cobertura que quisieran. Los tests de UI a veces llevan más mantenimiento del valor que aportan.'
+      - 'La idea es recorrer una arquitectura MVVM en iOS, ver una implementación con inyección de dependencias y recorrer los lugares en donde sí daba gusto tener los tests corriendo. Luego, pasar brevemente por una implementación TDD para mostrar que sí es posible hacerlo.'
+      - 'En síntesis, discutir dónde los tests aportan valor y dónde no, o cuándo un test te puede salvar la vida y cuándo la perdemos escribiéndolos.'
+    type: 'talk'
+    time: '9:30 - 10:10'
+    speaker_id: 1
+    speaker_name: 'Lucas Vidal'
+    tags: ['iOS', 'Testing']
+
+  - id: 2
+    title: 'Speed up iOS form development using Eureka!'
+    abstract:
+      - 'Eureka es la librería open source para crear formularios más popular dentro de la comunidad iOS. Dropbox, Kindle, SoundCloud, ChaseMobile, Foursquare, Wikipedia y otras 14k+ App Store apps la utilizan.'
+      - ' En esta charla veremos lo rápido y fácil que es crear formularios iOS utilizando Eureka.'
+    type: 'talk'
+    time: '10:15 - 10:55'
+    speaker_id: 10
+    speaker_name: 'Martín Barreto'
+    tags: ['iOS']
+
+  - id: 3
+    title: 'Distributed Mobile Development at Scale'
+    abstract:
+      - 'MercadoLibre es el octavo sitio de retail con más tráfico del mundo, con más de 69 millones de usuarios registrados en 12 países de América Latina en la cual trabajan +800 desarrolladores distribuidos en +8 centros de desarrollo diferentes. Los nuevos tiempos son más dinámicos, lo que hace que toda empresa tenga que estar constantemente reconvirtiéndose y evolucionando constantemente.'
+      - 'Hoy en día son muchos los equipos que, trabajando de diferente forma, con diferentes necesidades de negocio y en distintos lugares geográficos, trabajan en conjunto en el desarrollo de las aplicaciones nativas de Mercado Libre.'
+      - 'El cambio de forma de trabajo nos permitió llevar a producción nuevas funcionalidades de forma ágil manteniendo y mejorando la calidad del producto y del código.'
+      - 'Esta charla presentará la metodología de trabajo que adoptamos en Mercado Libre (y cómo fué el proceso de adopción de la misma) para poder trabajar ágilmente y de forma distribuida en el desarrollo de las aplicaciones nativas.'
+    type: 'talk'
+    time: '11:30 - 12:10'
+    speaker_id: 2
+    speaker_name: 'Marcos Barreto'
+    tags: ['Android']
+
+  - id: 4
+    title: 'Atomic Design for Android'
+    abstract:
+      - 'Los pasos fundamentales para diseñar una buena aplicación es conocer las limitantes y posibilidades de la plataforma, guidelines, patrones de interacción, navegación, etc.'
+      - 'El Atomic Design aplicado en Android centraliza el proceso de diseño para crear la mayoría de elementos claves e instancias y así atender a los requerimientos técnicos de diseño como desarrollo, teniendo en cuenta los stage, assets, resoluciones, tipografías, entre otros.'
+      - 'Una de las ventajas de usar esta metodología es permitir un trabajo entre diseñadores y desarrolladores más fluido, comprensible y sobre todo escalable. Permite trabajar detalles al nivel micro como macro, integrando lo que se necesita ahora y necesitará en el futuro.'
+    type: 'talk'
+    time: '12:15 - 12:55'
+    speaker_id: 7
+    speaker_name: 'Emilio Zárraga'
+    tags: ['Android']
+
+  - id: 5
+    title: 'Xamarin: Focus on what really matters'
+    abstract:
+      - 'Xamarin es una tecnología que permite desarrollar aplicaciones nativas compartiendo código entre plataformas. En esta sesión se introducirá sobre su uso, los diferentes enfoques y se mostrará el desarrollo de una aplicación que reconoce emociones.'
+    type: 'talk'
+    time: '14:30 - 15:10'
+    speaker_id: [8, 9]
+    speaker_name: ['Diego Bonilla', 'Johann Pérez']
+    tags: ['Cross-platform']
+
+  - id: 6
+    title: 'Tu app en los primeros lugares: Los secretos del ASO'
+    abstract:
+      - 'Desde lo básico a lo más avanzado para poder posicionar tu aplicación en lo más alto de Google Play. Estrategias de marketing de guerrilla aplicadas al mundo mobile. Conocé a fondo la ciencia detrás del ASO (App Store Optimization) y conseguí miles de descargas gratis.'
+    type: 'talk'
+    time: '15:15 - 15:55'
+    speaker_id: 11
+    speaker_name: 'Martín Alurralde'
+    tags: ['Marketing digital', 'Android']
+
+  - id: 7
+    title: 'The React Native Experience'
+    abstract:
+      - 'En esta charla les compartiré la experiencia de lo que es trabajar con React Native diariamente para proyectos del mundo real. Cubriremos ventajas y desventajas, la experiencia del desarrollador, rendimiento, cómo extenderlo (native modules) y distribución.'
+    type: 'talk'
+    time: '16:30 - 17:10'
+    speaker_id: 3
+    speaker_name: 'Luis Cal'
+    tags: ['Cross-platform']
+
+  - id: 8
+    title: 'Crear una red social de nicho y no morir en el intento'
+    abstract:
+      - 'Se describe un caso de éxito de desarrollo de una red social de nicho para un cliente. Esta historia contiene los altos y bajos que hacen parte de cada proyecto con un alto contenido tecnológico y de negocios. En cada etapa se identifican lecciones que pueden ser de gran utilidad para todos los oyentes, desde un emprendedor hasta un desarrollador y mismo para potenciales clientes.'
+      - 'El objetivo de la charla es nutrirse de experiencias reales en un proyecto de desarrollo mobile de una aplicación de alta complejidad tanto a nivel técnico cómo de negocios buscando que cada oyente evalúe y piense que podría haber hecho en cada situación planteada.'
+      - 'En cuanto a tecnología el proyecto se compone de una aplicación nativa en Android e IOS, backend y backoffice en PHP y servicios de Google para notificaciones.'
+    type: 'talk'
+    time: '17:15 - 17:55'
+    speaker_id: 4
+    speaker_name: 'Omar Saadoun'
+    tags: ['Buissness', 'Leadership']
+
+  - id: 9
+    title: 'Android from scratch'
+    abstract:
+      - 'Cada vez más, las aplicaciones se abren paso en nuestro día a día. Para todo hay una app, y para toda app, hay uno o varios desarrolladores.'
+      - 'A su vez, cada vez más desarrolladores tienden a volcarse al sector móvil y las empresas de software también están cada vez más demandantes en este área.'
+      - 'Como amantes de la tecnología, siempre nos gusta estar a la vanguardia y aprender constantemente lo que se viene; por eso aprender Android (o iOS) hoy por hoy, es casi un requisito.'
+      - 'Este taller apunta a quienes tienen conocimientos de Java, no importa el nivel, y aún no se han adentrado en el mundo Android.'
+      - 'El participante, al finalizar el taller, será capaz de implementar de manera nativa una aplicación Android básica, haciendo uso de diferentes componentes y features del sistema operativo.'
+    type: 'workshop'
+    speaker_id: 6
+    speaker_name: 'Diego Marcher'
+    tags: ['Android']
+
+  - id: 10
+    title: 'Swift 101'
+    abstract:
+      - 'Nos metemos de lleno en el mundo de Swift, el nuevo lenguaje de programación de Apple, creando desde cero una aplicación para iOS y viendo los principales puntos del desarrollo como UI, networking, y arquitectura en general.'
+    type: 'workshop'
+    speaker_id: [12, 13]
+    speaker_name: ['Nicolás Ameghino', 'Julio Carrettoni']
+    tags: ['iOS']
+
+  - id: 11
+    title: 'Kit de supervivencia de diseño para aplicaciones móviles'
+    abstract:
+      - 'En este taller discutiremos algunos tips de diseño y de usabilidad a tener en cuenta al momento de construir aplicaciones móviles, abarcando desde la conceptualización hasta la publicación de las mismas. Veremos en forma práctica un conjunto de tips que nos ayudarán durante la construcción de nuestras aplicación.'
+    type: 'workshop'
+    speaker_id: 5
+    speaker_name: 'Martín Loskin'
+    tags: ['UX']
+
+tags:
+  Android: '#66BB6A'
+  iOS: '#E0E0E0'
+  Testing: '#607D8B'
+  UX: '#FFA726'
+  Cross-platfom: '#2196F3'
+  Marketing digital: '#673AB7'
+  Buissness: '#8D6E63'
+  Leadership: '#E6EE9C'

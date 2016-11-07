@@ -22,7 +22,7 @@
             <b>9:00</b>
           </td>
           <td colspan="2" class='u-bg--secondary-x-light'>
-            <h6>Acreditaciones</h6>
+            <h6>Acreditaciones / Desayuno</h6>
           </td>
         </tr>
 
@@ -31,10 +31,16 @@
             <b>9:30</b>
           </td>
           <td>
-            <a href="sessions.html#1">Charla 1</a>
+            <a href="sessions.html#<%= sessions[0].id %>">
+              <%= sessions[0].title %>
+            </a>
+            <small><%= sessions[0].speaker_name %></small>
           </td>
-          <td rowspan="2" class='u-bg--primary-light' >
-            <h6>Taller 1</h6>
+          <td rowspan="2" class='u-bg--primary-light'>
+            <a href="sessions.html#<%= sessions[8].id %>">
+              <%= sessions[8].title %>
+            </a>
+            <small><%= sessions[8].speaker_name %></small>
           </td>
         </tr>
 
@@ -43,7 +49,8 @@
             <b>10:15</b>
           </td>
           <td>
-            <a href="sessions.html#2">Charla 2</a>
+            <a href="sessions.html#<%= sessions[1].id %>"><%= sessions[1].title %></a>
+            <small><%= sessions[1].speaker_name %></small>
           </td>
         </tr>
 
@@ -61,10 +68,14 @@
             <b>11:30</b>
           </td>
           <td>
-            <a href="sessions.html#3">Charla 3</a>
+            <a href="sessions.html#<%= sessions[2].id %>"><%= sessions[2].title %></a>
+            <small><%= sessions[2].speaker_name %></small>
           </td>
           <td rowspan="2" class='u-bg--primary-light'>
-            <h6>Taller 2</h6>
+            <a href="sessions.html#<%= sessions[9].id %>">
+              <%= sessions[9].title %>
+            </a>
+            <small><%= sessions[9].speaker_name[0] %> - <%= sessions[9].speaker_name[1] %></small>
           </td>
         </tr>
 
@@ -73,7 +84,8 @@
             <b>12:15</b>
           </td>
           <td>
-            <a href="sessions.html#4">Charla 4</a>
+            <a href="sessions.html#<%= sessions[3].id %>"><%= sessions[3].title %></a>
+            <small><%= sessions[3].speaker_name %></small>
           </td>
         </tr>
 
@@ -97,10 +109,14 @@
             <b>14:30</b>
           </td>
           <td>
-            <a href="sessions.html#5">Charla 5</a>
+            <a href="sessions.html#<%= sessions[4].id %>"><%= sessions[4].title %></a>
+            <small><%= sessions[4].speaker_name[0] %> - <%= sessions[4].speaker_name[1] %></small>
           </td>
           <td rowspan="2" class='u-bg--primary-light'>
-            <h6>Taller 3</h6>
+            <a href="sessions.html#<%= sessions[10].id %>">
+              <%= sessions[10].title %>
+            </a>
+            <small><%= sessions[10].speaker_name %></small>
           </td>
         </tr>
 
@@ -109,7 +125,8 @@
             <b>15:15</b>
           </td>
           <td>
-            <a href="sessions.html#6">Charla 6</a>
+            <a href="sessions.html#<%= sessions[5].id %>"><%= sessions[5].title %></a>
+            <small><%= sessions[5].speaker_name %></small>
           </td>
         </tr>
 
@@ -127,7 +144,8 @@
             <b>16:30</b>
           </td>
           <td>
-            <a href="sessions.html#7">Charla 7</a>
+            <a href="sessions.html#<%= sessions[6].id %>"><%= sessions[6].title %></a>
+            <small><%= sessions[6].speaker_name %></small>
           </td>
         </tr>
 
@@ -136,7 +154,8 @@
             <b>17:15</b>
           </td>
           <td>
-            <a href="sessions.html#8">Charla 8</a>
+            <a href="sessions.html#<%= sessions[7].id %>"><%= sessions[7].title %></a>
+            <small><%= sessions[7].speaker_name %></small>
           </td>
         </tr>
 

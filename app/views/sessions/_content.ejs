@@ -33,7 +33,7 @@
         <p><a href="speakers.html#<%= sessions[i].speaker_id %>"><%= sessions[i].speaker_name %></a></p>
         <ul>
           <% for (var j = 0; j < sessions[i].tags.length; j++) { %>
-          <li><%= sessions[i].tags[j] %></li>
+          <li style="background-color: <%= tags[sessions[i].tags[j]] %>;"><%= sessions[i].tags[j] %></li>
           <% } %>
         </ul>
       </article>

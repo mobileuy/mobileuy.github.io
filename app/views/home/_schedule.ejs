@@ -4,15 +4,13 @@
     <table class="c-schedule-table">
       <thead>
         <tr>
-          <th class="u-1-of-9">
+          <th>
           </th>
-          <th class="u-3-of-9">
+          <th>
             CHARLAS (Sala Mario Benedetti)
           </th>
-          <th class="u-3-of-9">
+          <th>
             TALLERES (Sala Vilariño)
-          </th>
-          <th class="u-1-of-9">
           </th>
         </tr>
       </thead>
@@ -34,7 +32,7 @@
             <a href="sessions.html#<%= sessions[0].id %>">
               <%= sessions[0].title %>
             </a>
-            <small><%= sessions[0].speaker_name %></small>
+            <small><%= speakers[sessions[0].speakers[0]].name %></small>
           </td>
           <td rowspan="2" class='u-bg--primary-light'>
             <a href="sessions.html#<%= sessions[8].id %>">

@@ -32,6 +32,15 @@
     display: inline-block;
     list-style: none;
     margin-right: $base-spacing-unit/2;
+    margin-bottom: $base-spacing-unit/2;
     padding: $base-spacing-unit/4 $base-spacing-unit/2;
+
+    @include media-query(start) {
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    color: palette(white);
   }
 }

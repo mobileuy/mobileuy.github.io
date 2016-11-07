@@ -191,11 +191,11 @@ sessions:
     tags: ['UX']
 
 tags:
-  Android: '#66BB6A'
-  iOS: '#E0E0E0'
-  Testing: '#607D8B'
+  Android: '#388E3C'
+  iOS: '#616161'
+  Testing: '#0097A7'
   UX: '#FFA726'
-  Cross-platfom: '#2196F3'
-  Marketing digital: '#673AB7'
-  Buissness: '#8D6E63'
-  Leadership: '#E6EE9C'
+  Cross-platform: '#E64A19'
+  Marketing digital: '#512DA8'
+  Buissness: '#C2185B'
+  Leadership: '#0288D1'

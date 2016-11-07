@@ -1,127 +1,44 @@
 <section class="c-coc u-vm++">
   <div class="o-wrapper">
-    <h1 class="c-coc__title">Sessions</h1>
+    <h1 class="c-coc__title">Charlas</h1>
 
-    <article id="1" class='c-articles'>
-      <h2> Titulo de charla 1<small>9:30 - 10:10</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#1">Nombre</a></p>
-      <div>
+    <% for (var i = 0; i < sessions.length; i++) { %>
+      <% if (sessions[i].type == 'talk') { %>
+        <article id="<%= sessions[i].id %>" class='c-articles'>
+          <h2><%= sessions[i].title %><small><%= sessions[i].time %></small></h2>
+          <% for (var j = 0; j < sessions[i].abstract.length; j++) { %>
+            <p><%= sessions[i].abstract[j] %></p>
+          <% } %>
+          <p>
+            <ul>
+              <% for (var j = 0; j < sessions[i].tags.length; j++) { %>
+              <li style="background-color: <%= tags[sessions[i].tags[j]] %>;"><%= sessions[i].tags[j] %></li>
+              <% } %>
+            </ul>
+          </p>
+          <p><a href="speakers.html#<%= sessions[i].speaker_id %>"><%= sessions[i].speaker_name %></a></p>
+        </article>
+      <% } %>
+    <% } %>
+
+    <h1 class="c-coc__title">Talleres</h1>
+
+    <% for (var i = 0; i < sessions.length; i++) { %>
+      <% if (sessions[i].type == 'workshop') { %>
+      <article id="<%= sessions[i].id %>" class='c-articles'>
+        <h2><%= sessions[i].title %><small><%= sessions[i].time %></small></h2>
+        <% for (var j = 0; j < sessions[i].abstract.length; j++) { %>
+        <p><%= sessions[i].abstract[j] %></p>
+        <% } %>
+        <p><a href="speakers.html#<%= sessions[i].speaker_id %>"><%= sessions[i].speaker_name %></a></p>
         <ul>
-          <li>tags</li>
-          <li>tags</li>
+          <% for (var j = 0; j < sessions[i].tags.length; j++) { %>
+          <li><%= sessions[i].tags[j] %></li>
+          <% } %>
         </ul>
-      </div>
-    </article>
-
-
-    <article id="2" class='c-articles'>
-      <h2> Titulo de charla 2<small>10:15 - 10:55</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#2">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
-
-    <article id="3" class='c-articles'>
-      <h2> Titulo de charla 3<small>11:30 - 12:10</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#3">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
-
-    <article id="4" class='c-articles'>
-      <h2> Titulo de charla 4<small>12:15 - 12:55</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#4">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
-
-    <article id="5" class='c-articles'>
-      <h2> Titulo de charla 5<small>14:30 - 15:10</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#5">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
-
-    <article id="6" class='c-articles'>
-      <h2> Titulo de charla 6<small>15:15 - 15:55</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#6">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
-
-    <article id="7" class='c-articles'>
-      <h2> Titulo de charla 7<small>16:30 - 17:10</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#7">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
-
-    <article id="8" class='c-articles'>
-      <h2> Titulo de charla 8<small>17:15 - 17:55</small></h2>
-      <p>
-        Puedes contactarnos a través del correo hello@mobileday.uy. Durante la conferencia también puedes dirigirte a
-        cualquiera de los organizadores o voluntarios, los cuales estarán debidamente identificados.
-      </p>
-      <p><a href="speakers.html#8">Nombre</a></p>
-      <div>
-        <ul>
-          <li>tags</li>
-          <li>tags</li>
-        </ul>
-      </div>
-    </article>
+      </article>
+      <% } %>
+    <% } %>
 
     <div class="o-box u-mv+"></div>
   </div>

@@ -157,7 +157,7 @@ sessions:
     time: '17:15 - 17:55'
     speaker_id: 4
     speaker_name: 'Omar Saadoun'
-    tags: ['Buissness', 'Leadership']
+    tags: ['Business', 'Leadership']
 
   - id: 9
     title: 'Android from scratch'
@@ -197,5 +197,5 @@ tags:
   UX: '#FFA726'
   Cross-platform: '#E64A19'
   Marketing digital: '#512DA8'
-  Buissness: '#C2185B'
+  Business: '#C2185B'
   Leadership: '#0288D1'

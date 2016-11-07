@@ -3,7 +3,7 @@
         <h1 class="c-coc__title">Oradores</h1>
 
         <% for (var i = 0; i < speakers.length; i++) { %>
-            <article id="<%= speakers[i].id %>" class='c-articles media'>
+            <article id="<%= speakers[i].id %>" class='c-articles media media--responsive'>
                 <img src="speakers/<%= speakers[i].photo %>" class="media__img c-articles__photo"/>
                 <div class="media__body">
                     <h2><%= speakers[i].name %><small><%= speakers[i].organization %></small></h2>

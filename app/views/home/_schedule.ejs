@@ -40,7 +40,7 @@
             <a href="sessions.html#<%= sessions[8].id %>">
               <%= sessions[8].title %>
             </a>
-            <small><%= sessions[8].speaker_name %></small>
+            <small><%= speakers[sessions[8].speakers[0]].name %></small>
           </td>
         </tr>
 
@@ -50,7 +50,7 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[1].id %>"><%= sessions[1].title %></a>
-            <small><%= sessions[1].speaker_name %></small>
+            <small><%= speakers[sessions[1].speakers[0]].name %></small>
           </td>
         </tr>
 
@@ -69,13 +69,13 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[2].id %>"><%= sessions[2].title %></a>
-            <small><%= sessions[2].speaker_name %></small>
+            <small><%= speakers[sessions[2].speakers[0]].name %></small>
           </td>
           <td rowspan="2" class='u-bg--primary-light'>
             <a href="sessions.html#<%= sessions[9].id %>">
               <%= sessions[9].title %>
             </a>
-            <small><%= sessions[9].speaker_name[0] %> - <%= sessions[9].speaker_name[1] %></small>
+            <small><%= speakers[sessions[9].speakers[0]].name %> - <%= speakers[sessions[9].speakers[1]].name %></small>
           </td>
         </tr>
 
@@ -85,7 +85,7 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[3].id %>"><%= sessions[3].title %></a>
-            <small><%= sessions[3].speaker_name %></small>
+            <small><%= speakers[sessions[3].speakers[0]].name %></small>
           </td>
         </tr>
 
@@ -110,13 +110,13 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[4].id %>"><%= sessions[4].title %></a>
-            <small><%= sessions[4].speaker_name[0] %> - <%= sessions[4].speaker_name[1] %></small>
+            <small><%= speakers[sessions[4].speakers[0]].name %> - <%= speakers[sessions[4].speakers[1]].name %></small>
           </td>
           <td rowspan="2" class='u-bg--primary-light'>
             <a href="sessions.html#<%= sessions[10].id %>">
               <%= sessions[10].title %>
             </a>
-            <small><%= sessions[10].speaker_name %></small>
+            <small><%= speakers[sessions[10].speakers[0]].name %></small>
           </td>
         </tr>
 
@@ -126,7 +126,7 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[5].id %>"><%= sessions[5].title %></a>
-            <small><%= sessions[5].speaker_name %></small>
+            <small><%= speakers[sessions[5].speakers[0]].name %></small>
           </td>
         </tr>
 
@@ -145,7 +145,7 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[6].id %>"><%= sessions[6].title %></a>
-            <small><%= sessions[6].speaker_name %></small>
+            <small><%= speakers[sessions[6].speakers[0]].name %></small>
           </td>
         </tr>
 
@@ -155,7 +155,7 @@
           </td>
           <td>
             <a href="sessions.html#<%= sessions[7].id %>"><%= sessions[7].title %></a>
-            <small><%= sessions[7].speaker_name %></small>
+            <small><%= speakers[sessions[7].speakers[0]].name %></small>
           </td>
         </tr>
 

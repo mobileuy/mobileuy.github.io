@@ -29,7 +29,7 @@ speakers:
     twitter: '_lucho99'
     linkedin: 'luis-cal-70131525'
     bio:
-      - 'Luis es un ingeniero front-end apasionado con un fuerte foco en performance de mobile devices. Con una vasta experiencia trabajando con tecnologías web, es fundador y CTO de DIXTRA. Disfruta de una buena lectura, música y fútbol. En su tiempo libre le gusta trabajar en proyectos personales de IoT basados en NodeJS.'
+      - 'Ingeniero front-end apasionado con un fuerte foco en performance de mobile devices. Con una vasta experiencia trabajando con tecnologías web, es fundador y CTO de DIXTRA. Disfruta de una buena lectura, música y fútbol. En su tiempo libre le gusta trabajar en proyectos personales de IoT basados en NodeJS.'
 
   - id: 4
     name: 'Omar Saadoun'
@@ -48,7 +48,7 @@ speakers:
     twitter: 'loskinoficial'
     linkedin: 'martinloskin'
     bio:
-      - 'Martín Loskin tiene más de 10 años de experiencia como director de arte y diseñador UX, trabajando en distintos proyectos de entretenimiento, educación y software de productividad. Actualmente trabaja hace 3 años como UX Architect en Infragistics en su equipo de Enterprise Mobility.'
+      - 'Tiene más de 10 años de experiencia como director de arte y diseñador UX, trabajando en distintos proyectos de entretenimiento, educación y software de productividad. Actualmente trabaja hace 3 años como UX Architect en Infragistics en su equipo de Enterprise Mobility.'
 
   - id: 6
     name: 'Diego Marcher'
@@ -57,7 +57,7 @@ speakers:
     twitter: 'memphisdrums'
     linkedin: 'diego-marcher-17364416'
     bio:
-      - 'Diego es Ingeniero en Computación egresado de la Facultad de Ingeniería de la Universidad de la República.'
+      - 'Ingeniero en Computación egresado de la Facultad de Ingeniería de la Universidad de la República.'
       - 'Actualmente y desde 2011 se encuentra desarrollando aplicaciones para Android de manera nativa tanto para su trabajo como de manera freelancer.'
       - 'Nerd, baterista frustrado, amante de las matemáticas y los cubos de Rubik.'
 
@@ -68,9 +68,10 @@ speakers:
     twitter: 'emiliovirtual'
     linkedin: 'emiliozarraga'
     bio:
-      - 'Los pasos fundamentales para diseñar una buena aplicación es conocer las limitantes y posibilidades de la plataforma, guidelines, patrones de interacción, navegación, etc.'
-      - 'El Atomic Design aplicado en Android centraliza el proceso de diseño para crear la mayoría de elementos claves e instancias y así atender a los requerimientos técnicos de diseño como desarrollo, teniendo en cuenta los stage, assets, resoluciones, tipografías, entre otros.'
-      - 'Una de las ventajas de usar esta metodología es permitir un trabajo entre diseñadores y desarrolladores más fluido, comprensible y sobre todo escalable. Permite trabajar detalles al nivel micro como macro, integrando lo que se necesita ahora y necesitará en el futuro.'
+      - 'Diseñador Gráfico Publicitario Venezolano. En el 2001, inicia su carrera dentro del ámbito de la publicidad y artes gráficas. Desde el 2006 comienza elaborando piezas digitales para sitios web e intranet para clientes como Pequiven, Digitel y Prosalud.'
+      - 'En el 2011, con el fin de especializarse en el área digital, emigra a Buenos Aires, Argentina y comienza sus estudios como Diseñador Web en la Escuela Da Vinci.'
+      - 'En la capital bonaerense ha trabajado en proyectos para los Laboratorios Roche y Abbott, Techo, Microsoft, Haier, entre otros. Desde el 2013, ha formado parte de equipos de desarrollo ágiles y, desde el 2015, de proyectos específicos de Mobile, diseñando para iOS y Android, en rubros tales como IoT, seguros, y banca.'
+      - 'Actualmente, cursa un Diplomado de Usabilidad y Accesibilidad en la Universidad Tecnológica Nacional, en CABA, Argentina y se desempeña como Diseñador UX Senior en GlobalLogic, Argentina.'
 
   - id: 8
     name: 'Diego Bonilla'
@@ -115,7 +116,7 @@ speakers:
     twitter: 'nameghino'
     linkedin: 'nicolas-ameghino-2ba77710'
     bio:
-      - 'Nicolás trabaja en iOS desde el inicio de la plataforma en 2008, con importantes clientes como Coto CICSA, JP Morgan y Disney.'
+      - 'Trabaja en iOS desde el inicio de la plataforma en 2008, con importantes clientes como Coto CICSA, JP Morgan y Disney.'
 
   - id: 13
     name: 'Julio Carrettoni'
@@ -124,7 +125,7 @@ speakers:
     twitter: 'dev_jac'
     linkedin: 'juliocarrettoni'
     bio:
-      - 'Julio Carrettoni trabaja de manera profesional e ininterrumpida en iOS desde el 2009 cuando aún era iPhoneOS. En el medio probó otras plataformas como Android y Blackberry pero siempre volvió a su primer amor. Entusiasta de UIKit e IB, se encuentra en una relación complicada con Auto Layout.'
+      - 'Trabaja de manera profesional e ininterrumpida en iOS desde el 2009 cuando aún era iPhoneOS. En el medio probó otras plataformas como Android y Blackberry pero siempre volvió a su primer amor. Entusiasta de UIKit e IB, se encuentra en una relación complicada con Auto Layout.'
 
 sessions:
   - id: 1

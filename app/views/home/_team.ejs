@@ -1,12 +1,26 @@
-<div id="team" class="u-pv++">
-    <div class='o-wrapper u-text-align--center'>
-        <h2 class='u-color--primary u-font-weight--300'>Equipo</h2>
-        <ul class='o-layout o-layout--center u-text-align--center u-mb'>
-            <li class='o-layout__item u-1-of-1 u-1-of-2-start u-1-of-4-small'>
-                <a href="http://genexus.com" target="_blank" rel="noopener" class='u-display--block u-text-align--center'>
-                    <!-- <img src="logos/genexus.png" alt="Genexus" height="100px"/> -->
+<div id="team" class="c-team u-pv++">
+    <div class='o-wrapper'>
+        <h1 class='c-team__title u-mb++'>Organizan</h1>
+        <ul class='o-layout o-layout--center o-layout--large'>
+            <% for (var i = 0; i < team.organizers.length; i++) { %>
+                <li class='o-layout__item c-team__item u-1-of-1 u-1-of-4-start u-mb++'>
+                    <a href="https://linkedin.com/in/<%= team.organizers[i].linkedin %>">
+                        <img class="c-team__img" src="team/<%= team.organizers[i].photo %>" alt="<%= team.organizers[i].name %>">
+                        <h5 class="c-team__name1 u-mt u-mb0"><%= team.organizers[i].name %></h5>
+                    </a>
+                </li>
+            <% } %>
+        </ul>
+        <h1 class='c-team__title u-mt++ u-mb++'>Colaboran</h1>
+        <ul class='o-layout o-layout--center'>
+            <% for (var i = 0; i < team.collaborators.length; i++) { %>
+            <li class='o-layout__item c-team__item u-1-of-2 u-1-of-7-start u-mb++'>
+                <a href="https://linkedin.com/in/<%= team.collaborators[i].linkedin %>">
+                    <img class="c-team__img" src="team/<%= team.collaborators[i].photo %>" alt="<%= team.collaborators[i].name %>">
+                    <h5 class="c-team__name2 u-mt u-mb0"><%= team.collaborators[i].name %></h5>
                 </a>
             </li>
+            <% } %>
         </ul>
     </div>
 </div>

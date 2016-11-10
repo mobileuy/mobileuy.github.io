@@ -247,3 +247,74 @@ tags:
   Marketing digital: '#512DA8'
   Business: '#C2185B'
   Leadership: '#0288D1'
+
+team:
+  organizers:
+    - name: 'Damián Arrillaga'
+      photo: 'DamianArrillaga.jpg'
+      linkedin: 'darrillaga'
+
+    - name: 'Juan Andrés Diana'
+      photo: 'JuanAndresDiana.jpg'
+      linkedin: 'juandiana'
+
+    - name: 'Juan Manuel Pereira'
+      photo: 'JuanManuelPereira.jpg'
+      linkedin: 'juanmanuelpereira'
+
+  collaborators:
+    - name: 'Marcos Ambrosi'
+      photo: 'MarcosAmbrosi.jpg'
+      linkedin: 'marcosambrosi'
+
+    - name: 'Marcos Barreto'
+      photo: 'MarcosBarreto.jpg'
+      linkedin: 'jmarcosbarreto'
+
+    - name: 'Ignacio Benedetto'
+      photo: 'IgnacioBenedetto.jpg'
+      linkedin: 'ignacio-benedetto-b2302280'
+
+    - name: 'Valentín Bonilla'
+      photo: 'ValentinBonilla.jpg'
+      linkedin: 'valentin-bonilla-7ba28039'
+
+    - name: 'Nicolás Cardelino'
+      photo: 'NicolasCardelino.jpg'
+      linkedin: 'nicolas-cardelino-0bb805'
+
+    - name: 'Gonzalo Cumini'
+      photo: 'GonzaloCumini.jpg'
+      linkedin: 'gonzalocumini'
+
+    - name: 'Máximo Gómez'
+      photo: 'MaximoGomez.jpg'
+      linkedin: 'maximogomezsantos'
+
+    - name: 'Muriel Graña'
+      photo: 'MurielGraña.jpg'
+      linkedin: 'murielgrana'
+
+    - name: 'Guzmán Iglesias'
+      photo: 'GuzmanIglesias.jpg'
+      linkedin: 'guzmán-iglesias-a6886956'
+
+    - name: 'Fabian Kremer'
+      photo: 'FabianKremer.jpg'
+      linkedin: 'fabian-kremer-5618807a'
+
+    - name: 'Cecilia Marcora'
+      photo: 'CeciliaMarcora.jpg'
+      linkedin: 'cecilia-marcora-0018b047'
+
+    - name: 'Nicolás Suarez'
+      photo: 'NicolasSuarez.jpg'
+      linkedin: 'nisuarez'
+
+    - name: 'Ignacio Talavera'
+      photo: 'IgnacioTalavera.jpg'
+      linkedin: 'ignacio-talavera-a07a8929'
+
+    - name: 'Sofía Torres'
+      photo: 'SofiaTorres.jpg'
+      linkedin: 'sofiatorreshernandez'

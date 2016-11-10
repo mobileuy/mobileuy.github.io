@@ -1,0 +1,49 @@
+.c-team {
+  background-color: lighten($color-footer, 20%);
+}
+
+.c-team__title {
+  color: palette(white);
+  text-align: center;
+  font-weight: 300;
+}
+
+.c-team__subtitle {
+  color: palette(white);
+  text-align: center;
+  font-weight: 300;
+}
+
+.c-team__item {
+  text-align: center !important;
+  color: rgba(255,255,255,0.5);
+
+  a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
+    &:hover, &:focus, &:active {
+      color: palette(white);
+    }
+  }
+}
+
+.c-team__img {
+  border-radius: 50%;
+}
+
+.c-team__name1 {
+  font-size: 1.7rem;
+
+  @include media-query(start) {
+    font-size: 1.1rem;
+  }
+}
+
+.c-team__name2 {
+  font-size: 1.1rem;
+
+  @include media-query(start) {
+    font-size: 0.9rem;
+  }
+}

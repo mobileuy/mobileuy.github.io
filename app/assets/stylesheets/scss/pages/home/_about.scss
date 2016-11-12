@@ -6,6 +6,12 @@
     padding-top: $base-spacing-unit * 8;
     padding-bottom: $base-spacing-unit * 6;
   }
+
+  display: none;
+
+  @include media-query(start) {
+    display: block;
+  }
 }
 
 .c-about__title {

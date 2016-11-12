@@ -1,7 +1,7 @@
 // Base heritage
 // ==========================================================================
 
-$content: '{ "particleCount" : 50, "mobile_viewport" : true }';
+$content: '{ "particleCount" : 0, "mobile_viewport" : true }';
 
 .variables-metadata::before {
   content: $content;

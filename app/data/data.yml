@@ -219,6 +219,7 @@ sessions:
       - 'Este taller apunta a quienes tienen conocimientos de Java, no importa el nivel, y aún no se han adentrado en el mundo Android.'
       - 'El participante, al finalizar el taller, será capaz de implementar de manera nativa una aplicación Android básica, haciendo uso de diferentes componentes y features del sistema operativo.'
     type: 'workshop'
+    time: '9:30 - 11:00'
     speakers: [5]
     tags: ['Android']
 
@@ -227,6 +228,7 @@ sessions:
     abstract:
       - 'Nos metemos de lleno en el mundo de Swift, el nuevo lenguaje de programación de Apple, creando desde cero una aplicación para iOS y viendo los principales puntos del desarrollo como UI, networking, y arquitectura en general.'
     type: 'workshop'
+    time: '11:30 - 13:00'
     speakers: [11, 12]
     tags: ['iOS']
 
@@ -235,6 +237,7 @@ sessions:
     abstract:
       - 'En este taller discutiremos algunos tips de diseño y de usabilidad a tener en cuenta al momento de construir aplicaciones móviles, abarcando desde la conceptualización hasta la publicación de las mismas. Veremos en forma práctica un conjunto de tips que nos ayudarán durante la construcción de nuestras aplicación.'
     type: 'workshop'
+    time: '14:30 - 16:00'
     speakers: [4]
     tags: ['UX']
 

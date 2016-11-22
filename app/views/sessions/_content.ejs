@@ -7,18 +7,38 @@
         <article id="<%= sessions[i].id %>" class='c-articles'>
           <h2><%= sessions[i].title %><small><%= sessions[i].time %></small></h2>
           <% for (var j = 0; j < sessions[i].abstract.length; j++) { %>
-            <p><%= sessions[i].abstract[j] %></p>
+            <p class="c-articles__abstract"><%= sessions[i].abstract[j] %></p>
           <% } %>
           <p>
-            <% for (var j = 0; j < sessions[i].speakers.length; j++) { %>
-              <a href="speakers.html#<%= speakers[sessions[i].speakers[j]].id %>">
-                <img src="speakers/<%= speakers[sessions[i].speakers[j]].photo %>" class="c-article__image"/>
-                <%= speakers[sessions[i].speakers[j]].name %>
-              </a>
-            <% } %>
+            <ul class="c-article__resources">
+              <li>
+                <a href="<%= sessions[i].slides %>">
+                  <svg><use xlink:href="#slides"></use></svg>
+                  <span>Slides</span>
+                </a>
+              </li>
+              <li>
+                <a href="<%= sessions[i].video %>">
+                  <svg><use xlink:href="#youtube"></use></svg>
+                  <span>Video</span>
+                </a>
+              </li>
+            </ul>
           </p>
           <p>
             <ul>
+              <% for (var j = 0; j < sessions[i].speakers.length; j++) { %>
+                <li>
+                  <a href="speakers.html#<%= speakers[sessions[i].speakers[j]].id %>">
+                    <img src="speakers/<%= speakers[sessions[i].speakers[j]].photo %>" class="c-article__image"/>
+                    <span><%= speakers[sessions[i].speakers[j]].name %></span>
+                  </a>
+                </li>
+              <% } %>
+            </ul>
+          </p>
+          <p>
+            <ul class="c-articles__tags">
               <% for (var j = 0; j < sessions[i].tags.length; j++) { %>
               <li style="background-color: <%= tags[sessions[i].tags[j]] %>;"><%= sessions[i].tags[j] %></li>
               <% } %>
@@ -38,19 +58,23 @@
         <p><%= sessions[i].abstract[j] %></p>
         <% } %>
         <p>
-          <% for (var j = 0; j < sessions[i].speakers.length; j++) { %>
-          <a href="speakers.html#<%= speakers[sessions[i].speakers[j]].id %>">
-            <img src="speakers/<%= speakers[sessions[i].speakers[j]].photo %>" class="c-article__image"/>
-            <%= speakers[sessions[i].speakers[j]].name %>
-          </a>
-          <% } %>
+          <ul>
+            <% for (var j = 0; j < sessions[i].speakers.length; j++) { %>
+              <li>
+                <a href="speakers.html#<%= speakers[sessions[i].speakers[j]].id %>">
+                  <img src="speakers/<%= speakers[sessions[i].speakers[j]].photo %>" class="c-article__image"/>
+                  <%= speakers[sessions[i].speakers[j]].name %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
         </p>
         <p>
-        <ul>
-          <% for (var j = 0; j < sessions[i].tags.length; j++) { %>
-          <li style="background-color: <%= tags[sessions[i].tags[j]] %>;"><%= sessions[i].tags[j] %></li>
-          <% } %>
-        </ul>
+          <ul class="c-articles__tags">
+            <% for (var j = 0; j < sessions[i].tags.length; j++) { %>
+            <li style="background-color: <%= tags[sessions[i].tags[j]] %>;"><%= sessions[i].tags[j] %></li>
+            <% } %>
+          </ul>
         </p>
       </article>
       <% } %>

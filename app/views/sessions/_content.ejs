@@ -11,18 +11,22 @@
           <% } %>
           <p>
             <ul class="c-article__resources">
-              <li>
-                <a href="<%= sessions[i].slides %>">
-                  <svg><use xlink:href="#slides"></use></svg>
-                  <span>Slides</span>
-                </a>
-              </li>
-              <li>
-                <a href="<%= sessions[i].video %>">
-                  <svg><use xlink:href="#youtube"></use></svg>
-                  <span>Video</span>
-                </a>
-              </li>
+              <% if (sessions[i].slides != null) { %>
+                <li>
+                  <a href="<%= sessions[i].slides %>">
+                    <svg><use xlink:href="#slides"></use></svg>
+                    <span>Slides</span>
+                  </a>
+                </li>
+              <% } %>
+              <% if (sessions[i].video != null) { %>
+                <li>
+                  <a href="<%= sessions[i].video %>">
+                    <svg><use xlink:href="#youtube"></use></svg>
+                    <span>Video</span>
+                  </a>
+                </li>
+              <% } %>
             </ul>
           </p>
           <p>
@@ -57,6 +61,26 @@
         <% for (var j = 0; j < sessions[i].abstract.length; j++) { %>
         <p><%= sessions[i].abstract[j] %></p>
         <% } %>
+        <p>
+        <ul class="c-article__resources">
+          <% if (sessions[i].slides != null) { %>
+            <li>
+              <a href="<%= sessions[i].slides %>">
+                <svg><use xlink:href="#slides"></use></svg>
+                <span>Slides</span>
+              </a>
+            </li>
+          <% } %>
+          <% if (sessions[i].github != null) { %>
+            <li>
+              <a href="<%= sessions[i].github %>">
+                <svg><use xlink:href="#github"></use></svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+          <% } %>
+        </ul>
+        </p>
         <p>
           <ul>
             <% for (var j = 0; j < sessions[i].speakers.length; j++) { %>

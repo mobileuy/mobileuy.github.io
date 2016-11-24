@@ -138,6 +138,7 @@ sessions:
     time: '9:30 - 10:10'
     speakers: [0]
     tags: ['iOS', 'Testing']
+    slides: 'How_coding_for_testability_made_me_a_better_developer-Lucas_Vidal.pdf'
 
   - id: 2
     title: 'Speed up iOS form development using Eureka!'
@@ -148,6 +149,7 @@ sessions:
     time: '10:15 - 10:55'
     speakers: [9]
     tags: ['iOS']
+    slides: 'Speed_up_iOS_form_development_using_Eureka!-MartinBarreto.pdf'
 
   - id: 3
     title: 'Distributed Mobile Development at Scale'
@@ -160,6 +162,7 @@ sessions:
     time: '11:30 - 12:10'
     speakers: [1]
     tags: ['Android']
+    slides: 'Distributed_Mobile_Development_at_Scale-Marcos_Barreto.pdf'
 
   - id: 4
     title: 'Atomic Design for Android'
@@ -171,6 +174,7 @@ sessions:
     time: '12:15 - 12:55'
     speakers: [6]
     tags: ['Android', 'UX']
+    slides: 'Atomic_Design_for_Android-Emilio_Zarraga.pdf'
 
   - id: 5
     title: 'Xamarin: Focus on what really matters'
@@ -180,6 +184,7 @@ sessions:
     time: '14:30 - 15:10'
     speakers: [7, 8]
     tags: ['Cross-platform']
+    slides: 'Xamarin_Focus_on_what_really_matters-Diego_Bonilla_Johann_Perez.pdf'
 
   - id: 6
     title: 'Tu app en los primeros lugares: Los secretos del ASO'
@@ -198,6 +203,7 @@ sessions:
     time: '16:30 - 17:10'
     speakers: [2]
     tags: ['Cross-platform']
+    slides: 'The_React_Native_Experience-Luis_Cal.pdf'
 
   - id: 8
     title: 'Crear una red social de nicho y no morir en el intento'
@@ -209,6 +215,7 @@ sessions:
     time: '17:15 - 17:55'
     speakers: [3]
     tags: ['Business', 'Leadership']
+    slides: 'Crear_una_red_social_de_nicho_y_no_morir_en_el_intento-Omar_Saadoun.pdf'
 
   - id: 9
     title: 'Android from scratch'
@@ -222,6 +229,8 @@ sessions:
     time: '9:30 - 11:00'
     speakers: [5]
     tags: ['Android']
+    slides: 'Android_from_scratch-Diego_Marcher.pdf'
+    github: 'https://github.com/marcherdiego/MobileDay'
 
   - id: 10
     title: 'Swift 101'
@@ -231,6 +240,8 @@ sessions:
     time: '11:30 - 13:00'
     speakers: [11, 12]
     tags: ['iOS']
+    slides: 'Swift_101-Nicolas_Ameghino_Julio_Carrettoni.pdf'
+    github: 'https://github.com/nameghino/MUYReddit'
 
   - id: 11
     title: 'Kit de supervivencia de diseño para aplicaciones móviles'
@@ -240,6 +251,7 @@ sessions:
     time: '14:30 - 16:00'
     speakers: [4]
     tags: ['UX']
+    slides: 'Kit_de_supervivencia_de_disenio_para_aplicaciones_moviles-Martin_Loksin.pdf'
 
 tags:
   Android: '#388E3C'

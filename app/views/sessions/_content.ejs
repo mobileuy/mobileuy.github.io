@@ -13,7 +13,7 @@
             <ul class="c-article__resources">
               <% if (sessions[i].slides != null) { %>
                 <li>
-                  <a href="<%= sessions[i].slides %>">
+                  <a href="<%= sessions[i].slides %>" target="_blank" rel="noopener">
                     <svg><use xlink:href="#slides"></use></svg>
                     <span>Slides</span>
                   </a>
@@ -21,7 +21,7 @@
               <% } %>
               <% if (sessions[i].video != null) { %>
                 <li>
-                  <a href="<%= sessions[i].video %>">
+                  <a href="<%= sessions[i].video %>" target="_blank" rel="noopener">
                     <svg><use xlink:href="#youtube"></use></svg>
                     <span>Video</span>
                   </a>
@@ -65,7 +65,7 @@
         <ul class="c-article__resources">
           <% if (sessions[i].slides != null) { %>
             <li>
-              <a href="<%= sessions[i].slides %>">
+              <a href="<%= sessions[i].slides %>" target="_blank" rel="noopener">
                 <svg><use xlink:href="#slides"></use></svg>
                 <span>Slides</span>
               </a>
@@ -73,7 +73,7 @@
           <% } %>
           <% if (sessions[i].github != null) { %>
             <li>
-              <a href="<%= sessions[i].github %>">
+              <a href="<%= sessions[i].github %>" target="_blank" rel="noopener">
                 <svg><use xlink:href="#github"></use></svg>
                 <span>GitHub</span>
               </a>

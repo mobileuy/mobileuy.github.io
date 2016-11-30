@@ -194,6 +194,7 @@ sessions:
     time: '15:15 - 15:55'
     speakers: [10]
     tags: ['Marketing digital', 'Android']
+    slides: 'Tu_app_en_los_primeros_lugares_Los_secretos_del_ASO-Martin_Alurralde.pdf'
 
   - id: 7
     title: 'The React Native Experience'

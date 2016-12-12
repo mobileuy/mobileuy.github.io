@@ -1,6 +1,6 @@
 <section class="c-coc u-vm++">
   <div class="o-wrapper">
-    <h1 class="c-coc__title">Charlas</h1>
+    <h1 id="talks" class="c-coc__title">Charlas</h1>
 
     <% for (var i = 0; i < sessions.length; i++) { %>
       <% if (sessions[i].type == 'talk') { %>
@@ -52,7 +52,7 @@
       <% } %>
     <% } %>
 
-    <h1 class="c-coc__title">Talleres</h1>
+    <h1 id="workshops" class="c-coc__title">Talleres</h1>
 
     <% for (var i = 0; i < sessions.length; i++) { %>
       <% if (sessions[i].type == 'workshop') { %>

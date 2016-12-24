@@ -139,6 +139,7 @@ sessions:
     speakers: [0]
     tags: ['iOS', 'Testing']
     slides: 'How_coding_for_testability_made_me_a_better_developer-Lucas_Vidal.pdf'
+    video: 'https://www.youtube.com/watch?v=dHMVL4J5O_w'
 
   - id: 2
     title: 'Speed up iOS form development using Eureka!'
@@ -150,6 +151,7 @@ sessions:
     speakers: [9]
     tags: ['iOS']
     slides: 'Speed_up_iOS_form_development_using_Eureka!-MartinBarreto.pdf'
+    video: 'https://www.youtube.com/watch?v=uRBy-RN5lZI'
 
   - id: 3
     title: 'Distributed Mobile Development at Scale'
@@ -163,6 +165,7 @@ sessions:
     speakers: [1]
     tags: ['Android']
     slides: 'Distributed_Mobile_Development_at_Scale-Marcos_Barreto.pdf'
+    video: 'https://www.youtube.com/watch?v=XC6bRHSxciI'
 
   - id: 4
     title: 'Atomic Design for Android'
@@ -175,6 +178,7 @@ sessions:
     speakers: [6]
     tags: ['Android', 'UX']
     slides: 'Atomic_Design_for_Android-Emilio_Zarraga.pdf'
+    video: 'https://www.youtube.com/watch?v=DHfdBHVNLMA'
 
   - id: 5
     title: 'Xamarin: Focus on what really matters'
@@ -185,6 +189,7 @@ sessions:
     speakers: [7, 8]
     tags: ['Cross-platform']
     slides: 'Xamarin_Focus_on_what_really_matters-Diego_Bonilla_Johann_Perez.pdf'
+    video: 'https://www.youtube.com/watch?v=aVcLXq4XKfM'
 
   - id: 6
     title: 'Tu app en los primeros lugares: Los secretos del ASO'
@@ -195,6 +200,7 @@ sessions:
     speakers: [10]
     tags: ['Marketing digital', 'Android']
     slides: 'Tu_app_en_los_primeros_lugares_Los_secretos_del_ASO-Martin_Alurralde.pdf'
+    video: 'https://www.youtube.com/watch?v=89ejD6WF4-Q'
 
   - id: 7
     title: 'The React Native Experience'
@@ -205,6 +211,7 @@ sessions:
     speakers: [2]
     tags: ['Cross-platform']
     slides: 'The_React_Native_Experience-Luis_Cal.pdf'
+    video: 'https://www.youtube.com/watch?v=3qYYQO-xTDY'
 
   - id: 8
     title: 'Crear una red social de nicho y no morir en el intento'
@@ -216,6 +223,7 @@ sessions:
     time: '17:15 - 17:55'
     speakers: [3]
     tags: ['Business', 'Leadership']
+    video: 'https://www.youtube.com/watch?v=9k1o64w7E8o'
     slides: 'Crear_una_red_social_de_nicho_y_no_morir_en_el_intento-Omar_Saadoun.pdf'
 
   - id: 9

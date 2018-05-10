@@ -1,5 +1,7 @@
 /*global io,superagent*/
 
+var endpoint = 'https://mobile-uy.herokuapp.com';
+
 var body = document.body;
 var request = superagent;
 
@@ -34,7 +36,7 @@ body.addEventListener('submit', function(ev){
 
 function invite(channel, coc, email, fn){
   request
-  .post('https://mobileuy.herokuapp.com/invite')
+  .post(endpoint + '/invite')
   .send({
     coc: coc,
     channel: channel,
@@ -54,7 +56,7 @@ function invite(channel, coc, email, fn){
 var url = document.createElement('a');
 url.href = window.location;
 // realtime updates
-var socket = io('https://mobileuy.herokuapp.com', { path: '/socket.io' });
+var socket = io(endpoint, { path: '/socket.io' });
 socket.on('data', function(users){
   for (var i in users) update(i, users[i]);
 });

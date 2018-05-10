@@ -29,7 +29,7 @@
   width: 15px;
   height: 15px;
   vertical-align: middle;
-  background: url(/assets/checkbox.svg);
+  background: url('../img/checkbox.svg');
   cursor: pointer
 }
 

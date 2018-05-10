@@ -27,7 +27,8 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background: url("../img/background.svg"), radial-gradient(circle farthest-corner at 50% 50%, #fff, #f9f9f9 34%, #ececec) 50% 50%, 0 0;
+  background: url("../img/background.svg"), radial-gradient(circle farthest-corner at 50% 50%, #fff, #f9f9f9 34%, #ececec);
+  background-position: 50% 50%, 0 0;
   background-size: cover, auto;
 }
 

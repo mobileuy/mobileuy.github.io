@@ -50,30 +50,29 @@
 
       <p class="status"><b class="active">3</b> usuarios conectados de <b class="total">71</b> registrados.</p>
 
-      <form>
-        <input type="email" placeholder="email@dominio.com" autofocus="autofocus" class="form-item">
+      <form id="invite">
+        <input type="email" name="email" placeholder="email@dominio.com" autofocus="autofocus" class="form-item">
         <br>
-        <div class="g-recaptcha" data-sitekey="6LdlLUYUAAAAAI70Nv9Sp2Pmp7JlYGL-Qn7nyFkO"></div>
+        <div class="g-recaptcha" data-sitekey="6Lf3glgUAAAAANBqixx-hKuoFHx9DI1274j_c5tm"></div>
         <button class="loading">Obtener invitación</button>
       </form>
 
       <p class="signin">o <a href="https://mobilemeetup.slack.com" target="_top">iniciá sesión</a>.</p>
-
-      <script>
-        data = {};
-        data.path = "/";
-      </script>
-      <script src="https://cdn.socket.io/socket.io-1.3.2.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
-      <script src="js/client.js"></script>
     </div>
   </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
 <script src="js/webflow.js"></script>
+
+<script>
+  data = {};
+  data.path = "/";
+</script>
+<script src="https://cdn.socket.io/socket.io-1.4.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/3.8.3/superagent.min.js"></script>
+<script src="js/client.js"></script>
 
 </body>
 

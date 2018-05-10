@@ -26,7 +26,7 @@ body.addEventListener('submit', function (ev){
     if (err) {
       button.removeAttribute('disabled')
       button.className = 'error'
-      button.innerHTML = err.message
+      button.innerHTML = msg
     } else {
       button.className = 'success'
       button.innerHTML = msg
@@ -36,23 +36,21 @@ body.addEventListener('submit', function (ev){
 
 function invite (channel, coc, email, gcaptcha_response_value, fn){
   request
-    .post(endpoint + 'invite')
+    .post(endpoint + '/invite')
     .send({
       "g-recaptcha-response": gcaptcha_response_value,
       coc: coc,
       channel: channel,
       email: email
     })
-    .end(function (res){
+    .end(function (err, res){
       if (res.body.redirectUrl) {
-        var err = new Error(res.body.msg || 'Server error')
         window.setTimeout(function () {
           topLevelRedirect(res.body.redirectUrl)
         }, 1500)
       }
       if (res.error) {
-        var err = new Error(res.body.msg || 'Server error')
-        return fn(err)
+        return fn(err, res.body.msg)
       } else {
         fn(null, res.body.msg)
       }
@@ -63,7 +61,7 @@ function invite (channel, coc, email, gcaptcha_response_value, fn){
 var url = document.createElement('a')
 url.href = window.location
 // realtime updates
-var socket = io(endpoint, { path: 'socket.io' })
+var socket = io(endpoint, { path: '/socket.io' })
 socket.on('data', function (users){
   for (var i in users) update(i, users[i])
 })

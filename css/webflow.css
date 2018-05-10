@@ -27,9 +27,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-image: url("http://uploads.webflow.com/5a7cc423167af10001ac6286/5a7cc4a215af960001b368f5_images.svg"), -webkit-radial-gradient(circle farthest-corner at 50% 50%, #fff, #f9f9f9 34%, #ececec);
-  background-image: url("http://uploads.webflow.com/5a7cc423167af10001ac6286/5a7cc4a215af960001b368f5_images.svg"), radial-gradient(circle farthest-corner at 50% 50%, #fff, #f9f9f9 34%, #ececec);
-  background-position: 50% 50%, 0px 0px;
+  background: url("../img/background.svg"), radial-gradient(circle farthest-corner at 50% 50%, #fff, #f9f9f9 34%, #ececec) 50% 50%, 0 0;
   background-size: cover, auto;
 }
 

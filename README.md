@@ -21,7 +21,7 @@ Los que organizan el grupo, en orden alfabético:
 Esta es una lista de las herramientas/assets con acceso privado que estamos usando:
 
 * Una [app heroku](https://dashboard.heroku.com/apps/mobile-uy) para gestionar las invitaciones automáticas.
-* Este repo GitHub.
+* Esta organización GitHub.
 * Un [sitio de Google reCAPTCHA](https://www.google.com/recaptcha/admin#site/341345015).
 * Mobile Meetup
 * El dominio mobileday.uy
